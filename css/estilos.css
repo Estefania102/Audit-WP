@@ -1,0 +1,81 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* REGISTRO AUDITOR*/
+.formh1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.formre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    width:800px;
+    height:480px;
+    background:rgb(187, 145, 135);
+    margin:auto;
+    margin-top:10px;
+    box-shadow:8px 13px 20px rgb(160, 137, 132);
+    padding:20px 40px;
+}
+.formulario-grupo-input{
+    position:relative;
+}
+
+.formulario-validacion-estado{
+    position:absolute;
+    right:10px;
+    bottom:27px;
+    z-index:100;
+    font-size:16px;
+    opacity:0;
+} 
+#grupo-button{
+    grid-column: span 2;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.buttonre{
+    height: 45px;
+	width: 30%;
+	cursor: pointer;
+}
+.buttonr:hover{
+    background-color:#DED6D4
+}
+/* Validacion */
+.formulario-grupo-correcto .formulario-validacion-estado{
+    color:#119200;
+    opacity: 1;
+}
+.formulario-grupo-incorrecto .formulario-validacion-estado{
+    color:#bb2929;   
+    opacity: 1;
+}
+@media screen and (max-width:800px){
+    .formre{
+        grid-template-columns:1fr;
+        width:60%;
+        gap:1px;
+        height:800px;
+        margin-bottom: 30px;
+    }
+
+    #grupo-button{
+        grid-column:1;
+    }
+    .buttonre{
+        width:100%;
+    }
+}

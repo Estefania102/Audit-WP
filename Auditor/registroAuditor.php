@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
     <title>Audit PW</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 
 </head>
 
 <?php
        
-        include 'controlador/Negocio.php';
+        include '../controlador/Negocio.php';
         
 ?>
 
-<body background="img/"> 
+<body background="../img/"> 
     
 <h1 class="formh1">REGISTRO</h1>
-    <form class="formre" id="envia5" name="envia5" action="controlador/OperacionInsertar.php" method="post">
+    <form class="formre" id="envia5" name="envia5" action="../controlador/OperacionInsertar.php" method="post">
  
         <div class="formulario-grupo" id="grupo-nombre">
             <label for="nombre" class="formulario-label">Nombres</label>
@@ -81,9 +81,9 @@
     </form>
 </body>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="js/formularioAuditor.js"></script>
-    <script src="principal.js"></script>
+    <script src="../js/formularioAuditor.js"></script>
+    <script src="../js/principal.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src='lib/sweetalert2.all.js'></script>
-    <script src='lib/sweetalert2.min.js'></script>
+    <script src='../lib/sweetalert2.all.js'></script>
+    <script src='../lib/sweetalert2.min.js'></script>
 </html>
