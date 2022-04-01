@@ -9,6 +9,85 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/* LOGIN */
+.frm{
+    display: flex;
+}
+.form{
+    width:430px;
+    height:440px;
+    background:rgb(187, 145, 135);
+    margin:auto;
+    margin-top:60px;
+    margin-bottom: 0px;
+    box-shadow:8px 13px 20px rgb(160, 137, 132);
+    padding:20px 40px;
+    color:black;
+    padding: 20px 40px 0px 40px;
+}
+
+.form h1{
+    text-align: center;
+    height:40px;
+    margin-bottom:30px;
+    margin-top:20px;
+    margin-bottom:25px;
+    font-size:30px;
+    color:cornsilk;
+}
+
+ .campos{
+    width:100%;
+    margin-bottom:15px;
+    padding:10px 10px;
+    font-size:14px;
+}
+ .button{
+    width:100%;
+    height:40px;
+    margin-bottom:16px;
+    border:none;
+    margin-top: 20px;
+}
+.button:hover {
+    background-color:#DED6D4;
+}
+.form p{
+    height:20px;
+    text-align:center;   
+}
+.form a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+.formulario-input-error{
+    font-size:15px;
+    margin-bottom:0;
+    display:none;
+    color:#bb2929;
+    margin-top: -10px;
+}
+.formulario-input-error-activo{
+    display:block;
+}
+.formulario-mensaje-exito{
+    font-size:14px;
+    color:#119200;
+    display: none;
+}
+.formulario-mensaje-exito-activo{
+    display:block;
+}
+.formulario-grupo-correcto .campos{
+    border:2px solid #119200;
+}
+.formulario-grupo-incorrecto .formulario-label{
+    color:#bb2929;   
+}
+.formulario-grupo-incorrecto .campos{
+    border:2px solid #bb2929;
+}
 
 /* REGISTRO AUDITOR*/
 .formh1{
