@@ -14,8 +14,10 @@ body{
     display: flex;
 }
 .form{
+    display: grid;
+    gap: 8px;
     width:430px;
-    height:440px;
+    height:480px;
     background:rgb(187, 145, 135);
     margin:auto;
     margin-top:60px;
@@ -143,6 +145,16 @@ body{
     opacity: 1;
 }
 @media screen and (max-width:800px){
+    .form{
+        width:60%;
+        /* gap:1px; */
+        height:450px;
+        margin-bottom: 10px;
+    }
+
+    .button{
+        width:100%;
+    }
     .formre{
         grid-template-columns:1fr;
         width:60%;
