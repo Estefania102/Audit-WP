@@ -18,7 +18,7 @@
 <body background="../img/"> 
     
 <h1 class="formh1">REGISTRO DE EMPRESA</h1>
-    <form class="formre" id="envia5" name="envia5" action="../controlador/OperacionInsertar.php" method="post">
+    <form class="formrebu" id="enviarebu" name="enviarebu" action="../controlador/OperacionInsertar.php" method="post">
  
         <div class="formulario-grupo" id="grupo-nombre">
             <label for="nombre" class="formulario-label">Nombres</label>
