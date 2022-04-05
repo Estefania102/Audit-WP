@@ -1,5 +1,5 @@
-const formulario = document.getElementById('envia10');
-const inputs = document.querySelectorAll('#envia10 input');
+const formulario = document.getElementById('envialobu');
+const inputs = document.querySelectorAll('#envialobu input');
 
 const expresiones = {
 	password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/, // 12 digitos

@@ -29,7 +29,7 @@
             <p class="formulario-input-error">Contraseña inválida</p>
         </div> 
         <div class="formulario-grupo">
-            <input type="hidden" name="envia10">
+            <input type="hidden" name="envialoaud">
             <button type="submit" class="button">Ingresar</button>
             
             <p><a href="LoginEmpresa.php?">Login Empresa</a></p>

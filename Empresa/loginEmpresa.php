@@ -9,7 +9,7 @@
 <link rel='stylesheet' href='lib/sweetalert2.min.css'>
 
     <body background="../img/"> 
-        <form class="form" id="envia10" name="envia10" action="../controlador/OperacionInsertar.php" method="post">
+        <form class="formlobu" id="envialobu" name="envialobu" action="../controlador/OperacionInsertar.php" method="post">
         <h1>Login Empresa</h1>
         <div class="formulario-grupo" id="grupo-correo" style="margin-top: -10px">
             <label for="correo" class="formulario-label">Correo</label>
@@ -29,19 +29,18 @@
             <p class="formulario-input-error">Contraseña inválida</p>
         </div> 
         <div class="formulario-grupo">
-            <input type="hidden" name="envia10">
+            <input type="hidden" name="envialobu">
             <button type="submit" class="button">Ingresar</button>
             
             <p><a href="LoginEmpresa.php?">Login Empresa</a></p>
             
-            <p><a href="registroAuditor.php">Registrarse</a></p>
+            <p><a href="RegistroAuditor.php">Registrarse</a></p>
             </div>
         </form>
     </body>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    
-    <script src="../js/formularioLogin.js"></script>
-    <script type="text/javascript" src="../js/principal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>   
+    <script src="../js/LoginEmpresa.js"></script>
+    <script type="text/javascript" src="../js/Principal.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src='../lib/sweetalert2.all.js'></script>
     <script src='../lib/sweetalert2.min.js'></script>

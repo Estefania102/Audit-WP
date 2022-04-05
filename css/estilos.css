@@ -91,10 +91,10 @@ body{
     border:2px solid #bb2929;
 }
 /* LOGIN Empresas*/
-.frm{
+.frmlobu{
     display: flex;
 }
-.form{
+.formlobu{
     display: grid;
     gap: 8px;
     width:430px;
@@ -109,7 +109,7 @@ body{
     padding: 20px 40px 0px 40px;
 }
 
-.form h1{
+.formlobu h1{
     text-align: center;
     height:40px;
     margin-bottom:30px;
@@ -165,11 +165,6 @@ body{
 }
 
 /* REGISTRO empresas*/
-.formh1{
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .formrebu{
     display: grid;
     grid-template-columns: 1fr 1fr;

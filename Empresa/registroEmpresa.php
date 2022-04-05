@@ -66,14 +66,14 @@
         </div>
 
         <div class="formulario-grupo" id="grupo-button">
-            <input type="hidden" name="envia5">
+            <input type="hidden" name="enviarebu">
             <button type="submit" class="buttonre">Registrar</button>
         </div>
     </form>
 </body>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../js/formularioAuditor.js"></script>
-    <script src="../js/principal.js"></script>
+    <script src="../js/RegistroEmpresa.js"></script>
+    <script src="../js/Principal.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src='../lib/sweetalert2.all.js'></script>
     <script src='../lib/sweetalert2.min.js'></script>

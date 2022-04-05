@@ -3,7 +3,6 @@ const inputs = document.querySelectorAll('#envia5 input');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     direccion: /^[a-zA-ZÀ-ÿ0-9_.\s]{1,100}$/, // Letras y espacios, pueden llevar acentos.
     telefono: /^\d{9,9}$/, // 9 numeros.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -11,7 +10,6 @@ const expresiones = {
 }
 const campos = { 
     nombre:false,
-    apellido: false,
     direccion:false,
     telefono: false,
     correo: false,
@@ -24,9 +22,6 @@ const validarFormulario = (e) => {
         
         case "nombre":
             validarCampo(expresiones.nombre,e.target,'nombre');
-        break;
-        case "apellido":
-            validarCampo(expresiones.apellido,e.target,'apellido');
         break;
         case "direccion":
             validarCampo(expresiones.direccion,e.target,'direccion');

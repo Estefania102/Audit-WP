@@ -98,10 +98,9 @@
                     }else{
                         session_start();
                         for($x=0;$x<count($resultado);$x++){
-                            $_SESSION["idAuditor"]=$resultado[0];
-                            $_SESSION["nombres"]=$resultado[1];
-                            $_SESSION["apellidos"]=$resultado[2];
-                            $_SESSION["correo"]=$resultado[3];
+                            $_SESSION["idEmpresa"]=$resultado[0];
+                            $_SESSION["nombre"]=$resultado[1];
+                            $_SESSION["correo"]=$resultado[2];
                         }
                         $respuesta=array(
                             'respuesta'=>'exitoso',
