@@ -9,9 +9,9 @@ class Negocio{
     }
 
     /* REGISTRO CLIENTE*/ 
-    function registro($nom,$ape,$dire,$cel,$correo,$pas){
-        $sql="insert into cliente (nombres, apellidos, direccion,celular,correo,contraseña) 
-        values('$nom','$ape','$dire','$cel','$correo','$pas')";
+    function registro($nom,$ape,$dire,$correo,$pas){
+        $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
+        values('$nom','$ape','$dire','$correo','$pas')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
            if($res)
            return "ok";
