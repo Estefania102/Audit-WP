@@ -8,18 +8,27 @@ class Negocio{
         return $this->cn;
     }
 
-    /* REGISTRO CLIENTE*/ 
-    function registro($nom,$ape,$dire,$cel,$correo,$pas){
-        $sql="insert into cliente (nombres, apellidos, direccion,celular,correo,contraseña) 
-        values('$nom','$ape','$dire','$cel','$correo','$pas')";
+    /* REGISTRO auditor*/ 
+    function registroAudit($nom,$ape,$dire,$cel,$correo,$pas){
+        $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
+        values('$nom','$ape','$dire','$correo','$pas')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
            if($res)
            return "ok";
            else
            return "Error";
-       }
+    }
 
-
+       /* REGISTRO empresa*/ 
+    function registroEmpresa($nom,$dire,$cel,$correo,$pas){
+        $sql="insert into empresa (nombres, direccion,celular,correo,contrasena) 
+        values('$nom','$dire','$cel','$correo','$pas')";
+        $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+           if($res)
+           return "ok";
+           else
+           return "Error";
+    }
 
 
     
