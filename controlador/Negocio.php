@@ -8,9 +8,8 @@ class Negocio{
         return $this->cn;
     }
 
-    /* REGISTRO CLIENTE*/ 
-    
-    function registroAuditor($nom,$ape,$dire,$correo,$pas){
+    /* REGISTRO CLIENTE*/     
+    function registroAudit($nom,$ape,$dire,$correo,$pas){
         $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
         values('$nom','$ape','$dire','$correo','$pas')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
