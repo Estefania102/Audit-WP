@@ -1,6 +1,6 @@
 $(document).ready(function(){
-// REGISTRO 
-$('#envia5').on('submit',function(e){
+// REGISTRO AUDITOR
+$('#enviareaud').on('submit',function(e){
     e.preventDefault();
     var datos = $(this).serializeArray();
     $.ajax({
@@ -23,7 +23,7 @@ $('#envia5').on('submit',function(e){
                 '',
                 'success'
             );setTimeout(function(){
-              window.location.href='Login.php';
+              window.location.href='LoginAuditor.php';
               },2000)
                   }
              

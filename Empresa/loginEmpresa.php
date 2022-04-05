@@ -10,7 +10,7 @@
 
     <body background="../img/"> 
         <form class="form" id="envia10" name="envia10" action="../controlador/OperacionInsertar.php" method="post">
-        <h1>Login Auditor</h1>
+        <h1>Login Empresa</h1>
         <div class="formulario-grupo" id="grupo-correo" style="margin-top: -10px">
             <label for="correo" class="formulario-label">Correo</label>
             <div class="formulario-grupo-input">

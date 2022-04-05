@@ -18,7 +18,7 @@
 <body background="../img/"> 
     
 <h1 class="formh1">REGISTRO</h1>
-    <form class="formre" id="envia5" name="envia5" action="../controlador/OperacionInsertar.php" method="post">
+    <form class="formreaud" id="enviareaud" name="enviareaud" action="../controlador/OperacionInsertar.php" method="post">
  
         <div class="formulario-grupo" id="grupo-nombre">
             <label for="nombre" class="formulario-label">Nombres</label>
@@ -47,15 +47,6 @@
             <p class="formulario-input-error">La dirección tiene que ser de 100 caracteres y puede contener letras y números</p>
         </div>
 
-        <div class="formulario-grupo" id="grupo-celular">
-            <label for="celular" class="formulario-label">Celular</label>
-            <div class="formulario-grupo-input">
-                <input class="campos" type="text" name="celular" placeholder="999999999" required>
-                <i class="formulario-validacion-estado fas fa-times-circle"></i>
-            </div>
-            <p class="formulario-input-error">El celular tiene que ser de 9 dígitos</p>
-        </div>
-
         <div class="formulario-grupo" id="grupo-correo">
             <label for="correo" class="formulario-label">Correo</label>
             <div class="formulario-grupo-input">
@@ -75,14 +66,14 @@
         </div>
 
         <div class="formulario-grupo" id="grupo-button">
-            <input type="hidden" name="envia5">
+            <input type="hidden" name="enviareaud">
             <button type="submit" class="buttonre">Registrar</button>
         </div>
     </form>
 </body>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../js/formularioAuditor.js"></script>
-    <script src="../js/principal.js"></script>
+    <script src="../js/RegistroAuditor.js"></script>
+    <script src="../js/Principal.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src='../lib/sweetalert2.all.js'></script>
     <script src='../lib/sweetalert2.min.js'></script>

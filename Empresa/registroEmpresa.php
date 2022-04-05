@@ -17,7 +17,7 @@
 
 <body background="../img/"> 
     
-<h1 class="formh1">REGISTRO</h1>
+<h1 class="formh1">REGISTRO DE EMPRESA</h1>
     <form class="formre" id="envia5" name="envia5" action="../controlador/OperacionInsertar.php" method="post">
  
         <div class="formulario-grupo" id="grupo-nombre">
@@ -27,15 +27,6 @@
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario-input-error">El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras</p>
-        </div>
-
-        <div class="formulario-grupo" id="grupo-apellido">
-            <label for="apellido" class="formulario-label">Apellidos</label>
-            <div class="formulario-grupo-input">
-                <input class="campos" type="text" name="apellido" placeholder="Flores Basurto" required>
-                <i class="formulario-validacion-estado fas fa-times-circle"></i>
-            </div>
-            <p class="formulario-input-error">El apellido tiene que ser de 4 a 16 caracteres y solo puede contener letras</p>
         </div>
 
         <div class="formulario-grupo" id="grupo-direccion">

@@ -97,7 +97,7 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.formre{
+.formreaud{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:20px;
