@@ -9,11 +9,11 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* LOGIN */
-.frm{
+/* LOGIN AUDITOR*/
+.frmloaud{
     display: flex;
 }
-.form{
+.formloaud{
     display: grid;
     gap: 8px;
     width:430px;
@@ -28,7 +28,7 @@ body{
     padding: 20px 40px 0px 40px;
 }
 
-.form h1{
+.formloaud h1{
     text-align: center;
     height:40px;
     margin-bottom:30px;
@@ -90,6 +90,34 @@ body{
 .formulario-grupo-incorrecto .campos{
     border:2px solid #bb2929;
 }
+/* LOGIN Empresas*/
+.frm{
+    display: flex;
+}
+.form{
+    display: grid;
+    gap: 8px;
+    width:430px;
+    height:480px;
+    background:rgb(187, 145, 135);
+    margin:auto;
+    margin-top:60px;
+    margin-bottom: 0px;
+    box-shadow:8px 13px 20px rgb(160, 137, 132);
+    padding:20px 40px;
+    color:black;
+    padding: 20px 40px 0px 40px;
+}
+
+.form h1{
+    text-align: center;
+    height:40px;
+    margin-bottom:30px;
+    margin-top:20px;
+    margin-bottom:25px;
+    font-size:30px;
+    color:cornsilk;
+}
 
 /* REGISTRO AUDITOR*/
 .formh1{
@@ -135,6 +163,26 @@ body{
 .buttonr:hover{
     background-color:#DED6D4
 }
+
+/* REGISTRO empresas*/
+.formh1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.formrebu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    width:800px;
+    height:480px;
+    background:rgb(187, 145, 135);
+    margin:auto;
+    margin-top:10px;
+    box-shadow:8px 13px 20px rgb(160, 137, 132);
+    padding:20px 40px;
+}
+
 /* Validacion */
 .formulario-grupo-correcto .formulario-validacion-estado{
     color:#119200;
