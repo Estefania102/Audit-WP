@@ -19,7 +19,7 @@
                                 'respuesta' => 'Correoexiste'
                             );
                         }else {
-                            $obj->registro($nom,$ape,$dire,$correo,$pas);
+                            $obj->registroAudit($nom,$ape,$dire,$correo,$pas);
                         $respuesta=array(
                         'respuesta'=>'exitoso'
                         );
