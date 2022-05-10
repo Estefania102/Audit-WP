@@ -8,7 +8,7 @@ class Negocio{
         return $this->cn;
     }
 
-    /* REGISTRO CLIENTE*/     
+    /* REGISTRO Auditor*/     
     function registroAudit($nom,$ape,$dire,$correo,$pas){
         $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
         values('$nom','$ape','$dire','$correo','$pas')";

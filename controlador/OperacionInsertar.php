@@ -23,9 +23,7 @@
                         $respuesta=array(
                         'respuesta'=>'exitoso'
                         );
-                        }
-                    
-                
+                        }               
                     die(json_encode($respuesta));
                 }
 
