@@ -29,7 +29,7 @@ $('#enviareaud').on('submit',function(e){
              
         }
     })
-  })
+  });
   
 // LOGIN AUDITOR
 $('#envia10').on('submit',function(e){
