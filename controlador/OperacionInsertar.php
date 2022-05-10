@@ -9,7 +9,7 @@
                         $ape=$_POST["apellidos"];
                         $dire=$_POST["direccion"];
                         $correo=$_POST["correo"];
-                        $pas=$_POST["contrasena"];
+                        $contrasena=$_POST["contrasena"];
                 
                         $query= "select * from auditor where correo='$correo'";
                         $resultado = $con->query($query);
@@ -19,7 +19,7 @@
                                 'respuesta' => 'Correoexiste'
                             );
                         }else {
-                            $obj->registroAudit($nom,$ape,$dire,$correo,$pas);
+                            $obj->registroAudit($nom,$ape,$dire,$correo,$contrasena);
                         $respuesta=array(
                         'respuesta'=>'exitoso'
                         );

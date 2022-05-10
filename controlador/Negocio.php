@@ -9,7 +9,7 @@ class Negocio{
     }
 
     /* REGISTRO Auditor*/     
-    function registroAudit($nom,$ape,$dire,$correo,$pas){
+    function registroAudit($nom,$ape,$dire,$correo,$contrasena){
         $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
         values('$nom','$ape','$dire','$correo','$contrasena')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
