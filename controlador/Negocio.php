@@ -19,10 +19,12 @@ class Negocio{
            return "Error";
     }
 
+
+
        /* REGISTRO empresa*/ 
-    function registroEmpresa($nom,$dire,$cel,$correo,$pas){
+    function registroEmpresa($nom,$dire,$cel,$correo,$contrasena){
         $sql="insert into empresa (nombre, direccion,celular,correo,contrasena) 
-        values('$nom','$dire','$cel','$correo','$pas')";
+        values('$nom','$dire','$cel','$correo','$contrasena')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
            if($res)
            return "ok";

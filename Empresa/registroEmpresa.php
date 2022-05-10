@@ -21,7 +21,7 @@
     <form class="formrebu" id="enviarebu" name="enviarebu" action="../controlador/OperacionInsertar.php" method="post">
  
         <div class="formulario-grupo" id="grupo-nombre">
-            <label for="nombre" class="formulario-label">Nombres</label>
+            <label for="nombre" class="formulario-label">Nombre</label>
             <div class="formulario-grupo-input">
                 <input class="campos" type="text" name="nombre" placeholder="Luis Fernando" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
@@ -59,7 +59,7 @@
         <div class="formulario-grupo" id="grupo-pas">
             <label for="pas" class="formulario-label">Contraseña</label>
             <div class="formulario-grupo-input">
-                <input class="campos" type="password" name="pas" placeholder="" required>
+                <input class="campos" type="password" name="contrasena" placeholder="" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario-input-error">El password tiene que ser de 1 mayúscula,1 número y será de no menos de 6 caracteres</p>

@@ -54,16 +54,16 @@
                     die(json_encode($respuesta));
                 }      
        
-                // REGISTRO EMPRESAS
+                // REGISTRO EMPRESA
                 if(isset($_POST["enviarebu"])){
                     include_once 'Conexion.php';
-                    include_once 'controlador/Negocio.php';
+                    include_once 'Negocio.php';
                     $obj=new Negocio();
                     $nom=$_POST["nombre"];
                     $dire=$_POST["direccion"];
                     $cel=$_POST["celular"];
                     $correo=$_POST["correo"];
-                    $pas=$_POST["contrasena"];
+                    $contrasena=$_POST["contrasena"];
             
                     $query= "select * from empresa where correo='$correo'";
                     $resultado = $con->query($query);
@@ -73,7 +73,7 @@
                             'respuesta' => 'Correoexiste'
                         );
                     }else {
-                        $obj->registro($nom,$dire,$cel,$correo,$pas);
+                        $obj->registroEmpresa($nom,$dire,$cel,$correo,$contrasena);
                     $respuesta=array(
                     'respuesta'=>'exitoso'
                     );
@@ -84,7 +84,7 @@
             }
 
                 //LOGIN EMPRESAS
-                if(isset($_POST["envialoaud"])){
+                if(isset($_POST["enviarebu"])){
                     include_once 'controlador/Negocio.php';
                     $obj=new Negocio();
                     $resultado=$obj->login($_POST["email"],$_POST["pas"]);

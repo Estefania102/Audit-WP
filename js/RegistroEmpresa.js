@@ -1,17 +1,17 @@
-const formulario = document.getElementById('envia5');
-const inputs = document.querySelectorAll('#envia5 input');
+const formulario = document.getElementById('enviarebu');
+const inputs = document.querySelectorAll('#enviarebu input');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     direccion: /^[a-zA-ZÀ-ÿ0-9_.\s]{1,100}$/, // Letras y espacios, pueden llevar acentos.
-    telefono: /^\d{9,9}$/, // 9 numeros.
+    celular: /^\d{9,9}$/, // 9 numeros.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/ // 6 digitos
 }
 const campos = { 
     nombre:false,
     direccion:false,
-    telefono: false,
+    celular: false,
     correo: false,
     password: false
   
@@ -27,7 +27,7 @@ const validarFormulario = (e) => {
             validarCampo(expresiones.direccion,e.target,'direccion');
         break;
         case "celular":
-            validarCampo(expresiones.telefono,e.target,'celular');
+            validarCampo(expresiones.celular,e.target,'celular');
         break;
         case "correo":
           validarCampo(expresiones.correo,e.target,'correo');
