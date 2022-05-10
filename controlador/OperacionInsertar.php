@@ -3,7 +3,7 @@
                 // REGISTRO AUDITOR
                     if(isset($_POST["enviareaud"])){
                         include_once 'Conexion.php';
-                        include_once 'controlador/Negocio.php';
+                        include_once 'Negocio.php';
                         $obj=new Negocio();
                         $nom=$_POST["nombres"];
                         $ape=$_POST["apellidos"];

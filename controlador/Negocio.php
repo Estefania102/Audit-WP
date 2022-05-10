@@ -11,7 +11,7 @@ class Negocio{
     /* REGISTRO Auditor*/     
     function registroAudit($nom,$ape,$dire,$correo,$pas){
         $sql="insert into auditor (nombres, apellidos, direccion,correo,contrasena) 
-        values('$nom','$ape','$dire','$correo','$pas')";
+        values('$nom','$ape','$dire','$correo','$contrasena')";
         $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
            if($res)
            return "ok";
