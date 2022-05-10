@@ -23,7 +23,7 @@
         <div class="formulario-grupo" id="grupo-nombre">
             <label for="nombre" class="formulario-label">Nombres</label>
             <div class="formulario-grupo-input">
-                <input class="campos" type="text" name="nombre" placeholder="Luis Fernando" required>
+                <input class="campos" type="text" name="nombres" placeholder="Luis Fernando" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario-input-error">El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras</p>
@@ -32,7 +32,7 @@
         <div class="formulario-grupo" id="grupo-apellido">
             <label for="apellido" class="formulario-label">Apellidos</label>
             <div class="formulario-grupo-input">
-                <input class="campos" type="text" name="apellido" placeholder="Flores Basurto" required>
+                <input class="campos" type="text" name="apellidos" placeholder="Flores Basurto" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario-input-error">El apellido tiene que ser de 4 a 16 caracteres y solo puede contener letras</p>
@@ -59,7 +59,7 @@
         <div class="formulario-grupo" id="grupo-pas">
             <label for="pas" class="formulario-label">Contraseña</label>
             <div class="formulario-grupo-input">
-                <input class="campos" type="password" name="pas" placeholder="" required>
+                <input class="campos" type="password" name="contrasena" placeholder="" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
             <p class="formulario-input-error">El password tiene que ser de 1 mayúscula,1 número y será de no menos de 6 caracteres</p>
