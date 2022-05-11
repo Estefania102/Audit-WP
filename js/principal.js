@@ -95,7 +95,7 @@ $('#enviarebu').on('submit',function(e){
 });
 
 // LOGIN EMPRESA
-$('#enviarebu').on('submit',function(e){
+$('#').on('submit',function(e){
 e.preventDefault();
 var datos = $(this).serializeArray();
 $.ajax({

@@ -6,25 +6,25 @@ const expresiones = {
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     direccion: /^[a-zA-ZÀ-ÿ0-9_.\s]{1,100}$/, // Letras y espacios, pueden llevar acentos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	password: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/ // 6 digitos
+	pas: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,20}$/ // 6 digitos
 }
 const campos = { 
     nombre:false,
     apellido: false,
     direccion:false,
     correo: false,
-    password: false
+    pas: false
   
 }
 
 const validarFormulario = (e) => {
     switch(e.target.name){
         
-        case "nombre":
-            validarCampo(expresiones.nombre,e.target,'nombre');
+        case "nombres":
+            validarCampo(expresiones.nombre,e.target,'nombres');
         break;
-        case "apellido":
-            validarCampo(expresiones.apellido,e.target,'apellido');
+        case "apellidos":
+            validarCampo(expresiones.apellido,e.target,'apellidos');
         break;
         case "direccion":
             validarCampo(expresiones.direccion,e.target,'direccion');
@@ -32,8 +32,8 @@ const validarFormulario = (e) => {
         case "correo":
           validarCampo(expresiones.correo,e.target,'correo');
         break;
-        case "pas":
-          validarCampo(expresiones.password,e.target,'pas');
+        case "contrasena":
+          validarCampo(expresiones.pas,e.target,'contrasena');
         break;
         
     }

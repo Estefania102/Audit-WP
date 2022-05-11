@@ -56,7 +56,7 @@
             <p class="formulario-input-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
         </div>
 
-        <div class="formulario-grupo" id="grupo-pas">
+        <div class="formulario-grupo" id="grupo-contrasena">
             <label for="pas" class="formulario-label">Contraseña</label>
             <div class="formulario-grupo-input">
                 <input class="campos" type="password" name="contrasena" placeholder="" required>

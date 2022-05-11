@@ -32,8 +32,8 @@ const validarFormulario = (e) => {
         case "correo":
           validarCampo(expresiones.correo,e.target,'correo');
         break;
-        case "pas":
-          validarCampo(expresiones.password,e.target,'pas');
+        case "contrasena":
+          validarCampo(expresiones.password,e.target,'contrasena');
         break;
         
     }

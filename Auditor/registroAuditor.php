@@ -20,7 +20,7 @@
 <h1 class="formh1">REGISTRO</h1>
     <form class="formreaud" id="enviareaud" name="enviareaud" action="../controlador/OperacionInsertar.php" method="post">
  
-        <div class="formulario-grupo" id="grupo-nombre">
+        <div class="formulario-grupo" id="grupo-nombres">
             <label for="nombre" class="formulario-label">Nombres</label>
             <div class="formulario-grupo-input">
                 <input class="campos" type="text" name="nombres" placeholder="Luis Fernando" required>
@@ -29,7 +29,7 @@
             <p class="formulario-input-error">El nombre tiene que ser de 4 a 16 caracteres y solo puede contener letras</p>
         </div>
 
-        <div class="formulario-grupo" id="grupo-apellido">
+        <div class="formulario-grupo" id="grupo-apellidos">
             <label for="apellido" class="formulario-label">Apellidos</label>
             <div class="formulario-grupo-input">
                 <input class="campos" type="text" name="apellidos" placeholder="Flores Basurto" required>
@@ -56,7 +56,7 @@
             <p class="formulario-input-error">El correo solo puede contener letras, números, puntos, guiones y guión bajo.</p>
         </div>
 
-        <div class="formulario-grupo" id="grupo-pas">
+        <div class="formulario-grupo" id="grupo-contrasena">
             <label for="pas" class="formulario-label">Contraseña</label>
             <div class="formulario-grupo-input">
                 <input class="campos" type="password" name="contrasena" placeholder="" required>
