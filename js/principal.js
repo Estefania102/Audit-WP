@@ -121,7 +121,7 @@ $('#addempresa').on('submit',function(e){
       if(resultado.respuesta == 'exitoso'){
           swal(
             'Correcto',
-            'Empresa añadido',
+            'Empresa añadida',
             'success'
           )
           setTimeout(function(){
