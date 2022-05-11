@@ -54,35 +54,6 @@
                     die(json_encode($respuesta));
                 }      
        
-                // REGISTRO EMPRESA
-                if(isset($_POST["enviarebu"])){
-                    include_once 'Conexion.php';
-                    include_once 'Negocio.php';
-                    $obj=new Negocio();
-                    $nom=$_POST["nombre"];
-                    $dire=$_POST["direccion"];
-                    $cel=$_POST["celular"];
-                    $correo=$_POST["correo"];
-                    $contrasena=$_POST["contrasena"];
-            
-                    $query= "select * from empresa where correo='$correo'";
-                    $resultado = $con->query($query);
-                     
-                    if(mysqli_num_rows($resultado) > 0){
-                        $respuesta = array(
-                            'respuesta' => 'Correoexiste'
-                        );
-                    }else {
-                        $obj->registroEmpresa($nom,$dire,$cel,$correo,$contrasena);
-                    $respuesta=array(
-                    'respuesta'=>'exitoso'
-                    );
-                    }
-                
-            
-                die(json_encode($respuesta));
-            }
-
                 //LOGIN EMPRESAS
                 if(isset($_POST["envialobu"])){
                     include_once 'Negocio.php';
@@ -115,15 +86,15 @@
                 if(isset($_POST['addempresa'])){
                     session_start();           
                     $idaudit=$_SESSION["idAuditor"];
-                    $nombre= $_POST['nombre'];
-                    $direccion= $_POST['direccion'];
-                    $celular= $_POST['celular'];
-                    $correo= $_POST['correo'];
-                    $contraseña= $_POST['contrasena'];
+                    $nombre= $_POST['nombreBu'];
+                    $direccion= $_POST['direccionBu'];
+                    $celular= $_POST['celularBu'];
+                    $correo= $_POST['correoBu'];
+                    $contrasena= $_POST['contrasenaBu'];
                                  
                     include_once 'Conexion.php';
-                    $query="INSERT INTO horariosdisp (FechaDisp,HoraInicio,HoraFin,Estado,id_personal)
-                    VALUES ('$nombre','$direccion','$celular','$correo','$idaudit')";
+                    $query="INSERT INTO empresa(nombre,direccion,celular,correo,contrasena,idauditor)
+                    VALUES ('$nombre','$direccion','$celular','$correo','$contrasena','$idaudit')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -137,5 +108,6 @@
                       }
                         } 
                     die(json_encode($respuesta));
-                
+                    
+                    
 ?>

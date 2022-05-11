@@ -5,12 +5,12 @@
    <title>Insertar empresas</title>
    </head>
       <?php
-        include "Templates/Head.php";
-        include 'controlador/Negocio.php';
+        include "../Templates/Head.php";
+        include '../controlador/Negocio.php';
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        $pers=$obj->Insertarbu($idaudit);  
+        $emp=$obj->Insertarbu($idaudit);  
       ?>
      <body>
 
@@ -25,7 +25,7 @@
             <table id="tinsertar" class="table table-striped table-bordered" style="width:100%;padding:10px;">
             <thead class="text-center">
                 <tr>
-                <th>Logo</th>
+                  <th>Logo</th>
                   <th>Nombre</th>
                   <th>Ingresar</th>
                   <th>Editar</th>
@@ -34,12 +34,12 @@
             </thead>
             <tbody class="text-center">
             <?php
-                    foreach ($pers as $k=>$d){?>
-                    <tr>                   
-                      <td><?php echo $d[1]?></td>
-                      <td><?php echo $d[2]."-".$d[3]?></td>
-                      <td><?php echo $d[4]?></td>
-                      <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[0]?>>Editar</button>
+                    foreach ($emp as $k=>$d){?>
+                    <tr>     
+                      <td></td>              
+                      <td><?php echo $d[0]?></td>
+                      <td><a href="../Empresa/MenuPrincipal.php" class="btn btn-success">Ingresar</a>
+                      <td><button class='btn btn-primary btnEditar'>Editar</button>
                       <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[0] ?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }

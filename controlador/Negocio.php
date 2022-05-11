@@ -67,7 +67,18 @@ class Negocio{
     }
     
     //MENU PRINCIPAL AUDITOR
-    
+    //Agregar
+    function Insertarbu($idaudit){      
+        $sql="select e.nombre FROM empresa e INNER JOIN auditor a ON e.idAuditor=a.idAuditor 
+        WHERE a.idAuditor='$idaudit'";
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
 
 
 
