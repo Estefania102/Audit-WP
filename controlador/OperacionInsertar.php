@@ -29,9 +29,9 @@
 
                 //LOGIN AUDITOR
                 if(isset($_POST["envialoaud"])){
-                    include_once 'controlador/Negocio.php';
+                    include_once 'Negocio.php';
                     $obj=new Negocio();
-                    $resultado=$obj->login($_POST["email"],$_POST["pas"]);
+                    $resultado=$obj->loginAuditor($_POST["email"],$_POST["pas"]);
         
                     if($resultado=="error"){
                         $respuesta=array(
@@ -84,10 +84,10 @@
             }
 
                 //LOGIN EMPRESAS
-                if(isset($_POST["enviarebu"])){
-                    include_once 'controlador/Negocio.php';
+                if(isset($_POST["envialobu"])){
+                    include_once 'Negocio.php';
                     $obj=new Negocio();
-                    $resultado=$obj->login($_POST["email"],$_POST["pas"]);
+                    $resultado=$obj->loginEmpresa($_POST["email"],$_POST["pas"]);
         
                     if($resultado=="error"){
                         $respuesta=array(
@@ -102,7 +102,7 @@
                         }
                         $respuesta=array(
                             'respuesta'=>'exitoso',
-                            'usuario'=>$_SESSION{"nombres"}
+                            'usuario'=>$_SESSION{"nombre"}
         
                         ); 
                     }

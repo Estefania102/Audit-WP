@@ -32,7 +32,7 @@ $('#enviareaud').on('submit',function(e){
   });
   
 // LOGIN AUDITOR
-$('#envia10').on('submit',function(e){
+$('#envialoaud').on('submit',function(e){
   e.preventDefault();
   var datos = $(this).serializeArray();
   $.ajax({
@@ -49,7 +49,7 @@ $('#envia10').on('submit',function(e){
                   'success'
               )
               setTimeout(function(){
-              window.location.href='MenuPrincipal.php';
+              window.location.href='../Auditor/MenuPrincipal.php';
               },2000)
           }else{
               swal(
@@ -95,7 +95,7 @@ $('#enviarebu').on('submit',function(e){
 });
 
 // LOGIN EMPRESA
-$('#').on('submit',function(e){
+$('#envialobu').on('submit',function(e){
 e.preventDefault();
 var datos = $(this).serializeArray();
 $.ajax({
@@ -112,7 +112,7 @@ $.ajax({
                 'success'
             )
             setTimeout(function(){
-            window.location.href='MenuPrincipal.php';
+            window.location.href='../Empresa/MenuPrincipal.php';
             },2000)
         }else{
             swal(
