@@ -12,7 +12,7 @@ $response = "
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
-    <form role='form' method='post' name='addempresa' id='addempresa' action='OperacionInsertar.php'>   
+    <form role='form' method='post' name='addempresa' id='addempresa' action='../controlador/OperacionInsertar.php'>   
     <input type='hidden' class='form-control' name='idh' value='$idaudit'>";
      
     // LOGO
@@ -32,7 +32,7 @@ $response = "
     $response .= "<div class='container'>";
     $response .= "<div class='nombreBu' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha</label>";
+    $response .= "<label>NOMBRE</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  autocomplete='off'>";
             
     $response .="</div>";
@@ -44,7 +44,7 @@ $response = "
     $response .= "<div class='container'>";
     $response .= "<div class='direccionBu' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha</label>";
+    $response .= "<label>DIRECCION</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  autocomplete='off'>";
             
     $response .="</div>";
@@ -56,7 +56,7 @@ $response = "
     $response .= "<div class='container'>";
     $response .= "<div class='celularBu' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha</label>";
+    $response .= "<label>CELULAR</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  autocomplete='off'>";
             
     $response .="</div>";
@@ -68,7 +68,7 @@ $response = "
     $response .= "<div class='container'>";
     $response .= "<div class='correoBu' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha</label>";
+    $response .= "<label>CORREO</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='correoBu' name='correoBu'  autocomplete='off'>";
             
     $response .="</div>";
@@ -80,14 +80,15 @@ $response = "
     $response .= "<div class='container'>";
     $response .= "<div class='contrasenaBu' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha</label>";
+    $response .= "<label>CONTRASEÑA</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='contrasenaBu' name='contrasenaBu'  autocomplete='off'>";
             
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
+    $response.="  <input type='hidden' name='addempresa' value=''>
+    <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark'>Guardar</button>";
 
-    $response.="<button style='margin-left:45%'type='submit' class='btn btn-dark' >Guardar</button>";
     
     $response.="</form>";
     echo $response;

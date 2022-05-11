@@ -125,7 +125,7 @@ $('#addempresa').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = 'AuditMenuPrincipal.php';
+            window.location.href = '../Auditor/AuditMenuPrincipal.php';
           },2000)
       }else{
         swal(

@@ -100,14 +100,12 @@
                             'respuesta' => 'exitoso'
                         );
                       }
-                
                     else{
                         $respuesta=array(
                             'respuesta' => 'datos incorrectos'
                         );
-                      }
-                        } 
+                    } 
                     die(json_encode($respuesta));
-                    
+                }  
                     
 ?>
