@@ -66,8 +66,8 @@ class Negocio{
         return $resultado;
     }
     
-
-
+    //MENU PRINCIPAL AUDITOR
+    
 
 
 

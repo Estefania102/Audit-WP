@@ -125,7 +125,82 @@ $.ajax({
 })
 });
 
+//MENU PRINCIPAL AUDITOR
 
+//Modal Agregar
+$('.btnAgregar').click(function(){
+  $.ajax({
+    url: 'get_dataAdd.php',
+    type:'post',
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalAgregar').modal('show');
+    }
+});
+});
+
+//Modal Editar
+$('.btnEditar').click(function(){
+  var edit =$(this).data('id');
+  $.ajax({
+    url: 'get_dataedit.php',
+    type:'post',
+    data:{edit:edit},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModal3').modal('show');
+    }
+});
+});
+
+//Borrar registro
+$('.btnBorrar').on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var tipo = $(this).attr('data-tipo');
+  // console.log("ID:"+id);
+  swal({
+  title:'¿Estás seguro?',
+  text: "Una empresa se eliminará",
+  icon : "warning",
+  showCancelButton: true,
+  confirmButtonColor : '#3085d6',
+  cancelButtonColor : '#d33',
+  confirmButtonText : 'Si, Eliminar',
+  cancelButtonText: 'Cancelar'
+  }).then((result)=>{
+    if(result.value){
+      $.ajax({
+        type:'post',
+        data:{
+          'id': id,
+          'registro': 'eliminar'
+        },
+        url : 'Operacion'+tipo+'.php',
+        success:function(data){
+          var resultado=JSON.parse(data);
+          if(resultado.respuesta=='exitoso'){
+            swal(
+              'Eliminado!',
+              'Empresa eliminada',
+               'success' 
+              )
+              jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
+  setTimeout(function(){
+    window.location.href="InsertarEmpresa.php";
+  },2000)
+          }
+        }
+      });
+    }else{
+      swal(
+        'Acción cancelada',
+        '',
+        'warning'
+      )
+    }
+    })
+  })
 
 
 
