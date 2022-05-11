@@ -109,5 +109,33 @@
                     die(json_encode($respuesta));
                 }      
    
+                //MENU PRINCIPAL AUDITOR
+
+                //AGREGAR 
+                if(isset($_POST['addempresa'])){
+                    session_start();           
+                    $idaudit=$_SESSION["idAuditor"];
+                    $nombre= $_POST['nombre'];
+                    $direccion= $_POST['direccion'];
+                    $celular= $_POST['celular'];
+                    $correo= $_POST['correo'];
+                    $contraseña= $_POST['contrasena'];
+                                 
+                    include_once 'Conexion.php';
+                    $query="INSERT INTO horariosdisp (FechaDisp,HoraInicio,HoraFin,Estado,id_personal)
+                    VALUES ('$nombre','$direccion','$celular','$correo','$idaudit')";
+                    if(mysqli_query($con,$query)==1){
+                        $respuesta=array(
+                            'respuesta' => 'exitoso'
+                        );
+                      }
+                
+                    else{
+                        $respuesta=array(
+                            'respuesta' => 'datos incorrectos'
+                        );
+                      }
+                        } 
+                    die(json_encode($respuesta));
                 
 ?>

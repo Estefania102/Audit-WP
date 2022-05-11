@@ -139,6 +139,43 @@ $('.btnAgregar').click(function(){
 });
 });
 
+// AGREGAR
+$('#addempresa').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Empresa añadido',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = 'InsertarEmpresa.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'Datos incompletos',
+          'error'
+        )
+      }
+    }
+  })
+});
+
+
+
+
+
+
+
 //Modal Editar
 $('.btnEditar').click(function(){
   var edit =$(this).data('id');
