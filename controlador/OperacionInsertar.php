@@ -160,5 +160,31 @@
                 
                 die(json_encode($respuesta));
                 }
-                    
+
+                //INGRESAR
+                if(isset($_POST["envialoaud"])){
+                    include_once 'Negocio.php';
+                    $obj=new Negocio();
+                    $resultado=$obj->loginAuditor($_POST["email"],$_POST["pas"]);
+        
+                    if($resultado=="error"){
+                        $respuesta=array(
+                            'respuesta'=>'error'
+                        );
+                    }else{
+                        session_start();
+                        for($x=0;$x<count($resultado);$x++){
+                            $_SESSION["idAuditor"]=$resultado[0];
+                            $_SESSION["nombres"]=$resultado[1];
+                            $_SESSION["apellidos"]=$resultado[2];
+                            $_SESSION["correo"]=$resultado[3];
+                        }
+                        $respuesta=array(
+                            'respuesta'=>'exitoso',
+                            'usuario'=>$_SESSION{"nombres"}
+        
+                        ); 
+                    }
+                    die(json_encode($respuesta));
+                }        
 ?>

@@ -38,7 +38,7 @@
                     <tr>     
                       <td></td>              
                       <td><?php echo $d[0]?></td>
-                      <td><a href="../Empresa/MenuPrincipal.php" class="btn btn-success">Ingresar</a>
+                      <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btn btn-success'>Ingresar</a>
                       <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[1]?>>Editar</button>
                       <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[1]?>>Eliminar</button></td>
                     </tr>                                                                           

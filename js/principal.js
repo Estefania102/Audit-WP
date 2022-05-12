@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 // REGISTRO AUDITOR
 $('#enviareaud').on('submit',function(e){
     e.preventDefault();
@@ -29,7 +30,7 @@ $('#enviareaud').on('submit',function(e){
              
         }
     })
-  });
+});
   
 // LOGIN AUDITOR
 $('#envialoaud').on('submit',function(e){
@@ -104,7 +105,7 @@ $('.btnAgregar').click(function(){
       $('.modal-body').html(response);
       $('#custModalAgregar').modal('show');
     }
-});
+  })
 });
 
 // AGREGAR
@@ -149,7 +150,7 @@ $('.btnEditar').click(function(){
       $('.modal-body').html(response);
       $('#custModalEditar').modal('show');
     }
-});
+  })
 });
 
 // MODIFICAR
@@ -174,7 +175,6 @@ $('#updateempresa').on('submit',function(e){
         },2000)
       }
     }
-
   })
 });
 
@@ -255,6 +255,19 @@ $('.btnBorrar').on('click',function(e){
       )
     }
     })
-  })
 });
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
 
