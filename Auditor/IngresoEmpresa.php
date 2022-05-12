@@ -11,44 +11,29 @@
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
         $emp=$obj->Insertarbu($idaudit);  
-      ?>
-
-	
-	<link rel="stylesheet" href="css/estilos.css">
-</head>
+      ?>	
 <body>
 	<!-- ENCABEZADO -->
 	<header>
-		<div class="menu-bar-pc">
-			<a href="#" class="logo">
-				<img src="img/logo.png" alt="">
-			</a>
+		<div class="menu-bar-pc" style="padding:0 12.25rem">
 			<nav class="menu-principal">
 				<a href="#" class="volver-arriba">Inicio</a>
-				<a href="#nosotros" class="scroll-suave">Nosotros</a>
-				<a href="#chef" class="scroll-suave">Nuestro Chef</a>
-				<a href="#nuestro_menu" class="scroll-suave">Menú</a>
-				<a href="#contacto" class="scroll-suave">Contactos</a>
+				<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
+				<a href="#elementos" class="scroll-suave">Ingreso de Elementos</a>
+				<a href="#respuestas" class="scroll-suave">Respuestas</a>
+				<a href="#cobit" class="scroll-suave">COBIT 5</a>
+                <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 			</nav>
 
 			<div class="top-redes">
 				<a href="#">
 					<i class="fab fa-facebook"></i>
-				</a>
-				<a href="#">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a href="#">
-					<i class="fab fa-instagram"></i>
-				</a>
+				</a>		
 			</div>
 		</div>
 
 		<div class="menu-bar-movil">
-			<a href="#" class="logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="burger-menu" id="burger_menu">
+			<div class="movil-menu" id="movil_menu">
 				<i class="fa fa-bars" aria-hidden="true"></i>
 			</div>
 
@@ -56,21 +41,15 @@
 				<div class="top-redes">
 					<a href="#">
 						<i class="fab fa-facebook"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-instagram"></i>
-					</a>
+					</a>		
 				</div>
-
 				<nav class="menu-principal">
 					<a href="#" class="volver-arriba">Inicio</a>
-					<a href="#nosotros" class="scroll-suave">Nosotros</a>
-					<a href="#chef" class="scroll-suave">Nuestro Chef</a>
-					<a href="#nuestro_menu" class="scroll-suave">Menú</a>
-					<a href="#contacto" class="scroll-suave">Contactos</a>
+					<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
+				    <a href="#elementos" class="scroll-suave">Ingreso de Elementos</a>
+				    <a href="#respuestas" class="scroll-suave">Respuestas</a>
+				    <a href="#cobit" class="scroll-suave">COBIT 5</a>
+                    <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 				</nav>
 			</div>			
 		</div>
@@ -328,12 +307,11 @@
 			</div>
 	</footer>
 <!-- FIN DE PIE DE PAGINA -->
-	<script src="js/lightbox.js"></script>
-	<script src="js/slider.js"></script>
-	<script src="js/tabs.js"></script>
-	<script src="js/bgParallax.js"></script>
-	<script src="js/formulario.js"></script>
-	<script src="js/scroll.js"></script>
-	<script src="js/menuMovil.js"></script>
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/tabs.js"></script>
+	<script src="../js/bgParallax.js"></script>
+	<script src="../js/scroll.js"></script>
+	<script src="../js/menuMovil.js"></script>
 </body>
 </html>
