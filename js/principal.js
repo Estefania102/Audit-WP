@@ -178,13 +178,42 @@ $('#updateempresa').on('submit',function(e){
   })
 });
 
+// Modal de borrar
+$('#deletehorario').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Empresa eliminada',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = '../Auditor/AuditMenuPrincipal.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'No se pudo eliminar',
+          'error'
+        )
+      }
+    }
+  })
+});
 
 //Borrar registro
 $('.btnBorrar').on('click',function(e){
   e.preventDefault();
   var id = $(this).attr('data-id');
   var tipo = $(this).attr('data-tipo');
-  // console.log("ID:"+id);
   swal({
   title:'¿Estás seguro?',
   text: "Una empresa se eliminará",
@@ -192,7 +221,7 @@ $('.btnBorrar').on('click',function(e){
   showCancelButton: true,
   confirmButtonColor : '#3085d6',
   cancelButtonColor : '#d33',
-  confirmButtonText : 'Si, Eliminar',
+  confirmButtonText : 'Si, eliminar',
   cancelButtonText: 'Cancelar'
   }).then((result)=>{
     if(result.value){
@@ -202,18 +231,18 @@ $('.btnBorrar').on('click',function(e){
           'id': id,
           'registro': 'eliminar'
         },
-        url : 'Operacion'+tipo+'.php',
+        url : '../controlador/Operacion'+tipo+'.php',
         success:function(data){
           var resultado=JSON.parse(data);
           if(resultado.respuesta=='exitoso'){
             swal(
-              'Eliminado!',
+              'Eliminado',
               'Empresa eliminada',
-               'success' 
+              'success' 
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              window.location.href="AuditMenuPrincipal.php";
+              window.location.href="../Auditor/AuditMenuPrincipal.php";
               },2000)
           }
         }
@@ -227,9 +256,5 @@ $('.btnBorrar').on('click',function(e){
     }
     })
   })
-
-
-
-
-
 });
+

@@ -133,5 +133,32 @@
                     }                 
                     die(json_encode($respuesta));
                     }
+
+                // ELIMINAR
+                if($_POST['registro']=='eliminar'){
+                    $idbu = $_POST['id'];
+                        try{
+                    include_once 'Conexion.php';
+                    $query="DELETE FROM `empresa` WHERE idEmpresa=".$idbu;
+                   
+                if(mysqli_query($con,$query)==1){
+                    $respuesta=array(
+                        'respuesta' => 'exitoso',
+                        'id_borrar' => $idbu
+                
+                    );
+                }
+                else{
+                    $respuesta=array(
+                        'respuesta' => 'horario incorrecto'
+                    );
+                  }
+                 
+                }catch (Exception $e){
+                    echo "Error:".$e->get_Message();
+                }
+                
+                die(json_encode($respuesta));
+                }
                     
 ?>
