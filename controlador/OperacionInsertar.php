@@ -150,7 +150,7 @@
                 }
                 else{
                     $respuesta=array(
-                        'respuesta' => 'horario incorrecto'
+                        'respuesta' => 'eliminación incorrecta'
                     );
                   }
                  

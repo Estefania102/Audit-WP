@@ -65,8 +65,7 @@ if(isset($_POST['edit'])){
     $response.="</form>";
     $response.="<script src='../js/Principal.js'></script>
     <script src='../lib/sweetalert2.all.js'></script>
-    <script src='../lib/sweetalert2.min.js'></script>
-    ";
+    <script src='../lib/sweetalert2.min.js'></script>";
     echo $response;
     exit;
   
