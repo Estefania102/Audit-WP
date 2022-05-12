@@ -26,7 +26,7 @@ if(isset($_POST['edit'])){
                 $var=$d[0];
         }       
     $response .= "<label style='margin-left:67px'>Nombre</label>";
-    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  value='$var' autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -39,8 +39,8 @@ if(isset($_POST['edit'])){
             foreach ($emp as $k=>$d){
                 $var=$d[1];
         }       
-    $response .= "<label style='margin-left:67px'>Nombre</label>";
-    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Direccion</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -53,8 +53,8 @@ if(isset($_POST['edit'])){
             foreach ($emp as $k=>$d){
                 $var=$d[2];
         }       
-    $response .= "<label style='margin-left:67px'>Nombre</label>";
-    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Celular</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";

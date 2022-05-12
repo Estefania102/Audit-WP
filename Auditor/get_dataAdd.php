@@ -81,7 +81,7 @@ $response = "
     $response .= "<div class='contrasenaBu' style='margin-top:30px;'>";
            
     $response .= "<label>CONTRASEÑA</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' type='password' id='contrasenaBu' name='contrasenaBu'  autocomplete='off' required>";
+    $response .= "<input style='width:200px;' class='form-control' type='password' id='contrasenaBu' name='contrasenaBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
