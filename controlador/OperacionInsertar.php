@@ -107,5 +107,31 @@
                     } 
                     die(json_encode($respuesta));
                 }  
+
+                // EDITAR
+                if(isset($_POST['updateempresa'])){            
+                    $idBu= $_POST['idE'];
+                    $nombre= $_POST['nombreBu'];
+                    $direccion= $_POST['direccionBu'];
+                    $celular= $_POST['celularBu'];
+            
+                    try{
+                            include_once 'Conexion.php';
+                        $query="UPDATE `empresa` SET `nombre`='$nombre',`direccion`='$direccion',`celular`=$celular WHERE idEmpresa=".$idBu;
+                                if(mysqli_query($con,$query)==1){
+                                        $respuesta=array(
+                                            'respuesta' => 'exitoso'                   
+                                        );
+                                      }               
+                                    else{
+                                        $respuesta=array(
+                                            'respuesta' => 'datos incorrectos'
+                                        );
+                                      }
+                    } catch (Exception $e){
+                        echo "Error:".$e->get_Message();
+                    }                 
+                    die(json_encode($respuesta));
+                    }
                     
 ?>

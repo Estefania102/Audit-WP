@@ -39,8 +39,8 @@
                       <td></td>              
                       <td><?php echo $d[0]?></td>
                       <td><a href="../Empresa/MenuPrincipal.php" class="btn btn-success">Ingresar</a>
-                      <td><button class='btn btn-primary btnEditar'>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[0] ?>>Eliminar</button></td>
+                      <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[0]?>>Editar</button>
+                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[0]?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }
               ?> 
@@ -53,7 +53,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="ActualizarPer.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
@@ -66,19 +66,19 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModal3" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEditar" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Editar</h4>
-                              <a type="button" href="ActualizarPer.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="ActualizarPer.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="AuditMenuPrincipal.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>

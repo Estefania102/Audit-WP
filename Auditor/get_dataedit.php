@@ -1,11 +1,11 @@
 <?php
 if(isset($_POST['edit'])){
-    include 'controlador/Negocio.php';
+    include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
     $idAuditor=$_SESSION["idAuditor"];  
     $id = $_POST['edit']; 
-    $pers=$obj->UpdateHor($id);
+    $emp=$obj->UpdateEmpresa($id);
     $response = " 
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='css/estilos.css'>
@@ -15,83 +15,57 @@ if(isset($_POST['edit'])){
     <link rel='stylesheet' href='lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateempresa' id='updateempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idh' value='$id'>";
+    <input type='hidden' class='form-control' name='idE' value='$id'>";
      
-    // Fecha
+    // NOMBRE
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='dates' style='margin-top:15px;'>";?>   
+    $response .= "<div class='nombreBu' style='margin-top:15px;'>";?>   
             <?php
-            foreach ($pers as $k=>$d){
+            foreach ($emp as $k=>$d){
                 $var=$d[0];
-        }
-        $response .=    "<div id='fecha10' style='display:none'> 
-                                <div class='obtener'>
-                                    <p>Fecha debe ser mayor a la fecha de hoy</p>
-                                </div>
-                              </div>";
-    $response .= "<label style='margin-left:67px'>Fecha</label>";
-    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='fecha1' name='event_dates'  value='$var' autocomplete='off' required>";
-
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='fecha' name='event_date' value='$var'  autocomplete='off' required>";
-                
-
+        }       
+    $response .= "<label style='margin-left:67px'>Nombre</label>";
+    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
-   
-    // Hora Inicio
+    
+    // DIRECCION
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='horaini' style='margin-top: 20px;'> ";?>
+    $response .= "<div class='direccionBu' style='margin-top:15px;'>";?>   
             <?php
-            foreach ($pers as $k=>$d){
-                $var = 'showpickers("timepkr",24)';
-    $response .= "<label style='margin-left:19px;'>Hora Inicio</label>";
-    $response .= "<br><input id='timepkr' name='Horai' style='width: 100px;float:left;' class='form-control' value='$d[1]' required>";
-            }
-    $response .= "<button type='button' class='btn btn-primary' onclick='$var' style='width:40px;float:left;' ><i class='fa fa-clock-o'></i>";
-            
+            foreach ($emp as $k=>$d){
+                $var=$d[1];
+        }       
+    $response .= "<label style='margin-left:67px'>Nombre</label>";
+    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
-    $response .= "<div class='timepicker'></div>";
-    $response .=" </div>
-    </head>";
-    
-    // Hora Final
-    $response .= "<div class='form-group'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='horafin' style='margin-top: 20px;'>";?>
-            <?php
-            foreach ($pers as $k=>$d){
-                $var = 'showpickers("timepkr1",24)';
-    $response .= "<label style='margin-left:25px;'>Hora Fin</label>";
-    $response .= "<br><input id='timepkr1' name='Horaf' style='width: 100px;float:left;' class='form-control' value='$d[2]' required>";
-            }
-    $response .= "<button type='button' class='btn btn-primary' onclick='$var' style='width:40px;float:left;' ><i class='fa fa-clock-o'></i>";
-            
-    
-    $response .="</div>";
-    $response .= "</div>";
-    $response .= "<div class='timepicker'></div>";
     $response .=" </div>";
-    $response.="  <input type='hidden' name='updatehorario' value=''>
-    <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark' >Guardar</button>";
+
+    // CELULAR
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='celularBu' style='margin-top:15px;'>";?>   
+            <?php
+            foreach ($emp as $k=>$d){
+                $var=$d[2];
+        }       
+    $response .= "<label style='margin-left:67px'>Nombre</label>";
+    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
+    $response.="  <input type='hidden' name='updateempresa' value=''>
+    <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark'>Guardar</button>";
     
     $response.="</form>";
-    $response.="<script>
-    $(function() {
-    
-    $('.dates #fecha').datepicker({
-        'format': 'yyyy-mm-dd',
-        'autoclose': true
-    });
-    });
-    </script>
-    <script src='principal.js'></script>
-    <script src='lib/sweetalert2.all.js'></script>
-    <script src='lib/sweetalert2.min.js'></script>
-
+    $response.="<script src='../js/Principal.js'></script>
+    <script src='../lib/sweetalert2.all.js'></script>
+    <script src='../lib/sweetalert2.min.js'></script>
     ";
     echo $response;
     exit;

@@ -138,12 +138,6 @@ $('#addempresa').on('submit',function(e){
   })
 });
 
-
-
-
-
-
-
 //Modal Editar
 $('.btnEditar').click(function(){
   var edit =$(this).data('id');
@@ -153,10 +147,39 @@ $('.btnEditar').click(function(){
     data:{edit:edit},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModal3').modal('show');
+      $('#custModalEditar').modal('show');
     }
 });
 });
+
+// MODIFICAR
+$('#updateempresa').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == "exitoso"){
+        swal(
+          'Correcto',
+          'Empresa modificada',
+          'success'
+        )
+        setTimeout(function(){
+          window.location.href = 'AuditMenuPrincipal.php';
+        },2000)
+      }
+    }
+
+  })
+});
+
+
+
 
 //Borrar registro
 $('.btnBorrar').on('click',function(e){
