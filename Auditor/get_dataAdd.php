@@ -33,7 +33,7 @@ $response = "
     $response .= "<div class='nombreBu' style='margin-top:30px;'>";
            
     $response .= "<label>NOMBRE</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
@@ -45,7 +45,7 @@ $response = "
     $response .= "<div class='direccionBu' style='margin-top:30px;'>";
            
     $response .= "<label>DIRECCION</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
@@ -57,7 +57,7 @@ $response = "
     $response .= "<div class='celularBu' style='margin-top:30px;'>";
            
     $response .= "<label>CELULAR</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
@@ -69,7 +69,7 @@ $response = "
     $response .= "<div class='correoBu' style='margin-top:30px;'>";
            
     $response .= "<label>CORREO</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='correoBu' name='correoBu'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='correoBu' name='correoBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
@@ -81,7 +81,7 @@ $response = "
     $response .= "<div class='contrasenaBu' style='margin-top:30px;'>";
            
     $response .= "<label>CONTRASEÑA</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='contrasenaBu' name='contrasenaBu'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' type='password' id='contrasenaBu' name='contrasenaBu'  autocomplete='off' required>";
             
     $response .="</div>";
     $response .= "</div>";
