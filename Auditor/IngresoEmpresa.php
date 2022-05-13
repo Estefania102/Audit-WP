@@ -19,8 +19,8 @@
 		<div class="menu-bar-pc" style="padding:0 12.25rem">
 			<nav class="menu-principal">
 				<a href="#" class="volver-arriba">Inicio</a>
-				<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
-				<a href="#elementos" class="scroll-suave">Ingreso de Elementos</a>
+				<a href="#evaluacion" class="scroll-suave">Guía de Evaluación</a>
+				<a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
 				<a href="#respuestas" class="scroll-suave">Respuestas</a>
 				<a href="#cobit" class="scroll-suave">COBIT 5</a>
                 <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
@@ -47,7 +47,7 @@
 				<nav class="menu-principal">
 					<a href="#" class="volver-arriba">Inicio</a>
 					<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
-				    <a href="#elementos" class="scroll-suave">Ingreso de Elementos</a>
+				    <a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
 				    <a href="#respuestas" class="scroll-suave">Respuestas</a>
 				    <a href="#cobit" class="scroll-suave">COBIT 5</a>
                     <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
@@ -90,13 +90,13 @@
 					<div class="texto">
 						<p>Documento formal que permite hacer seguimiento paso a paso de todos los procedimiento a evaluar, con la finalidad de realizar una adecuada revisión a los sistemas de información. </p>				
 					</div>
-					<a href="AuditMenuPrincipal.php" class='btn btn-guia'>Guía de evaluación</a>
+					<a href="AuditMenuPrincipal.php" class='btns'>Guía de evaluación</a>
 				</div>
 			</div>
 		</section>
 		<!-- FIN EVALUACIÓN -->
 
-		<!-- INGRESO DE ELEMENTOS -->
+		<!-- GESTIÓN DE ELEMENTOS -->
 		<section class="elementos" id="elementos">
 			<div class="container">
 				<div class="col izq">
@@ -108,14 +108,15 @@
 				</div>
 				<div class="col">
 					<div class="titulo-seccion">
-						<h2>Ingreso de elementos</h2>
-						<p>Lorem ipsum dolor sit amet, </p>
-						<p>Blanditiis assumenda odit,</p>
+						<h2>Gestión de elementos</h2>
+						<p>Se utiliza para actualizar la tabla elementos de la auditoría.</p>
+						<p>Permite introducir la información de los elementos de cada componente que serán objeto de revisión durante la auditoria</p>
 					</div>
+					<a href="AuditMenuPrincipal.php" class='btns'>Gestión de elementos</a>
 				</div>
 			</div>
 		</section>
-		<!--FIN INGRESO DE ELEMENTOS -->
+		<!--FIN GESTIÓN DE ELEMENTOS -->
 
 		<!-- RESPUESTAS -->
 		<section class="respuestas" id="respuestas">
@@ -127,8 +128,10 @@
 				</div>
 				<div class="col der">
 					<div class="texto">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi amet, at iure perferendis, sequi modi et sunt quibusdam, id rerum quia nesciunt ipsa ex alias laudantium corrupti facere tempora sed.Assumenda odit, sunt voluptatibus molestiae iure, beatae placeat laudantium non explicabo earum nesciunt nostrum adipisci consequatur amet, voluptatum laborum aspernatur autem architecto quae dicta rem quisquam nemo repellat. Explicabo eaque magni asperiores libero ut expedita, voluptatibus cum ipsum harum a, molestiae hic! Debitis ab perspiciatis sequi, unde, ducimus, dolorum voluptates expedita commodi nisi, quos excepturi consectetur cupiditate odit cum.</p>
+						<p>Se utiliza para actualizar la tabla que contiene información sobre las respuestas al cuestionario aplicado en la auditoría.</p>
+						<p>Permite introducir las respuestas, debilidades, efectos y recomendaciones de cada elemento auditado. Por otra parte, permite revisar las respuestas y el análisis de los registros ya ingresados.</p>
 					</div>
+					<a href="AuditMenuPrincipal.php" class='btns' style="margin-left: 40%;">Respuestas</a>
 				</div>
 			</div>
 		</section>

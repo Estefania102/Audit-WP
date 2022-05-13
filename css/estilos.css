@@ -523,7 +523,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   line-height: 1.75;
   color: #777777;
 }
-.main .evaluacion .container .col.der a {
+.btns {
 display: inline-block;
 margin-bottom: 0;
 font-weight: 400;
@@ -540,7 +540,7 @@ border-radius: 4px;
 color: #fff;
 background-color: #27a4b0;
 border-color: #208992;
-margin-left: 30%;
+margin-left: 32%;
 margin-top: 8%;
 }
 
@@ -862,7 +862,7 @@ footer .bottom-redes a:hover {
   }
 
   .main .portada .col .texto p {
-    text-align: justify;
+    text-align: center;
   }
 
   .main .elementos .container .col {
