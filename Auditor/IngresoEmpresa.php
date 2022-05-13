@@ -150,8 +150,8 @@
 				<div class="col">
 					<div class="titulo-seccion">
 						<h2>COBIT 5</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fuga.</p>
-						<p>Blanditiis assumenda odit, sunt voluptatibus molestiae iure, beatae placeat laudantium non explicabo earum nesciunt nostrum adipisci consequatur amet</p>
+						<p>COBIT 5 brinda mecanismos de apoyo que ayudan a los ejecutivos a disminuir la diferencia existente entre los requisitos de verificación, las cuestiones tecnológicas y amenazas al negocio. </p>
+						<p>Mejora la capacidad de definir controles, seguridad y gobierno de procesos en el dominio de TI de las organizaciones.</p>
 					</div>
 				</div>
 			</div>
