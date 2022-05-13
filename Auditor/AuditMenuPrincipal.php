@@ -19,8 +19,6 @@
       </nav>
     </div>
     <div class="menu-movil">
-			<!-- <div class="movil-menu" id="movil_menu">
-      </div> -->
       <div class="slide" id="slide">
           <nav class="menu-principal">
           <a>Lista de empresas</a>
@@ -30,10 +28,10 @@
 
     </header>
 <!-- BOTON NUEVO -->
-    <div class="container" style="margin-top: 150px; margin-left: 45%;">
-      <div class="row">
+    <div class="container-btn">
+      <div class="row">    
         <div class="col-lg-12">
-          <button class="btn btn-success btnAgregar">Nuevo</button>
+        <button class="btn btn-success btnAgregar">Nuevo</button>
         </div>
       </div>
     </div>
@@ -53,7 +51,7 @@
                     <tr>     
                       <td></td>              
                       <td><?php echo $d[0]?></td>
-                      <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btn btn-success'>Ingresar</a>
+                      <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btns2' style="text-decoration:none;color: #fff;">Ingresar</a>
                       <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[1]?>>Editar</button>
                       <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[1]?>>Eliminar</button></td>
                     </tr>                                                                           

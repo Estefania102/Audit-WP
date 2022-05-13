@@ -553,6 +553,29 @@ border-color: #208992;
 margin-left: 32%;
 margin-top: 8%;
 }
+.btns2{
+display: inline-block;
+margin-bottom: 0;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+border: 1px solid transparent;
+white-space: nowrap;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.42857;
+border-radius: 4px;
+color: #fff;
+background-color: #e0a800;
+border-color: #d39e00;
+font-family: inherit;
+}
+.btns2:hover{
+  background-color: #d7b82f;
+  border-color: #d7b82f;
+}
 
 /* RESPUESTAS */
 .main .respuestas {
@@ -942,4 +965,9 @@ footer {
   .main .cobit .container .col .titulo-seccion p {
     font-size: 1rem;
   }
+}
+
+/*boton agregar*/
+.container-btn .btnAgregar {
+  margin:3% 0 3% 45%;
 }
