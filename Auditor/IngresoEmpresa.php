@@ -16,7 +16,7 @@
 <body>
 	<!-- ENCABEZADO -->
 	<header>
-		<div class="menu-bar-pc" style="padding:0 12.25rem">
+		<div class="menu-bar-pc" style="padding: 0 17.25rem">
 			<nav class="menu-principal">
 				<a href="#" class="volver-arriba">Inicio</a>
 				<a href="#evaluacion" class="scroll-suave">Guía de Evaluación</a>
@@ -25,12 +25,6 @@
 				<a href="#cobit" class="scroll-suave">COBIT 5</a>
                 <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 			</nav>
-
-			<div class="top-redes">
-				<a href="#">
-					<i class="fab fa-facebook"></i>
-				</a>		
-			</div>
 		</div>
 
 		<div class="menu-bar-movil">
@@ -39,11 +33,6 @@
 			</div>
 
 			<div class="slideMenu" id="slideMenu">
-				<div class="top-redes">
-					<a href="#">
-						<i class="fab fa-facebook"></i>
-					</a>		
-				</div>
 				<nav class="menu-principal">
 					<a href="#" class="volver-arriba">Inicio</a>
 					<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
@@ -89,9 +78,9 @@
 				<div class="col der">
 					<div class="texto">
 						<p>Documento formal que permite hacer seguimiento paso a paso de todos los procedimiento a evaluar, con la finalidad de realizar una adecuada revisión a los sistemas de información. </p>				
-					</div>
-					<a href="AuditMenuPrincipal.php" class='btns'>Guía de evaluación</a>
+					</div>			
 				</div>
+				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Guía de evaluación</a>
 			</div>
 		</section>
 		<!-- FIN EVALUACIÓN -->
@@ -111,9 +100,9 @@
 						<h2>Gestión de elementos</h2>
 						<p>Se utiliza para actualizar la tabla elementos de la auditoría.</p>
 						<p>Permite introducir la información de los elementos de cada componente que serán objeto de revisión durante la auditoria</p>
-					</div>
-					<a href="AuditMenuPrincipal.php" class='btns'>Gestión de elementos</a>
+					</div>				
 				</div>
+				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Gestión de elementos</a>
 			</div>
 		</section>
 		<!--FIN GESTIÓN DE ELEMENTOS -->
@@ -130,9 +119,9 @@
 					<div class="texto">
 						<p>Se utiliza para actualizar la tabla que contiene información sobre las respuestas al cuestionario aplicado en la auditoría.</p>
 						<p>Permite introducir las respuestas, debilidades, efectos y recomendaciones de cada elemento auditado. Por otra parte, permite revisar las respuestas y el análisis de los registros ya ingresados.</p>
-					</div>
-					<a href="AuditMenuPrincipal.php" class='btns' style="margin-left: 40%;">Respuestas</a>
+					</div>			
 				</div>
+				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Respuestas</a>
 			</div>
 		</section>
 		<!-- RESPUESTAS -->
@@ -154,11 +143,12 @@
 						<p>Mejora la capacidad de definir controles, seguridad y gobierno de procesos en el dominio de TI de las organizaciones.</p>
 					</div>
 				</div>
+				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">COBIT 5</a>
 			</div>
 		</section>
 		<!--FIN COBIT-->
 
-		<!-- CONTACTO -->
+		<!-- CONCLUSIONES -->
 		<section class="conclusiones" id="conclusiones">
 			<div class="datos parallax">
 				<div class="overlay">					
@@ -166,23 +156,19 @@
 				<div class="container">					
 					<div class="blurb">
 						<h3>Conclusiones</h3>
-						<p>Aqui están las conclusiones<br>Vmt</p>
-					</div>	
+						<p>Según el análisis de la auditoría se expone el resultado obtenido del estado de los componentes de los sistemas de información.<br></p>
+					</div>
+					<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Conclusiones</a>	
 				</div>
 			</div>			
 		</section>
-		<!-- FIN CONTACTO -->
+		<!-- FIN CONCLUSIONES -->
 	</section>
 <!-- FIN MAIN -->
 
 <!-- PIE DE PAGINA -->
 	<footer>
-		<p class="copyright">Todos los derechos reservados</p>
-		<div class="bottom-redes">
-				<a href="#">
-					<i class="fab fa-facebook"></i>
-				</a>				
-			</div>
+		<p class="copyright">Todos los derechos reservados</p>	
 	</footer>
 <!-- FIN DE PIE DE PAGINA -->
 	<script src="../js/lightbox.js"></script>

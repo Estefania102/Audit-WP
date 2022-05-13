@@ -13,11 +13,21 @@
       ?>
 <body>
     <header>
-		<div class="menu-bar-pc" style="padding:0 32.25rem; font-size: 16px; font-family: 'Playfair Display', serif; color: #303133;">
+		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
 			<nav class="menu-principal">
         <a>Lista de empresas</a>
       </nav>
     </div>
+    <div class="menu-movil">
+			<!-- <div class="movil-menu" id="movil_menu">
+      </div> -->
+      <div class="slide" id="slide">
+          <nav class="menu-principal">
+          <a>Lista de empresas</a>
+          </nav>
+			</div>
+      </div>
+
     </header>
 <!-- BOTON NUEVO -->
     <div class="container" style="margin-top: 150px; margin-left: 45%;">
