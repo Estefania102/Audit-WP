@@ -90,6 +90,17 @@ class Negocio{
         return $vec;
     }
 
+    //Ingreso Empresa
+    //Modificar
+    function NombreEmpresa($upbu){      
+        $sql="select `nombre` FROM `empresa` WHERE idEmpresa=".$upbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
 
 
 }
