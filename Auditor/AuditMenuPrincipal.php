@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
    <title>Insertar empresas</title>
-   </head>
+</head>
       <?php
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
@@ -12,17 +11,23 @@
         $idaudit=$_SESSION["idAuditor"];    
         $emp=$obj->Insertarbu($idaudit);  
       ?>
-     <body>
-
+<body>
+    <header>
+		<div class="menu-bar-pc" style="padding:0 32.25rem; font-size: 16px; font-family: 'Playfair Display', serif; color: #303133;">
+			<nav class="menu-principal">
+        <a>Lista de empresas</a>
+      </nav>
+    </div>
+    </header>
 <!-- BOTON NUEVO -->
-    <div class="container">
+    <div class="container" style="margin-top: 150px; margin-left: 45%;">
       <div class="row">
         <div class="col-lg-12">
           <button class="btn btn-success btnAgregar">Nuevo</button>
         </div>
       </div>
     </div>
-            <table id="tinsertar" class="table table-striped table-bordered" style="width:100%;padding:10px;">
+            <table id="tinsertar" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
             <thead class="text-center">
                 <tr>
                   <th>Logo</th>
