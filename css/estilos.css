@@ -451,7 +451,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 }
 
 .main .portada .col .texto p {
-  font-size: 0.9375rem;
+  font-size: 2.5375rem;
   line-height: 1.75;
 }
 
@@ -522,6 +522,26 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   font-size: 1.125rem;
   line-height: 1.75;
   color: #777777;
+}
+.main .evaluacion .container .col.der a {
+display: inline-block;
+margin-bottom: 0;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+border: 1px solid transparent;
+white-space: nowrap;
+padding: 12px 12px;
+font-size: 20px;
+line-height: 1.42857;
+border-radius: 4px;
+color: #fff;
+background-color: #27a4b0;
+border-color: #208992;
+margin-left: 30%;
+margin-top: 8%;
 }
 
 /* RESPUESTAS */

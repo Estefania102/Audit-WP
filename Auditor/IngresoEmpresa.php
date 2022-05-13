@@ -70,8 +70,8 @@
 				<?php
                     foreach ($namemp as $k=>$d){?>				
 				<div class="texto">					
-					<h2><?php echo $d[0];?></h2>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non sit aut ullam eos commodi ducimus aspernatur facilis nisi velit, fuga praesentium natus, eveniet eaque quibusdam est consequatur autem necessitatibus at!</p>	
+					<h2>Proceso de Auditoria a los sistemas de información de:</h2>
+					<p><?php echo $d[0];?></p>	
 				</div>
 				<?php }?>
 			</div>		
@@ -88,8 +88,9 @@
 				</div>
 				<div class="col der">
 					<div class="texto">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi amet, at iure perferendis, sequi modi et sunt quibusdam, id rerum quia nesciunt ipsa ex alias laudantium corrupti facere tempora sed.Assumenda odit, sunt voluptatibus molestiae iure, beatae placeat laudantium non explicabo earum nesciunt nostrum adipisci consequatur amet, voluptatum laborum aspernatur autem architecto quae dicta rem quisquam nemo repellat. Explicabo eaque magni asperiores libero ut expedita, voluptatibus cum ipsum harum a, molestiae hic! Debitis ab perspiciatis sequi, unde, ducimus, dolorum voluptates expedita commodi nisi, quos excepturi consectetur cupiditate odit cum.</p>
+						<p>Documento formal que permite hacer seguimiento paso a paso de todos los procedimiento a evaluar, con la finalidad de realizar una adecuada revisión a los sistemas de información. </p>				
 					</div>
+					<a href="AuditMenuPrincipal.php" class='btn btn-guia'>Guía de evaluación</a>
 				</div>
 			</div>
 		</section>
@@ -108,8 +109,8 @@
 				<div class="col">
 					<div class="titulo-seccion">
 						<h2>Ingreso de elementos</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fuga.</p>
-						<p>Blanditiis assumenda odit, sunt voluptatibus molestiae iure, beatae placeat laudantium non explicabo earum nesciunt nostrum adipisci consequatur amet</p>
+						<p>Lorem ipsum dolor sit amet, </p>
+						<p>Blanditiis assumenda odit,</p>
 					</div>
 				</div>
 			</div>
