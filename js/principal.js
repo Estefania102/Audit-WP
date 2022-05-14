@@ -174,6 +174,13 @@ $('#updateempresa').on('submit',function(e){
           window.location.href = '../Auditor/AuditMenuPrincipal.php';
         },2000)
       }
+      else{
+        swal(
+          'Incorrecto',
+          'Empresa modificada',
+          'success'
+        )
+      }
     }
   })
 });
