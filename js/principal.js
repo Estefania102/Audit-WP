@@ -164,7 +164,14 @@ $('#updateempresa').on('submit',function(e){
     dataType:'json',
     success: function(data){
       var resultado =data;
-      if(resultado.respuesta == "exitoso"){
+      if(resultado.respuesta == "datos incorrectos"){
+        swal(
+          'Incorrecto',
+          'Empresa modificada',
+          'error'
+        )
+      }
+      else if(resultado.respuesta == "exito"){
         swal(
           'Correcto',
           'Empresa modificada',
@@ -173,13 +180,6 @@ $('#updateempresa').on('submit',function(e){
         setTimeout(function(){
           window.location.href = '../Auditor/AuditMenuPrincipal.php';
         },2000)
-      }
-      else{
-        swal(
-          'Incorrecto',
-          'Empresa modificada',
-          'success'
-        )
       }
     }
   })
