@@ -110,7 +110,7 @@
 
                 // EDITAR
                 if(isset($_POST['updateempresa'])){            
-                    // session_start();
+                    session_start();
                     $idBu= $_POST['idE'];
                     $nombre= $_POST['nombreBu'];
                     $direccion= $_POST['direccionBu'];
@@ -124,7 +124,8 @@
                         $respuesta=array(
                             'respuesta' => 'exito'                   
                         );
-                    } else{
+                    } 
+                    else{
                         $respuesta=array(
                             'respuesta' => 'datos incorrectos'
                         );
