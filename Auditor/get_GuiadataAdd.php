@@ -1,5 +1,4 @@
 <?php
-
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
@@ -74,5 +73,4 @@ $response = "
     echo $response;
     exit;
   
-
 ?>

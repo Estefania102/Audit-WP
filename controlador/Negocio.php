@@ -104,6 +104,8 @@ class Negocio{
 
     //GUIA DE EVALUACIÓN 
     /* REGISTRO GUIA DE EVALUACIÓN*/ 
+ 
     
+}
 ?>
 
