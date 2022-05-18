@@ -3,7 +3,8 @@
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
-    $idaudit=$_SESSION["idAuditor"];  
+    $idaudit=$_SESSION["idAuditor"]; 
+    $id = $_POST['add'];  
 
 $response = "   
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>

@@ -196,11 +196,10 @@
                 if(isset($_POST['addGuiaempresa'])){
                     session_start();           
                     $idemp= $_POST['idG'];
-                    $$act= $_POST['nombreBu'];
-                    $prod= $_POST['direccionBu'];
-                    $herra= $_POST['celularBu'];
-                    $obser= $_POST['correoBu'];
-                    $contrasena= $_POST['contrasenaBu'];
+                    $$act= $_POST['actividadG'];
+                    $prod= $_POST['procedimientoG'];
+                    $herra= $_POST['herramientaG'];
+                    $obser= $_POST['observacionG'];
                                  
                     include_once 'Conexion.php';
                     $query="INSERT INTO `guiaevaluacion`(`actividad`, `procedimiento`, `herramientas`, `observaciones`, `idEmpresa`) 
