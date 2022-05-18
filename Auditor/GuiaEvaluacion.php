@@ -33,9 +33,8 @@
     <div class="container-btn">
       <div class="row">    
         <div class="col-lg-12">
-          <a>Nombre de la empresa:</a>
+          <a>Nombre de la empresa:</a></br>
           <a>Nombre del área a auditar:</a>
-          
         <button class="btn btn-success btnAgregar">Nuevo</button>
         </div>
       </div>

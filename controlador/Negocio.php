@@ -102,6 +102,18 @@ class Negocio{
         return $vec;
     }
 
+    //GUIA DE EVALUACIÓN 
+    /* REGISTRO GUIA DE EVALUACIÓN*/ 
+    function registroguia($act,$prod,$herra,$obser,$idemp){
+        $sql="INSERT INTO `guiaevaluacion`(`actividad`, `procedimiento`, `herramientas`, `observaciones`, `idEmpresa`) 
+        VALUES ('$act','$prod','$herra', '$obser') WHERE idEmpresa=".$idemp;
+        $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+           if($res)
+           return "ok";
+           else
+           return "Error";
+    }
 
 }
 ?>
+
