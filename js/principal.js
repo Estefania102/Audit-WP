@@ -268,12 +268,15 @@ $('.btnBorrar').on('click',function(e){
 
 //Modal Agregar
 $('.btnAgregarG').click(function(){
+  var add =$(this).data('id');
   $.ajax({
-    url: 'get_GuiadataAdd.php',
+    url: 'get_GuiadataAdd.php?add='+add,
     type:'post',
+    data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
       $('#custModalAgregarGuia').modal('show');
+      // window.show.modal = '../Auditor/get_GuiadataAdd.php;
     }
   })
 });

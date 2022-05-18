@@ -2,6 +2,7 @@
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
+    $idem=$_GET["add"];
     $idaudit=$_SESSION["idAuditor"]; 
 
 $response = "   
@@ -21,7 +22,7 @@ $response = "
            
     $response .= "<label>Actividad que será evaluada</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='actividadG' name='actividadG'  autocomplete='off' required>";
-            
+    $response .= "<input type='text' name='correocon' value= echo '$idem'>";             
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
