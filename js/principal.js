@@ -268,7 +268,6 @@ $('.btnBorrar').on('click',function(e){
 
 //Modal Agregar
 $('.btnAgregarG').click(function(){
-  var add =$(this).data('id');
   $.ajax({
     url: 'get_GuiadataAdd.php',
     type:'post',
