@@ -79,8 +79,9 @@
 					<div class="texto">
 						<p>Documento formal que permite hacer seguimiento paso a paso de todos los procedimiento a evaluar, con la finalidad de realizar una adecuada revisión a los sistemas de información. </p>				
 					</div>			
+				</div>	
+				<a href="GuiaEvaluacion.php?cod=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Guía de evaluación</a>
 				</div>
-				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Guía de evaluación</a>
 			</div>
 		</section>
 		<!-- FIN EVALUACIÓN -->

@@ -39,6 +39,18 @@ $response = "
     $response .= "</div>";
     $response .=" </div>";
    
+    // NOMBRE
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='areaBu' style='margin-top:30px;'>";
+           
+    $response .= "<label>Área a auditar</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='areaBu' name='areaBu'  autocomplete='off' required>";
+            
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
     // DIRECCION
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
