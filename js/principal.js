@@ -264,6 +264,51 @@ $('.btnBorrar').on('click',function(e){
     })
 });
 
+//APARTADO DE GUIA DE EVALUACIÓN
+
+//Modal Agregar
+$('.btnAgregarG').click(function(){
+  var add =$(this).data('idA');
+  $.ajax({
+    url: 'get_GuiadataAdd.php',
+    type:'post',
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalAgregarGuia').modal('show');
+    }
+  })
+});
+
+// AGREGAR
+$('#addGuiaempresa').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Referencia añadida',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = '../Auditor/GuiaEvaluacion.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'Datos incompletos',
+          'error'
+        )
+      }
+    }
+  })
+});
 
 
 

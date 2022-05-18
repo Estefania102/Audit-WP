@@ -188,5 +188,33 @@
                         ); 
                     }
                     die(json_encode($respuesta));
-                }        
+                }     
+                
+                 //APARTADO DE GUIA DE EVALUACIÓN
+
+                 //AGREGAR 
+                if(isset($_POST['addGuiaempresa'])){
+                    session_start();           
+                    $idemp= $_POST['idG'];
+                    $$act= $_POST['nombreBu'];
+                    $prod= $_POST['direccionBu'];
+                    $herra= $_POST['celularBu'];
+                    $obser= $_POST['correoBu'];
+                    $contrasena= $_POST['contrasenaBu'];
+                                 
+                    include_once 'Conexion.php';
+                    $query="INSERT INTO `guiaevaluacion`(`actividad`, `procedimiento`, `herramientas`, `observaciones`, `idEmpresa`) 
+                    VALUES ('$act','$prod','$herra', '$obser','$idemp')";
+                    if(mysqli_query($con,$query)==1){
+                        $respuesta=array(
+                            'respuesta' => 'exitoso'
+                        );
+                      }
+                    else{
+                        $respuesta=array(
+                            'respuesta' => 'datos incorrectos'
+                        );
+                    } 
+                    die(json_encode($respuesta));
+                }  
 ?>

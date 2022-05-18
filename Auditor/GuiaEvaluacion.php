@@ -10,7 +10,6 @@
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        
         $namemp=$obj->NombreEmpresa($idem); 
       ?>
 <body>
@@ -35,7 +34,7 @@
         <div class="col-lg-12">
           <a>Nombre de la empresa:</a></br>
           <a>Nombre del área a auditar:</a>
-        <button class="btn btn-success btnAgregar">Nuevo</button>
+        <button class="btn btn-success btnAgregarG" data-id=<?php echo $d[1]?>>Nuevo</button>
         </div>
       </div>
     </div>
@@ -66,19 +65,19 @@
             </tbody>          
             </table>
             <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalAgregar" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalAgregarGuia" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="GuiaEvaluacion.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="AuditMenuPrincipal.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="GuiaEvaluacion.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
