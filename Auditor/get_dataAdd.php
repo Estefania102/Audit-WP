@@ -27,7 +27,7 @@ $response = "
     $response .= "</div>";
     $response .=" </div>";
     
-    // NOMBRE
+    // NOMBRE DE EMPRESA
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
     $response .= "<div class='nombreBu' style='margin-top:30px;'>";
@@ -39,7 +39,7 @@ $response = "
     $response .= "</div>";
     $response .=" </div>";
    
-    // NOMBRE
+    // NOMBRE DE AREA
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
     $response .= "<div class='areaBu' style='margin-top:30px;'>";

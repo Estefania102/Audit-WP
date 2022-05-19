@@ -1,11 +1,11 @@
 <?php
-if(isset($_POST['edit'])){
+if(isset($_POST['editGuia'])){
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
     $idAuditor=$_SESSION["idAuditor"];  
-    $id = $_POST['edit']; 
-    $emp=$obj->UpdateEmpresa($id);
+    $id = $_POST['editGuia']; 
+    $ref=$obj->UpdateGuia($id);
     $response = " 
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='../css/estilos.css'>
@@ -14,18 +14,23 @@ if(isset($_POST['edit'])){
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateGuiaempresa' id='updateGuiaempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idGE' value='$id'>";
+    <input type='hidden' class='form-control' name='idGE' value='$id'>";?>
+    <?php
+            foreach ($ref as $k=>$d){
+                $var=$d[5];
+        }   
+    $response .="<input type='hidden' class='form-control' name='idbu' value='$var'>";
      
     // Actividad que será evaluada
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
     $response .= "<div class='actividadG' style='margin-top:30px;'>";?>   
             <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[0];
+            foreach ($ref as $k=>$d){
+                $var=$d[1];
         }       
-    $response .= "<label style='margin-left:67px'>Nombre</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Actividad que será evaluada</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='actividadG' name='actividadG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -35,11 +40,11 @@ if(isset($_POST['edit'])){
     $response .= "<div class='container'>";
     $response .= "<div class='procedimientoG' style='margin-top:30px;'>";?>   
             <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[1];
+            foreach ($ref as $k=>$d){
+                $var=$d[2];
         }       
-    $response .= "<label style='margin-left:67px'>Direccion</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Procedimiento de auditoría</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='procedimientoG' name='procedimientoG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -49,11 +54,11 @@ if(isset($_POST['edit'])){
     $response .= "<div class='container'>";
     $response .= "<div class='herramientaG' style='margin-top:30px;'>";?>   
             <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[2];
+            foreach ($ref as $k=>$d){
+                $var=$d[3];
         }       
-    $response .= "<label style='margin-left:67px'>Celular</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Herramientas que serán utilizadas</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='herramientaG' name='herramientaG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -63,11 +68,11 @@ if(isset($_POST['edit'])){
     $response .= "<div class='container'>";
     $response .= "<div class='observacionG' style='margin-top:30px;'>";?>   
             <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[2];
+            foreach ($ref as $k=>$d){
+                $var=$d[4];
         }       
-    $response .= "<label style='margin-left:67px'>Celular</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label style='margin-left:67px'>Observaciones</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";

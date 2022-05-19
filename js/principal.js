@@ -167,7 +167,7 @@ $('#updateempresa').on('submit',function(e){
       if(resultado.respuesta == "datos incorrectos"){
         swal(
           'Incorrecto',
-          'Empresa modificada',
+          'Empresa no modificada',
           'error'
         )
       }
@@ -185,8 +185,8 @@ $('#updateempresa').on('submit',function(e){
   })
 });
 
-// Modal de borrar
-$('#deletehorario').on('submit',function(e){
+// // Modal de borrar
+$('#deletempresa').on('submit',function(e){
   e.preventDefault();
   var datos =$(this).serializeArray();
   $.ajax({
@@ -314,11 +314,11 @@ $('#addGuiaempresa').on('submit',function(e){
 
 //Modal Editar
 $('.btnGuiaEditar').click(function(){
-  var edit =$(this).data('id');
+  var editGuia =$(this).data('id');
   $.ajax({
     url: 'get_Guiadataedit.php',
     type:'post',
-    data:{edit:edit},
+    data:{editGuia:editGuia},
     success: function(response){
       $('.modal-body').html(response);
       $('#custModalEditarGuia').modal('show');
@@ -340,14 +340,14 @@ $('#updateGuiaempresa').on('submit',function(e){
       if(resultado.respuesta == "datos incorrectos"){
         swal(
           'Incorrecto',
-          'Empresa modificada',
+          'Referencia no modificada',
           'error'
         )
       }
       else if(resultado.respuesta == "exito"){
         swal(
           'Correcto',
-          'Empresa modificada',
+          'Referencia modificada',
           'success'
         )
         setTimeout(function(){

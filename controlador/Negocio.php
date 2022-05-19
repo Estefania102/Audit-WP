@@ -114,6 +114,16 @@ class Negocio{
         }
         return $vec;
     }
+    //Modificar
+    function UpdateGuia($upgi){      
+        $sql="select idreferencia, actividad, procedimiento, herramientas, observaciones,idEmpresa FROM guiaevaluacion WHERE idreferencia=".$upgi;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
     
 }
 ?>
