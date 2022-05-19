@@ -437,6 +437,52 @@ $('#deletereferencia').on('submit',function(e){
   })
 });
 
+//APARTADO DE INGRESO DE ELEMENTOS
+//Modal Agregar
+$('.btnAgregarElementos').click(function(){
+  var add =$(this).data('id');
+  $.ajax({
+    url: 'get_ElementosdataAdd.php?add='+add,
+    type:'post',
+    data:{add:add},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalElementos').modal('show');
+    }
+  })
+});
+
+// AGREGAR
+$('#addelementos').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Elemento añadido',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = '../Auditor/IngresoElementos.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'Datos incompletos',
+          'error'
+        )
+      }
+    }
+  })
+});
+
 
 
 
