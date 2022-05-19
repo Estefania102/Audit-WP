@@ -312,7 +312,51 @@ $('#addGuiaempresa').on('submit',function(e){
   })
 });
 
+//Modal Editar
+$('.btnGuiaEditar').click(function(){
+  var edit =$(this).data('id');
+  $.ajax({
+    url: 'get_Guiadataedit.php',
+    type:'post',
+    data:{edit:edit},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalEditarGuia').modal('show');
+    }
+  })
+});
 
+// MODIFICAR
+$('#updateGuiaempresa').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == "datos incorrectos"){
+        swal(
+          'Incorrecto',
+          'Empresa modificada',
+          'error'
+        )
+      }
+      else if(resultado.respuesta == "exito"){
+        swal(
+          'Correcto',
+          'Empresa modificada',
+          'success'
+        )
+        setTimeout(function(){
+          window.location.href = '../Auditor/GuiaEvaluacion.php';
+        },2000)
+      }
+    }
+  })
+});
 
 
 

@@ -57,7 +57,7 @@
                       <td></td>              
                       <td><?php echo $d[0]?></td>
                       <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btns2' style="text-decoration:none;color: #fff;">Ingresar</a>
-                      <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[1]?>>Editar</button>
+                      <td><button class='btn btn-primary btnGuiaEditar' data-id=<?php echo $d[1]?>>Editar</button>
                       <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[1]?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }
@@ -84,19 +84,19 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEditar" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEditarGuia" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Editar</h4>
-                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="GuiaEvaluacion.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="AuditMenuPrincipal.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="GuiaEvaluacion.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
