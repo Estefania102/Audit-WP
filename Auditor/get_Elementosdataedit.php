@@ -1,10 +1,10 @@
 <?php
-if(isset($_POST['edit'])){
+if(isset($_POST['editElemento'])){
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
     $idAuditor=$_SESSION["idAuditor"];  
-    $id = $_POST['edit']; 
+    $id = $_POST['editElemento']; 
     $emp=$obj->UpdateEmpresa($id);
     $response = " 
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
@@ -13,52 +13,110 @@ if(isset($_POST['edit'])){
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
-    <form role='form' method='post' name='updateempresa' id='updateempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idE' value='$id'>";
+    <form role='form' method='post' name='updateElemento' id='updateElemento' action='../controlador/OperacionInsertar.php'>   
+    <input type='hidden' class='form-control' name='idEle' value='$id'>";
      
-    // NOMBRE
+    // Nombre
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='nombreBu' style='margin-top:15px;'>";?>   
-            <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[0];
-        }       
-    $response .= "<label style='margin-left:67px'>Nombre</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  value='$var' autocomplete='off' required>";
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-    
-    // DIRECCION
-    $response .= "<div class='form-group'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='direccionBu' style='margin-top:15px;'>";?>   
+    $response .= "<div class='nombreEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[1];
         }       
-    $response .= "<label style='margin-left:67px'>Direccion</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label>Nombre de elemento</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreEle' name='nombreEle'  autocomplete='off'>";
+    
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
-
-    // CELULAR
+    
+    // Descripción
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='celularBu' style='margin-top:15px;'>";?>   
+    $response .= "<div class='descEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[2];
         }       
-    $response .= "<label style='margin-left:67px'>Celular</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
+    $response .= "<label>Descripción del elemento</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='descEle' name='descEle'  autocomplete='off' required>";
+     
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
 
-    $response.="  <input type='hidden' name='updateempresa' value=''>
+    // Cantidad
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='cantEle' style='margin-top:30px;'>";?>   
+            <?php
+            foreach ($emp as $k=>$d){
+                $var=$d[3];
+        }       
+    $response .= "<label>Cantidad</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='cantEle' name='cantEle' autocomplete='off' required>";
+     
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
+    // F.Revisión
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='dates' style='margin-top:30px;'>";?>   
+            <?php
+            foreach ($emp as $k=>$d){
+                $var=$d[4];
+        }       
+    $response .= "<label>Fecha de revisión</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario'  autocomplete='off'>";
+      
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
+    // Estado
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='camposr' style='margin-top:30px;'>";
+    $response .= "<script function changeFunc(id){
+        if(id =='custModalElementos') {
+          $('#custModalElementos').modal('show');
+        }}></script>";?>   
+            <?php
+            foreach ($emp as $k=>$d){
+                $var=$d[5];
+        }       
+    $response .= "<label for='categorias'>Elija estado</label>                           
+    <select name='categoria' id='categoria' class='camposr'>
+    <option value=''>Seleccione</option>";?>  
+    <?php
+    $vec2=$obj->ListarEstado();
+    foreach ($vec2 as $k=>$d){                                   
+    echo '<option value='.$d[0].'>'.$d[1].'</option>';
+    }
+    $response .="</select>";
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
+    // Observación
+    $response .= "<div class='form-group'>";
+    $response .= "<div class='container'>";
+    $response .= "<div class='obserEle' style='margin-top:30px;'>";?>   
+            <?php
+            foreach ($emp as $k=>$d){
+                $var=$d[6];
+        }       
+    $response .= "<label>Observación</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='obserEle' name='obserEle' autocomplete='off'>";
+      
+    $response .="</div>";
+    $response .= "</div>";
+    $response .=" </div>";
+
+    $response.="  <input type='hidden' name='updateElemento' value=''>
     <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark'>Guardar</button>";
     
     $response.="</form>";

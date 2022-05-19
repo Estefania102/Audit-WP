@@ -280,7 +280,7 @@
                 //AGREGAR 
                 if(isset($_POST['addelementos'])){
                     session_start();           
-                    $idemp= $_POST['idEle'];
+                    $idele= $_POST['idEle'];
                     $nombre= $_POST['nombreEle'];
                     $desc= $_POST['descEle'];
                     $cant= $_POST['cantEle'];
@@ -290,7 +290,7 @@
                                  
                     include_once 'Conexion.php';
                     $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, idEstado, observacion, idEmpresa) 
-                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idemp')";
+                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idele')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -304,5 +304,34 @@
                     die(json_encode($respuesta));
                 }
 
+                // EDITAR
+                if(isset($_POST['updateElemento'])){            
+                    session_start();
+                    $idEle= $_POST['idEle'];
+                    $nombre= $_POST['nombreEle'];
+                    $desc= $_POST['descEle'];
+                    $cant= $_POST['cantEle'];
+                    $date= $_POST['dates'];
+                    $campo= $_POST['camposr'];
+                    $obser= $_POST['obserEle'];
+                    try {        
+                    include_once 'Conexion.php';
+                    $query="update elementos SET nombre='$nombre',descripcion='$desc',cantidad='$cant',frevision='$date',idEstado='$campo',observacion='$obser' 
+                    WHERE idelementos=".$idEle;
+                    if(mysqli_query($con,$query)==1){
+                        $respuesta=array(
+                            'respuesta' => 'exito'                   
+                        );
+                    } 
+                    else{
+                        $respuesta=array(
+                            'respuesta' => 'datos incorrectos'
+                        );
+                        }
+                    } catch (Exception $e){
+                        echo "Error:".$e->get_Message();
+                    }                
+                    die(json_encode($respuesta));
+                    } 
 
 ?>
