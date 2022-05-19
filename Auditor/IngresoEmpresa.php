@@ -103,7 +103,7 @@
 						<p>Permite introducir la información de los elementos de cada componente que serán objeto de revisión durante la auditoria</p>
 					</div>				
 				</div>
-				<a href="IngresoElementos.php" class='btns' style="margin:8% auto 0px auto;">Gestión de elementos</a>
+				<a href="IngresoElementos.php?cod1=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Gestión de elementos</a>
 			</div>
 		</section>
 		<!--FIN GESTIÓN DE ELEMENTOS -->

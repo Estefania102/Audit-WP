@@ -3,7 +3,6 @@
     $obj=new Negocio();
     session_start();
     $idem=$_GET["add"];
-    $idaudit=$_SESSION["idAuditor"]; 
 
     $response = "   
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
@@ -13,7 +12,7 @@
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
     <form role='form' method='post' name='addGuiaempresa' id='addGuiaempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idG' value='$idaudit'>";
+    <input type='hidden' class='form-control' name='idG' value='$idem'>";
 
     // NOMBRE
     $response .= "<div class='form-group'>";

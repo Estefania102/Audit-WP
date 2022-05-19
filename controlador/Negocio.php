@@ -124,6 +124,34 @@ class Negocio{
         }
         return $vec;
     }
+
+    //APARTADO DE INGRESO DE ELEMENTOS
+
+    //NUEVO 
+
+    function ListarEstado(){      
+        $sql="select * from estadoelementos";
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+    /* MOSTRAR ELEMENTOS*/ 
+    function Mostrarelemen($idbu){      
+        $sql="select e.idelementos, e.nombre, e.descripcion, e.cantidad, e.frevision, l.Tipo, e.observacion 
+        FROM elementos e INNER JOIN estadoelementos l ON e.idEstado=l.idEstado WHERE e.idEmpresa=".$idbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
+
+
     
 }
 ?>

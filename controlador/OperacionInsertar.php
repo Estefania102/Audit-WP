@@ -280,16 +280,17 @@
                 //AGREGAR 
                 if(isset($_POST['addelementos'])){
                     session_start();           
-                    $idaudit=$_SESSION["idAuditor"];
-                    $nombre= $_POST['nombreBu'];
-                    $direccion= $_POST['direccionBu'];
-                    $celular= $_POST['celularBu'];
-                    $correo= $_POST['correoBu'];
-                    $contrasena= $_POST['contrasenaBu'];
+                    $idemp= $_POST['idEle'];
+                    $nombre= $_POST['nombreEle'];
+                    $desc= $_POST['descEle'];
+                    $cant= $_POST['cantEle'];
+                    $date= $_POST['dates'];
+                    $campo= $_POST['camposr'];
+                    $obser= $_POST['obserEle'];
                                  
                     include_once 'Conexion.php';
-                    $query="INSERT INTO empresa(nombre,direccion,celular,correo,contrasena,idauditor)
-                    VALUES ('$nombre','$direccion','$celular','$correo','$contrasena','$idaudit')";
+                    $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, idEstado, observacion, idEmpresa) 
+                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idemp')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -302,4 +303,6 @@
                     } 
                     die(json_encode($respuesta));
                 }
+
+
 ?>

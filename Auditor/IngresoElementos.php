@@ -6,10 +6,11 @@
       <?php
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
+        $idem=$_REQUEST['cod1'];
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        // $emp=$obj->($idaudit);  
+        $melem=$obj->Mostrarelemen($idem);  
       ?>
 <body>
     <header>
@@ -51,17 +52,17 @@
             </thead>
             <tbody class="text-center">
             <?php
-                    foreach ($emp as $k=>$d){?>
+                    foreach ($melem as $k=>$d){?>
                     <tr>                 
                       <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[0]?></td>
-                      <td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[1]?>>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[1]?>>Eliminar</button></td>
+                      <td><?php echo $d[1]?></td>
+                      <td><?php echo $d[2]?></td>
+                      <td><?php echo $d[3]?></td>
+                      <td><?php echo $d[4]?></td>
+                      <td><?php echo $d[5]?></td>
+                      <td><?php echo $d[6]?></td>
+                      <td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
+                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }
               ?> 
@@ -103,29 +104,18 @@
                             </div>
                         </div>
                     </div>
-                  </div>
- <!--prueba -->
-<!-- 
-<div class='dropdown' style='margin-top:30px;'>
-          <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Estado</button>
-    <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-    <button class='dropdown-item' type='button'>Bueno</button>
-    <button class='dropdown-item' type='button'>Regular</button>
-    <button class='dropdown-item' type='button'>Malo</button></div>
-            
-</div> -->
-<!-- Default dropright button -->
-<div class="btn-group dropright">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropright
-  </button>
-  <div class="dropdown-menu">
-    <!-- Dropdown menu links -->
-  </div>
-</div>
-
- <!-- gfgf -->
-         
+                  </div>                  
+<!---->
+<!-- <label for='categorias'>Elija estado</label>                           
+    <select name='categoria' id='categoria' class='camposr'>
+    <option value=''>Seleccione</option>
+<?php
+    $vec2=$obj->ListarEstado();
+    foreach ($vec2 as $k=>$d){                                   
+    echo "<option value=".$d[0].">".$d[1]."</option>";
+    }?> 
+    </select> -->
+<!--  -->
 </body>
 
 <!-- Datatable -->

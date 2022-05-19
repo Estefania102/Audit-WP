@@ -4,12 +4,10 @@
     $obj=new Negocio();
     session_start();
     $idaudit=$_SESSION["idAuditor"];  
-
+    
 $response = "   
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='../css/estilos.css'>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
-    
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script type='text/javascript' src='../lib/bootstrap-datepicker.js'></script>
     <link rel='stylesheet' type='text/css' href='../lib/bootstrap-datepicker.css'>
@@ -79,14 +77,21 @@ $response = "
     // Estado
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='dropdown' style='margin-top:30px;'>";
-           
-    $response .= "<button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenu2' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Estado</button>
-    <div class='dropdown-menu' aria-labelledby='dropdownMenu2'>
-    <button class='dropdown-item' type='button'>Bueno</button>
-    <button class='dropdown-item' type='button'>Regular</button>
-    <button class='dropdown-item' type='button'>Malo</button></div>";
-            
+    $response .= "<div class='camposr' style='margin-top:30px;'>";
+    $response .= "<script function changeFunc(id){
+        if(id =='custModalElementos') {
+          $('#custModalElementos').modal('show');
+        }}></script>";
+
+    $response .= "<label for='categorias'>Elija estado</label>                           
+    <select name='categoria' id='categoria' class='camposr'>
+    <option value=''>Seleccione</option>";?>  
+    <?php
+    $vec2=$obj->ListarEstado();
+    foreach ($vec2 as $k=>$d){                                   
+    echo '<option value='.$d[0].'>'.$d[1].'</option>';
+    }
+    $response .="</select>";
     $response .="</div>";
     $response .="</div>";
     $response .="</div>";
@@ -110,12 +115,8 @@ $response = "
     $response.="
     <script src='../js/Principal.js'></script>
     <script src='../lib/sweetalert2.all.js'></script>
-    <script src='../lib/sweetalert2.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous'></script>
-    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous'></script>
-    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js' integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF' crossorigin='anonymous'></script>";
+    <script src='../lib/sweetalert2.min.js'></script>";
     echo $response;
     exit;
   
-
 ?>
