@@ -220,15 +220,17 @@
                 // EDITAR
                 if(isset($_POST['updateGuiaempresa'])){            
                     session_start();
-                    $idBu= $_POST['idE'];
-                    $nombre= $_POST['nombreBu'];
-                    $direccion= $_POST['direccionBu'];
-                    $celular= $_POST['celularBu'];         
-                    
+                    $idRe= $_POST['idE'];
+                    $actividad= $_POST['actividadG'];
+                    $procedimiento= $_POST['procedimientoG'];
+                    $herramientas= $_POST['herramientaG'];         
+                    $observaciones= $_POST['observacionG'];  
+                    $idEmpresa=$_POST['idE'];
                     try {
                         
                     include_once 'Conexion.php';
-                    $query="UPDATE `empresa` SET `nombre`='$nombre',`direccion`='$direccion',`celular`=$celular WHERE idEmpresa=".$idBu;
+                    $query="UPDATE guiaevaluacion SET actividad='$actividad',procedimiento='$procedimiento',herramientas='$herramientas',observaciones='$observaciones',idEmpresa='2' 
+                    WHERE idreferencia".$idRe;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exito'                   

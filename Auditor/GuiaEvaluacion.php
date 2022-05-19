@@ -11,6 +11,7 @@
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
         $namemp=$obj->NombreEmpresa($idem); 
+        $mguia=$obj->Mostrarguia($idem)
       ?>
 <body>
     <header>
@@ -52,13 +53,15 @@
             </thead>
             <tbody class="text-center">
             <?php
-                    foreach ($emp as $k=>$d){?>
-                    <tr>     
-                      <td></td>              
+                    foreach ($mguia as $k=>$d){?>
+                    <tr>                 
                       <td><?php echo $d[0]?></td>
-                      <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btns2' style="text-decoration:none;color: #fff;">Ingresar</a>
-                      <td><button class='btn btn-primary btnGuiaEditar' data-id=<?php echo $d[1]?>>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[1]?>>Eliminar</button></td>
+                      <td><?php echo $d[1]?></td>
+                      <td><?php echo $d[2]?></td>
+                      <td><?php echo $d[3]?></td>
+                      <td><?php echo $d[4]?></td>
+                      <td><button class='btn btn-primary btnGuiaEditar' data-id=<?php echo $d[0]?>>Editar</button>
+                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarGuia' data-id=<?php echo $d[0]?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }
               ?> 
@@ -100,9 +103,7 @@
                             </div>
                         </div>
                     </div>
-                  </div>
-
-                
+                  </div>              
 </body>
   
 <!-- Datatable -->

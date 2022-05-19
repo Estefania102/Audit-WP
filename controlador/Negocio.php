@@ -103,8 +103,17 @@ class Negocio{
     }
 
     //GUIA DE EVALUACIÓN 
-    /* REGISTRO GUIA DE EVALUACIÓN*/ 
- 
+    /* MOSTRAR GUIA DE EVALUACIÓN*/ 
+    function Mostrarguia($idbu){      
+        $sql="select idreferencia,actividad,procedimiento,herramientas,observaciones from guiaevaluacion
+        WHERE idEmpresa=".$idbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
     
 }
 ?>
