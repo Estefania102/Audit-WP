@@ -333,5 +333,32 @@
                     }                
                     die(json_encode($respuesta));
                     } 
+                    
+                    // ELIMINAR
+                if($_POST['registro']=='eliminar'){
+                    $idele = $_POST['id'];
+                        try{
+                    include_once 'Conexion.php';
+                    $query="DELETE FROM `elementos` WHERE  idelementos=".$idele;
+                   
+                if(mysqli_query($con,$query)==1){
+                    $respuesta=array(
+                        'respuesta' => 'exitoso',
+                        'id_borrar' => $idele
+                
+                    );
+                }
+                else{
+                    $respuesta=array(
+                        'respuesta' => 'eliminación incorrecta'
+                    );
+                  }
+                 
+                }catch (Exception $e){
+                    echo "Error:".$e->get_Message();
+                }
+                
+                die(json_encode($respuesta));
+                }
 
 ?>

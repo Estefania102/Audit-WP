@@ -529,7 +529,84 @@ $('#updateElemento').on('submit',function(e){
   })
 });
 
+//Borrar registro
+$('.btnBorrarElementos').on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var tipo = $(this).attr('data-tipo');
+  swal({
+  title:'¿Estás seguro?',
+  text: "Un elemento se eliminará",
+  icon :"warning",
+  showCancelButton: true,
+  confirmButtonColor : '#3085d6',
+  cancelButtonColor : '#d33',
+  confirmButtonText : 'Si, eliminar',
+  cancelButtonText: 'Cancelar'
+  }).then((result)=>{
+    if(result.value){
+      $.ajax({
+        type:'post',
+        data:{
+          'id': id,
+          'registro': 'eliminar'
+        },
+        url : '../controlador/Operacion'+tipo+'.php',
+        success:function(data){
+          var resultado=JSON.parse(data);
+          if(resultado.respuesta=='exitoso'){
+            swal(
+              'Eliminado',
+              'Elemento eliminado',
+              'success' 
+              )
+              jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
+              setTimeout(function(){
+              window.location.href="../Auditor/IngresoElementos.php";
+              },2000)
+          }
+        }
+      });
+    }else{
+      swal(
+        'Acción cancelada',
+        '',
+        'warning'
+      )
+    }
+    })
+});
 
+// Modal de borrar
+$('#deleteElementos').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Referencia eliminada',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = '../Auditor/IngresoElementos.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'No se pudo eliminar',
+          'error'
+        )
+      }
+    }
+  })
+});
 
 
 
