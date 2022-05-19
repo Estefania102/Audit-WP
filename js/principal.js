@@ -185,7 +185,7 @@ $('#updateempresa').on('submit',function(e){
   })
 });
 
-// // Modal de borrar
+// Modal de borrar
 $('#deletempresa').on('submit',function(e){
   e.preventDefault();
   var datos =$(this).serializeArray();
@@ -358,6 +358,84 @@ $('#updateGuiaempresa').on('submit',function(e){
   })
 });
 
+// Modal de borrar
+$('#deletereferencia').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Referencia eliminada',
+            'success'
+          )
+          setTimeout(function(){
+            window.location.href = '../Auditor/GuiaEvaluacion.php';
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'No se pudo eliminar',
+          'error'
+        )
+      }
+    }
+  })
+});
+
+//Borrar registro
+$('.btnBorrarGuia').on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var tipo = $(this).attr('data-tipo');
+  swal({
+  title:'¿Estás seguro?',
+  text: "Una referencia se eliminará",
+  icon : "warning",
+  showCancelButton: true,
+  confirmButtonColor : '#3085d6',
+  cancelButtonColor : '#d33',
+  confirmButtonText : 'Si, eliminar',
+  cancelButtonText: 'Cancelar'
+  }).then((result)=>{
+    if(result.value){
+      $.ajax({
+        type:'post',
+        data:{
+          'id': id,
+          'registro': 'eliminar'
+        },
+        url : '../controlador/Operacion'+tipo+'.php',
+        success:function(data){
+          var resultado=JSON.parse(data);
+          if(resultado.respuesta=='exitoso'){
+            swal(
+              'Eliminado',
+              'Empresa eliminada',
+              'success' 
+              )
+              jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
+              setTimeout(function(){
+              window.location.href="../Auditor/GuiaEvaluacion.php";
+              },2000)
+          }
+        }
+      });
+    }else{
+      swal(
+        'Acción cancelada',
+        '',
+        'warning'
+      )
+    }
+    })
+});
 
 
 
