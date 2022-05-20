@@ -17,7 +17,7 @@ if(isset($_POST['edit'])){
     <input type='hidden' class='form-control' name='idE' value='$id'>";
      
     // NOMBRE
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='nombreBu' style='margin-top:15px;'>";?>   
             <?php
@@ -31,28 +31,28 @@ if(isset($_POST['edit'])){
     $response .=" </div>";
     
     // DIRECCION
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='direccionBu' style='margin-top:15px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[1];
         }       
-    $response .= "<label style='margin-left:67px'>Direccion</label>";
+    $response .= "<label style='margin-left:60px'>Direccion</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
 
     // CELULAR
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='celularBu' style='margin-top:15px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[2];
         }       
-    $response .= "<label style='margin-left:67px'>Celular</label>";
+    $response .= "<label style='margin-left:70px'>Celular</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";

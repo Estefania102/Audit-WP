@@ -38,7 +38,6 @@
             <table id="tinsertar" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
             <thead class="text-center">
                 <tr>
-                  <th>Logo</th>
                   <th>Nombre</th>
                   <th>Ingresar</th>
                   <th>Editar</th>
@@ -48,8 +47,7 @@
             <tbody class="text-center">
             <?php
                     foreach ($emp as $k=>$d){?>
-                    <tr>     
-                      <td></td>              
+                    <tr>                
                       <td><?php echo $d[0]?></td>
                       <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btns2' style="text-decoration:none;color: #fff;">Ingresar</a>
                       <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[1]?>>Editar</button>
@@ -68,7 +66,7 @@
                               <h4 class="modal-title">Nuevo</h4>
                               <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body">
+                            <div class="modal-body" style="padding-top: 1px;">
                               
                             </div>
                             <div class="modal-footer">

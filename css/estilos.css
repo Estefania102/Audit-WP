@@ -965,9 +965,88 @@ footer {
   .main .cobit .container .col .titulo-seccion p {
     font-size: 1rem;
   }
+  .main .cobit5 .container .contenedor-cobit .contenido .item .col.izq {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.625rem;
+  }
 }
 
 /*boton agregar*/
 .container-btn .btnAgregar {
   margin:3% 0 3% 45%;
+}
+
+/* COBIT 5 */
+.main .cobit5 {
+  padding: 0.525rem 0;
+}
+.main .cobit5 .container .titulo-seccion h2 {
+  text-align: center;
+}
+.main .cobit5 .container .contenedor-cobit {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.main .cobit5 .container .contenedor-cobit .encabezado {
+  font-weight: 600;
+  font-family: 'Poppins', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.main .cobit5 .container .contenedor-cobit .encabezado li a {
+  font-size: 0.75rem;
+  padding: 0 1.437rem 1.125rem 1.4375rem;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  border-bottom: 2px solid transparent;
+}
+.main .cobit5 .container .contenedor-cobit .encabezado li a:hover {
+  color: #b4975a;
+}
+.main .cobit5 .container .contenedor-cobit .encabezado li.active a {
+  color: #b4975a;
+  border-bottom: 2px solid #b4975a;
+}
+.main .cobit5 .container .contenedor-cobit .contenido {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  border: 6px double #eaeaea;
+  padding: 0 2.25rem;
+}
+.main .cobit5 .container .contenedor-cobit .contenido > div {
+  display: none;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.main .cobit5 .container .contenedor-cobit .contenido .active {
+  display: block;
+}
+.main .cobit5 .container .contenedor-cobit .contenido .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.main .cobit5 .container .contenedor-cobit .contenido .item .col.izq {
+  width: 100%;
+}
+.main .cobit5 .container .contenedor-cobit .contenido .item .col.izq h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+.main .cobit5 .container .contenedor-cobit .contenido .item .col.izq p {
+  font-size: 1rem;
+  color: #777;
 }

@@ -2,11 +2,11 @@
 //Objetos con propiedades de Tab
 
 var propTabs = {
-	primer_encabezado: document.getElementById('encabezado_menu').firstElementChild,
-	primer_contenido: document.getElementById('contenido_menu').firstElementChild,
-	enlaces_encabezado: document.querySelectorAll('#encabezado_menu li a'),
-	li_encabezado: document.querySelectorAll('#encabezado_menu li'),
-	divs_contenido: document.querySelectorAll('#contenido_menu > div'),
+	primer_encabezado: document.getElementById('encabezado_cobit').firstElementChild,
+	primer_contenido: document.getElementById('contenido_cobit').firstElementChild,
+	enlaces_encabezado: document.querySelectorAll('#encabezado_cobit li a'),
+	li_encabezado: document.querySelectorAll('#encabezado_cobit li'),
+	divs_contenido: document.querySelectorAll('#contenido_cobit > div'),
 	contenido_activo: null
 }
 

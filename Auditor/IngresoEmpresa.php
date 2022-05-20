@@ -144,7 +144,7 @@
 						<p>Mejora la capacidad de definir controles, seguridad y gobierno de procesos en el dominio de TI de las organizaciones.</p>
 					</div>
 				</div>
-				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">COBIT 5</a>
+				<a href="COBIT.php" class='btns' style="margin:8% auto 0px auto;">COBIT 5</a>
 			</div>
 		</section>
 		<!--FIN COBIT-->

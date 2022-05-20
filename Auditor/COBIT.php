@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>APARTADO COBIT 5</title>
-	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="../css/all.css">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
     <section class="main">
 <!-- COBIT 5 -->
-        <section id="cobit"  class="cobit">
+        <section id="cobit5"  class="cobit5">
 			<div class="container">
 				<div class="titulo-seccion">
 					<h2>COBIT 5</h2>
@@ -126,4 +126,5 @@
     </section>
 <!-- FIN MAIN -->
 </body>
+<script src="../js/tabs.js"></script>
 </html>

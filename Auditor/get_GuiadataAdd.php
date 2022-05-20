@@ -15,11 +15,11 @@
     <input type='hidden' class='form-control' name='idG' value='$idem'>";
 
     // NOMBRE
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='actividadG' style='margin-top:30px;'>";
            
-    $response .= "<label>Actividad que será evaluada</label>";
+    $response .= "<label style='margin-left:-10px'>Actividad que será evaluada</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='actividadG' name='actividadG'  autocomplete='off' required>";
             
     $response .="</div>";
@@ -27,11 +27,11 @@
     $response .=" </div>";
     
     // Procedimiento de auditoría
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='procedimientoG' style='margin-top:30px;'>";
            
-    $response .= "<label>Procedimiento de auditoría</label>";
+    $response .= "<label style='margin-left:-7px'>Procedimiento de auditoría</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='procedimientoG' name='procedimientoG'  autocomplete='off' required>";
             
     $response .="</div>";
@@ -39,11 +39,11 @@
     $response .=" </div>";
    
     // Herramientas que serán utilizadas
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='herramientaG' style='margin-top:30px;'>";
            
-    $response .= "<label>Herramientas que serán utilizadas</label>";
+    $response .= "<label style='margin-left:-30px'>Herramientas que serán utilizadas</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='herramientaG' name='herramientaG'  autocomplete='off' required>";
             
     $response .="</div>";
@@ -51,11 +51,11 @@
     $response .=" </div>";
 
     // Observaciones
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='observacionG' style='margin-top:30px;'>";
            
-    $response .= "<label>Observaciones</label>";
+    $response .= "<label style='margin-left:40px'>Observaciones</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  autocomplete='off' required>";
             
     $response .="</div>";
