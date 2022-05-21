@@ -1050,3 +1050,8 @@ footer {
   font-size: 1rem;
   color: #777;
 }
+
+/* APARTADO RESPUESTAS */
+.main .arespuestas .container .titulo-seccion h2 {
+  text-align: center;
+}
