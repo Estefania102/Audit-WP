@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
    <title>Guia de evaluacion</title>
+   <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 </head>
-      <?php
+<?php
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
-        $idem=$_REQUEST['cod'];
+        $idem=$_GET['cod'];
+        echo $idem;
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
         $namemp=$obj->NombreEmpresa($idem); 
         $mguia=$obj->Mostrarguia($idem)
       ?>
+      
 <body>
     <header>
 		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
@@ -35,7 +38,7 @@
         <div class="col-lg-12">
           <a>Nombre de la empresa:</a></br>
           <a>Nombre del área a auditar:</a>
-        <button class="btn btn-success btnAgregarG" data-id=<?php $idem?>>Nuevo</button>
+        <button class="btn btn-success btnAgregarG" data-id="<?php echo $idem;?>">Nuevo</button>
         </div>
       </div>
     </div>
@@ -68,7 +71,7 @@
             </tbody>          
             </table>
             <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalAgregarGuia" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalAgregarGuia" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">

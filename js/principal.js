@@ -269,6 +269,8 @@ $('.btnBorrar').on('click',function(e){
 //Modal Agregar
 $('.btnAgregarG').click(function(){
   var add =$(this).data('id');
+  // var add=this.id;
+  console.log(add);
   $.ajax({
     url: 'get_GuiadataAdd.php?add='+add,
     type:'post',
@@ -290,18 +292,21 @@ $('#addGuiaempresa').on('submit',function(e){
     data :datos,
     url:$(this).attr('action'),
     dataType:'json',
-    success: function(data){
+    success: function(data){      
       var resultado =data;
-      if(resultado.respuesta == 'exitoso'){
+      if(resultado.respuesta == "exitoso"){
+        console.log(data);
+        console.log("paso exitoso");
           swal(
             'Correcto',
             'Referencia añadida',
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/GuiaEvaluacion.php';
+            location.reload();
           },2000)
       }else{
+        console.log("no paso exitoso");
         swal(
           'Error',
           'Datos incompletos',
