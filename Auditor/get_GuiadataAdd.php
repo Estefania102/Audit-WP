@@ -12,7 +12,8 @@
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
     <form role='form' method='post' name='addGuiaempresa' id='addGuiaempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idG' value='$idem'>";
+    <input type='hidden' class='form-control' name='idG' value='$idem'>
+    <input type='hidden' class='form-control' name='registro' value=''>";
 
     // NOMBRE
     $response .= "<div class='form-group' style='margin-left: 25%'>";
