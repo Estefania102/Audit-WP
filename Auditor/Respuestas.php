@@ -26,9 +26,9 @@
 
 
 
-<!-- NUEVO -->
-<div class="modal fade modal modal-warning fade" id="custModalEnvioFormulario" role="dialog">
-                    <div class="modal-dialog">
+                <!-- Envio formulario -->
+                <div class="modal fade modal modal-warning fade" id="custModalEnvioFormulario" role="dialog">
+                        <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
@@ -43,11 +43,15 @@
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
 
 
 
 
 
-    </body>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link rel="stylesheet" href="../lib/bootstrap.min.css">
+<script type="text/javascript" src="../js/Principal.js"></script>
+
 </html>

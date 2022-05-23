@@ -608,7 +608,24 @@ $('#deleteElementos').on('submit',function(e){
   })
 });
 
-//Apartado de correo
+//Apartado de envio formulario
+
+$('.btnEnvioFormulario').click(function(){
+  var editGuia =$(this).data('id');
+  $.ajax({
+    url: 'get_Correo.php',
+    type:'post',
+    data:{editGuia:editGuia},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalEnvioFormulario').modal('show');
+    }
+  })
+});
+
+
+
+
 
 
 });
