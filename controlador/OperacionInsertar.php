@@ -116,7 +116,7 @@
                     $direccion= $_POST['direccionBu'];
                     $celular= $_POST['celularBu'];         
                     
-                    try {
+ 
                         
                     include_once 'Conexion.php';
                     $query="UPDATE `empresa` SET `nombre`='$nombre',`direccion`='$direccion',`celular`=$celular WHERE idEmpresa=".$idBu;
@@ -129,9 +129,8 @@
                         $respuesta=array(
                             'respuesta' => 'datos incorrectos'
                         );
-                        }
-                    } catch (Exception $e){
-                        echo "Error:".$e->get_Message();
+                        
+                 
                     }                
                     die(json_encode($respuesta));
                 }
@@ -218,7 +217,8 @@
                 } 
 
                 // EDITAR
-                if(isset($_POST['updateGuiaempresa'])){            
+                if(isset($_POST['updateGuiaempresa'])){ 
+                               
                     session_start();
                     $idRe= $_POST['idGE'];
                     $actividad= $_POST['actividadG'];
@@ -226,11 +226,11 @@
                     $herramientas= $_POST['herramientaG'];         
                     $observaciones= $_POST['observacionG'];  
                     $idEmpresa=$_POST['idbu'];
-                    try {
-                        
+                    
+                    
                     include_once 'Conexion.php';
                     $query="UPDATE guiaevaluacion SET actividad='$actividad',procedimiento='$procedimiento',herramientas='$herramientas',observaciones='$observaciones',idEmpresa='$idEmpresa' 
-                    WHERE idreferencia".$idRe;
+                    WHERE idreferencia=".$idRe;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exito'                   
@@ -240,9 +240,7 @@
                         $respuesta=array(
                             'respuesta' => 'datos incorrectos'
                         );
-                        }
-                    } catch (Exception $e){
-                        echo "Error:".$e->get_Message();
+                        
                     }                
                     die(json_encode($respuesta));
                     } 
@@ -289,7 +287,7 @@
                     $obser= $_POST['obserEle'];
                                  
                     include_once 'Conexion.php';
-                    $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, idEstado, observacion, idEmpresa) 
+                    $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, estado, observacion, idEmpresa) 
                     VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idele')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
@@ -316,7 +314,7 @@
                     $obser= $_POST['obserEle'];
                     try {        
                     include_once 'Conexion.php';
-                    $query="update elementos SET nombre='$nombre',descripcion='$desc',cantidad='$cant',frevision='$date',idEstado='$campo',observacion='$obser' 
+                    $query="update elementos SET nombre='$nombre',descripcion='$desc',cantidad='$cant',frevision='$date',estado='$campo',observacion='$obser' 
                     WHERE idelementos=".$idEle;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(

@@ -78,20 +78,12 @@ $response = "
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";
-    $response .= "<script function changeFunc(id){
-        if(id =='custModalElementos') {
-          $('#custModalElementos').modal('show');
-        }}></script>";
-
     $response .= "<label for='categorias'>Elija estado</label>                           
     <select name='categoria' id='categoria' class='camposr'>
-    <option value=''>Seleccione</option>";?>  
-    <?php
-    $vec2=$obj->ListarEstado();
-    foreach ($vec2 as $k=>$d){                                   
-    echo '<option value='.$d[0].'>'.$d[1].'</option>';
-    }
-    $response .="</select>";
+    <option value='null'>Seleccione</option>
+    <option value='1'>Bueno</option>
+    <option value='2'>Regular</option>
+    <option value='3'>Malo</option></select>"; 
     $response .="</div>";
     $response .="</div>";
     $response .="</div>";

@@ -105,17 +105,6 @@
                         </div>
                     </div>
                   </div>                  
-<!---->
-<!-- <label for='categorias'>Elija estado</label>                           
-    <select name='categoria' id='categoria' class='camposr'>
-    <option value=''>Seleccione</option>
-<?php
-    $vec2=$obj->ListarEstado();
-    foreach ($vec2 as $k=>$d){                                   
-    echo "<option value=".$d[0].">".$d[1]."</option>";
-    }?> 
-    </select> -->
-<!--  -->
 </body>
 
 <!-- Datatable -->

@@ -14,7 +14,8 @@ if(isset($_POST['editGuia'])){
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateGuiaempresa' id='updateGuiaempresa' action='../controlador/OperacionInsertar.php'>   
-    <input type='hidden' class='form-control' name='idGE' value='$id'>";?>
+    <input type='hidden' class='form-control' name='idGE' value='$id'>
+    <input type='hidden' class='form-control' name='registro' value=''>";?>
     <?php
             foreach ($ref as $k=>$d){
                 $var=$d[5];

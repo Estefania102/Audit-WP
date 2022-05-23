@@ -63,7 +63,7 @@
                       <td><?php echo $d[2]?></td>
                       <td><?php echo $d[3]?></td>
                       <td><?php echo $d[4]?></td>
-                      <td><button class='btn btn-primary btnGuiaEditar' data-id=<?php echo $d[0]?>>Editar</button>
+                      <td><button class='btn btn-primary btnGuiaEditar' data-id="<?php echo $d[0]?>">Editar</button>
                       <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarGuia' data-id=<?php echo $d[0]?>>Eliminar</button></td>
                     </tr>                                                                           
                         <?php }

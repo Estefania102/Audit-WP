@@ -349,14 +349,14 @@ $('#updateGuiaempresa').on('submit',function(e){
           'error'
         )
       }
-      else if(resultado.respuesta == "exito"){
+      else {
         swal(
           'Correcto',
           'Referencia modificada',
           'success'
         )
         setTimeout(function(){
-          window.location.href = '../Auditor/GuiaEvaluacion.php';
+          location.reload();
         },2000)
       }
     }
@@ -396,7 +396,7 @@ $('.btnBorrarGuia').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              window.location.href="../Auditor/GuiaEvaluacion.php";
+              location.reload();
               },2000)
           }
         }

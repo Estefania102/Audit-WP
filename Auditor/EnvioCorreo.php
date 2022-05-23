@@ -3,19 +3,18 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require 'vendor/autoload.php';
-include 'controlador/Negocio.php';
-include_once 'Conexion.php';
-$obj=new Negocio();  
-$correo=$_POST['CorreoCod'];
+// require 'vendor/autoload.php';
+// include 'controlador/Negocio.php';
+// include_once 'Conexion.php';
+// $obj=new Negocio();  
+// $correo=$_POST['CorreoCod'];
 
-$mail = new PHPMailer(true);
-$query= "select * from cliente where correo='$correo'";
-$resultado = $con->query($query);
-if(mysqli_num_rows($resultado) > 0){
+// $mail = new PHPMailer(true);
+// $query= "select * from cliente where correo='$correo'";
+// $resultado = $con->query($query);
+// if(mysqli_num_rows($resultado) > 0){
 
-
-$code=$obj->codigoT($cod,$correo,$estado);
+// $code=$obj->codigoT($cod,$correo,$estado);
 
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
@@ -34,15 +33,15 @@ $code=$obj->codigoT($cod,$correo,$estado);
     $mail->Body = 'Buenas tardes, envío el formulario ::> https://forms.gle/FCbjYbAPWgFhA7cP8';
     $mail->send();
 
-$respuesta=array(
-'respuesta'=>'exitoso'
-);
-}else{
-    $respuesta=array(
-        'respuesta'=>'incorrecto'
-        );
-}
+// $respuesta=array(
+// 'respuesta'=>'exitoso'
+// );
+// }else{
+//     $respuesta=array(
+//         'respuesta'=>'incorrecto'
+//         );
+// }
 
-die(json_encode($respuesta));
+// die(json_encode($respuesta));
 
 ?>

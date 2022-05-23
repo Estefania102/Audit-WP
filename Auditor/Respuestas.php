@@ -21,7 +21,13 @@
     </section>
 
     <button class="btn btn-success btnEnvioFormulario">Nuevo</button>
+<?php 
+foreach ($resultados as $resultado){
+     $correo = $resultado; 
+     include "EnvioCorreo.php";
+}
 
+?>
 
 
 
