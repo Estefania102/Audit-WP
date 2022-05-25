@@ -5,7 +5,7 @@
     session_start();
     $idaudit=$_SESSION["idAuditor"];  
     
-$response = "   
+    $response = "   
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='../css/estilos.css'>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -16,8 +16,9 @@ $response = "
     
     <form role='form' method='post' name='addelementos' id='addelementos' action='../controlador/OperacionElementoInsertar.php'>   
     <input type='hidden' class='form-control' name='idEle' value='$idaudit'>
-    <input type='hidden' class='form-control' name='registroElemento' value=''>
-    
+    <input type='hidden' class='form-control' name='registroElemento' value=''>";
+
+    $response = "     
     <script>
     $(function() {
     $('.dates #calendario').datepicker({

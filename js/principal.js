@@ -126,7 +126,8 @@ $('#addempresa').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/AuditMenuPrincipal.php';
+          // window.location.href = '../Auditor/AuditMenuPrincipal.php';
+          location.reload();
           },2000)
       }else{
         swal(
@@ -178,7 +179,8 @@ $('#updateempresa').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-          window.location.href = '../Auditor/AuditMenuPrincipal.php';
+        // window.location.href = '../Auditor/AuditMenuPrincipal.php';
+        location.reload();
         },2000)
       }
     }
@@ -203,7 +205,8 @@ $('#deletempresa').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/AuditMenuPrincipal.php';
+          // window.location.href = '../Auditor/AuditMenuPrincipal.php';
+          location.reload();
           },2000)
       }else{
         swal(
@@ -249,7 +252,8 @@ $('.btnBorrar').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              window.location.href="../Auditor/AuditMenuPrincipal.php";
+              // window.location.href="../Auditor/AuditMenuPrincipal.php";
+              location.reload();
               },2000)
           }
         }
@@ -359,8 +363,7 @@ $('#updateGuiaempresa').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-          location.reload();
-          
+          location.reload();       
         },2000)
       }
     }
@@ -400,8 +403,7 @@ $('.btnBorrarGuia').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              location.reload();
-              
+              location.reload();             
               },2000)
           }
         }
@@ -434,7 +436,8 @@ $('#deletereferencia').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/GuiaEvaluacion.php';
+          // window.location.href = '../Auditor/GuiaEvaluacion.php';
+          location.reload();
           },2000)
       }else{
         swal(
@@ -480,7 +483,8 @@ $('#addelementos').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/IngresoElementos.php';
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
           },2000)
       }else{
         swal(
@@ -532,7 +536,8 @@ $('#updateElemento').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-          window.location.href = '../Auditor/IngresoElementos.php';
+        // window.location.href = '../Auditor/IngresoElementos.php';
+        location.reload();
         },2000)
       }
     }
@@ -572,7 +577,8 @@ $('.btnBorrarElementos').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              window.location.href="../Auditor/IngresoElementos.php";
+              // window.location.href="../Auditor/IngresoElementos.php";
+              location.reload();
               },2000)
           }
         }
@@ -605,7 +611,8 @@ $('#deleteElementos').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-            window.location.href = '../Auditor/IngresoElementos.php';
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
           },2000)
       }else{
         swal(
