@@ -7,6 +7,7 @@
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
         $idem=$_REQUEST['cod1'];
+        // echo $idem;
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
@@ -32,7 +33,7 @@
     <div class="container-btn">
       <div class="row">    
         <div class="col-lg-12">
-        <button class="btn btn-success btnAgregarElementos">Nuevo</button>
+        <button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
         </div>
       </div>
     </div>

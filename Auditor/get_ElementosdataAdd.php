@@ -3,7 +3,7 @@
     include '../controlador/Negocio.php';
     $obj=new Negocio();
     session_start();
-    $idaudit=$_SESSION["idAuditor"];  
+    $idem=$_GET["add"];  
     
     $response = "   
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
     <form role='form' method='post' name='addelementos' id='addelementos' action='../controlador/OperacionElementoInsertar.php'>   
-    <input type='hidden' class='form-control' name='idEle' value='$idaudit'>
+    <input type='hidden' class='form-control' name='idEle' value='$idem'>
     <input type='hidden' class='form-control' name='registroElemento' value=''>
   
     <script>
@@ -80,7 +80,7 @@
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";
     $response .= "<label for='categorias'>Elija estado</label>                           
-    <select name='categoria' id='categoria' class='camposr'>
+    <select name='estado' id='estado' class='camposr'>
     <option value='null'>Seleccione</option>
     <option value='1'>Bueno</option>
     <option value='2'>Regular</option>
@@ -102,7 +102,7 @@
     $response .= "</div>";
     $response .=" </div>";
 
-    $response.="  <input type='hidden' name='addempresa' value=''>
+    $response.="  <input type='hidden' name='addelementos' value=''>
     <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark'>Guardar</button>";
     $response.="</form>";
     $response.="

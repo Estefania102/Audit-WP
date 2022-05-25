@@ -5,17 +5,17 @@
                 //AGREGAR 
                 if(isset($_POST['addelementos'])){
                     session_start();           
-                    $idele= $_POST['idEle'];
+                    $idemp= $_POST['idEle'];
                     $nombre= $_POST['nombreEle'];
                     $desc= $_POST['descEle'];
                     $cant= $_POST['cantEle'];
-                    $date= $_POST['dates'];
-                    $campo= $_POST['camposr'];
+                    $date= $_POST['calendario'];
+                    $campo= $_POST['estado'];
                     $obser= $_POST['obserEle'];
                                  
                     include_once 'Conexion.php';
                     $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, estado, observacion, idEmpresa) 
-                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idele')";
+                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idemp')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'

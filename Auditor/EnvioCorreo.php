@@ -25,7 +25,13 @@ use PHPMailer\PHPMailer\Exception;
     $mail->Port = 587;
 
     $mail->setFrom('coesmdp@gmail.com', 'PROCESO DE AUDITORIA');
-    $mail->addAddress($correo, 'Receptor');
+    $emails = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
+
+for($i = 0; $i < count($emails); $i++) {
+    $mail->AddAddress($emails[$i]);
+    echo $emails[$i];
+}
+    // $mail->addAddress($correo, 'Receptor');
     $mail->addCC('estef.carrillo10@gmail.com');
 
     $mail->isHTML(true);

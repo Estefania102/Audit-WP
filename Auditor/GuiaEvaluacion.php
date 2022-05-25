@@ -8,7 +8,7 @@
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
         $idem=$_GET['cod'];
-        echo $idem;
+        // echo $idem;
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    

@@ -20,17 +20,18 @@
         </section>
     </section>
 
-    <button class="btn btn-success btnEnvioFormulario">Nuevo</button>
+    <button class="btn btn-success btnEnvioFormulario">Seleccionar correos</button>
 <?php 
-foreach ($resultados as $resultado){
-     $correo = $resultado; 
-     include "EnvioCorreo.php";
-}
+
+
+// $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
+
+// foreach ($resultados as $resultado){
+//      $correo = $resultado; 
+//      include "EnvioCorreo.php";
+// }
 
 ?>
-
-
-
 
                 <!-- Envio formulario -->
                 <div class="modal fade modal modal-warning fade" id="custModalEnvioFormulario" role="dialog">
@@ -38,7 +39,7 @@ foreach ($resultados as $resultado){
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                              <h4 class="modal-title">Nuevo</h4>
+                              <h4 class="modal-title">Envio de formulario</h4>
                               <a type="button" href="Respuestas.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body" style="padding-top: 1px;">
