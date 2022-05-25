@@ -238,7 +238,7 @@ $('.btnBorrar').on('click',function(e){
           'id': id,
           'registro': 'eliminar'
         },
-        url : '../controlador/Operacion'+tipo+'.php',
+        url : '../controlador/OperacionLista'+tipo+'.php',
         success:function(data){
           var resultado=JSON.parse(data);
           if(resultado.respuesta=='exitoso'){
@@ -343,6 +343,7 @@ $('#updateGuiaempresa').on('submit',function(e){
     success: function(data){
       var resultado =data;
       if(resultado.respuesta == "datos incorrectos"){
+        
         swal(
           'Incorrecto',
           'Referencia no modificada',
@@ -350,6 +351,8 @@ $('#updateGuiaempresa').on('submit',function(e){
         )
       }
       else {
+        console.log(data);
+        console.log("paso exitoso");
         swal(
           'Correcto',
           'Referencia modificada',
@@ -357,6 +360,7 @@ $('#updateGuiaempresa').on('submit',function(e){
         )
         setTimeout(function(){
           location.reload();
+          
         },2000)
       }
     }
@@ -385,7 +389,7 @@ $('.btnBorrarGuia').on('click',function(e){
           'id': id,
           'registro': 'eliminar'
         },
-        url : '../controlador/Operacion'+tipo+'.php',
+        url : '../controlador/OperacionGuia'+tipo+'.php',
         success:function(data){
           var resultado=JSON.parse(data);
           if(resultado.respuesta=='exitoso'){
@@ -397,6 +401,7 @@ $('.btnBorrarGuia').on('click',function(e){
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
               location.reload();
+              
               },2000)
           }
         }
@@ -556,7 +561,7 @@ $('.btnBorrarElementos').on('click',function(e){
           'id': id,
           'registro': 'eliminar'
         },
-        url : '../controlador/Operacion'+tipo+'.php',
+        url : '../controlador/OperacionElemento'+tipo+'.php',
         success:function(data){
           var resultado=JSON.parse(data);
           if(resultado.respuesta=='exitoso'){

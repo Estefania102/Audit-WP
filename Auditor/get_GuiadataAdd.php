@@ -11,7 +11,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
-    <form role='form' method='post' name='addGuiaempresa' id='addGuiaempresa' action='../controlador/OperacionInsertar.php'>   
+    <form role='form' method='post' name='addGuiaempresa' id='addGuiaempresa' action='../controlador/OperacionGuiaInsertar.php'>   
     <input type='hidden' class='form-control' name='idG' value='$idem'>
     <input type='hidden' class='form-control' name='registro' value=''>";
 

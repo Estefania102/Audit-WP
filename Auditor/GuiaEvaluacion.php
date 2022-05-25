@@ -90,7 +90,7 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEditarGuia" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEditarGuia" role="dialog" tabindex="-1" aria-labelledby="custModalEditarGuia" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
