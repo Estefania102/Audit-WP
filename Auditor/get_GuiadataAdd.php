@@ -13,7 +13,7 @@
     
     <form role='form' method='post' name='addGuiaempresa' id='addGuiaempresa' action='../controlador/OperacionGuiaInsertar.php'>   
     <input type='hidden' class='form-control' name='idG' value='$idem'>
-    <input type='hidden' class='form-control' name='registro' value=''>";
+    <input type='hidden' class='form-control' name='registroGuia' value=''>";
 
     // NOMBRE
     $response .= "<div class='form-group' style='margin-left: 25%'>";

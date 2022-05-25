@@ -60,7 +60,7 @@
                     } 
                     
                 // ELIMINAR
-                if($_POST['registro']=='eliminar'){
+                if($_POST['registroElemento']=='eliminar'){
                     $idele = $_POST['id'];
                         try{
                     include_once 'Conexion.php';

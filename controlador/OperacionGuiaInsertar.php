@@ -60,7 +60,7 @@
 
 
                 // ELIMINAR
-                if($_POST['registro']=='eliminar'){
+                if($_POST['registroGuia']=='eliminar'){
                     $idref = $_POST['id'];
                         try{
                     include_once 'Conexion.php';

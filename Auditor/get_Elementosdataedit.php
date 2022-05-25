@@ -14,7 +14,8 @@ if(isset($_POST['editElemento'])){
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateElemento' id='updateElemento' action='../controlador/OperacionElementoInsertar.php'>   
-    <input type='hidden' class='form-control' name='idEle' value='$id'>";
+    <input type='hidden' class='form-control' name='idEle' value='$id'>
+    <input type='hidden' class='form-control' name='registroElemento' value=''>";
      
     // Nombre
     $response .= "<div class='form-group'>";

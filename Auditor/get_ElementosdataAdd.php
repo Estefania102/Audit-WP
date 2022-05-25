@@ -16,6 +16,7 @@ $response = "
     
     <form role='form' method='post' name='addelementos' id='addelementos' action='../controlador/OperacionElementoInsertar.php'>   
     <input type='hidden' class='form-control' name='idEle' value='$idaudit'>
+    <input type='hidden' class='form-control' name='registroElemento' value=''>
     
     <script>
     $(function() {

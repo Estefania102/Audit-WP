@@ -56,7 +56,7 @@
                 }
 
                 // ELIMINAR
-                if($_POST['registro']=='eliminar'){
+                if($_POST['registroLista']=='eliminar'){
                     $idbu = $_POST['id'];
                         try{
                     include_once 'Conexion.php';

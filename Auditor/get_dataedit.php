@@ -14,7 +14,8 @@ if(isset($_POST['edit'])){
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateempresa' id='updateempresa' action='../controlador/OperacionListaInsertar.php'>   
-    <input type='hidden' class='form-control' name='idE' value='$id'>";
+    <input type='hidden' class='form-control' name='idE' value='$id'>
+    <input type='hidden' class='form-control' name='registroLista' value=''>";
      
     // NOMBRE
     $response .= "<div class='form-group' style='margin-left: 25%'>";

@@ -236,7 +236,7 @@ $('.btnBorrar').on('click',function(e){
         type:'post',
         data:{
           'id': id,
-          'registro': 'eliminar'
+          'registroLista': 'eliminar'
         },
         url : '../controlador/OperacionLista'+tipo+'.php',
         success:function(data){
@@ -387,7 +387,7 @@ $('.btnBorrarGuia').on('click',function(e){
         type:'post',
         data:{
           'id': id,
-          'registro': 'eliminar'
+          'registroGuia': 'eliminar'
         },
         url : '../controlador/OperacionGuia'+tipo+'.php',
         success:function(data){
@@ -559,7 +559,7 @@ $('.btnBorrarElementos').on('click',function(e){
         type:'post',
         data:{
           'id': id,
-          'registro': 'eliminar'
+          'registroElemento': 'eliminar'
         },
         url : '../controlador/OperacionElemento'+tipo+'.php',
         success:function(data){
