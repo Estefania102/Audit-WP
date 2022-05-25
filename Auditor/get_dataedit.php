@@ -9,9 +9,13 @@ if(isset($_POST['edit'])){
     $response = " 
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='../css/estilos.css'>
+
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.8.0/sweetalert2.min.css' rel='stylesheet'/>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.8.0/sweetalert2.min.js'></script>
 
     <form role='form' method='post' name='updateempresa' id='updateempresa' action='../controlador/OperacionListaInsertar.php'>   
     <input type='hidden' class='form-control' name='idE' value='$id'>
@@ -65,8 +69,7 @@ if(isset($_POST['edit'])){
     $response.="</form>";
     $response.="
     <script src='../js/Principal.js'></script>
-    <script src='../lib/sweetalert2.all.js'></script>
-    <script src='../lib/sweetalert2.min.js'></script>";
+    ";
     echo $response;
     exit;
   
