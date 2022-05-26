@@ -20,7 +20,7 @@
         </section>
     </section>
 
-    <button class="btn btn-success btnEnvioFormulario">Seleccionar correos</button>
+    <button class="btn btn-success btnEnvioFormulario">Envio Formulario</button>
 <?php 
 
 
