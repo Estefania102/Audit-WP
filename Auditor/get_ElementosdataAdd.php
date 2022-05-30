@@ -79,7 +79,7 @@
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";
-    $response .= "<label for='categorias'>Elija estado</label>                           
+    $response .= "<label for='estado'>Elija estado</label>                           
     <select name='estado' id='estado' class='camposr'>
     <option value='null'>Seleccione</option>
     <option value='1'>Bueno</option>

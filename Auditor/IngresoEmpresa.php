@@ -122,7 +122,7 @@
 						<p>Permite introducir las respuestas, debilidades, efectos y recomendaciones de cada elemento auditado. Por otra parte, permite revisar las respuestas y el análisis de los registros ya ingresados.</p>
 					</div>			
 				</div>
-				<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Respuestas</a>
+				<a href="Respuestas.php" class='btns' style="margin:8% auto 0px auto;">Respuestas</a>
 			</div>
 		</section>
 		<!-- RESPUESTAS -->

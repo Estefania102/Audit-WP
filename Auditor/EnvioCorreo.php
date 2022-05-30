@@ -1,21 +1,32 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-// require 'vendor/autoload.php';
+require '../lib/vendor/PHPMailer/PHPMailer/src/Exception.php';
+require '../lib/vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
+require '../lib/vendor/PHPMailer/PHPMailer/src/SMTP.php';
+
+require '../lib/vendor/autoload.php';
 // include 'controlador/Negocio.php';
 // include_once 'Conexion.php';
 // $obj=new Negocio();  
 // $correo=$_POST['CorreoCod'];
+use PHPMailer\PHPMailer\PHPMailer;
 
-// $mail = new PHPMailer(true);
+ $mail = new PHPMailer(true);
 // $query= "select * from cliente where correo='$correo'";
 // $resultado = $con->query($query);
 // if(mysqli_num_rows($resultado) > 0){
-
 // $code=$obj->codigoT($cod,$correo,$estado);
 
+if(isset($_POST['nuevocorreo'])){           
+    $correo= $_POST['correo'];
+    echo $correo;
+}
+    
+    // $emails = array();
+    // array_push($emails,$correo);
+
+// for($i = 0; $i < count($emails); $i++) {
+    try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
@@ -25,12 +36,9 @@ use PHPMailer\PHPMailer\Exception;
     $mail->Port = 587;
 
     $mail->setFrom('coesmdp@gmail.com', 'PROCESO DE AUDITORIA');
-    $emails = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
+    $mail->AddAddress($correo);
+    
 
-for($i = 0; $i < count($emails); $i++) {
-    $mail->AddAddress($emails[$i]);
-    echo $emails[$i];
-}
     // $mail->addAddress($correo, 'Receptor');
     $mail->addCC('estef.carrillo10@gmail.com');
 
@@ -38,6 +46,14 @@ for($i = 0; $i < count($emails); $i++) {
     $mail->Subject = 'Formulario para el proceso de Auditoria';
     $mail->Body = 'Buenas tardes, envío el formulario ::> https://forms.gle/FCbjYbAPWgFhA7cP8';
     $mail->send();
+    } catch (Exception $e) {
+        echo 'Hubo un error al enviar el mensaje: ', $mail->ErrorInfo;
+
+    }
+    
+
+    
+// }
 
 // $respuesta=array(
 // 'respuesta'=>'exitoso'

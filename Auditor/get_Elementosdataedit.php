@@ -80,24 +80,17 @@ if(isset($_POST['editElemento'])){
     // Estado
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='camposr' style='margin-top:30px;'>";
-    $response .= "<script function changeFunc(id){
-        if(id =='custModalElementos') {
-          $('#custModalElementos').modal('show');
-        }}></script>";?>   
-            <?php
-            foreach ($emp as $k=>$d){
-                $var=$d[5];
-        }       
-    $response .= "<label for='categorias'>Elija estado</label>                           
-    <select name='categoria' id='categoria' class='camposr'>
-    <option value=''>Seleccione</option>";?>  
+    $response .= "<div class='camposr' style='margin-top:30px;'>";    
+    $response .= "<label for='estado'>Elija estado</label>                           
+    <select name='estado' id='estado' class='camposr'>";?>  
     <?php
-    $vec2=$obj->ListarEstado();
+    $vec2=$obj->ListarEstado($id);
     foreach ($vec2 as $k=>$d){                                   
-    echo '<option value='.$d[0].'>'.$d[1].'</option>';
+    echo '<option value='.$d[0].'>sd</option>';
     }
-    $response .="</select>";
+    $response .="<option value='1'>Bueno</option>
+    <option value='2'>Regular</option>
+    <option value='3'>Malo</option></select>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";

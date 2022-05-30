@@ -12,83 +12,26 @@ $response = "
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
     
-    <form role='form' method='post' name='addempresa' id='addempresa' action='../controlador/OperacionListaInsertar.php'>   
+    <form role='form' method='post' name='addcorreo' id='addcorreo' action='EnvioCorreo.php'>   
     <input type='hidden' class='form-control' name='idh' value='$idaudit'>
     <input type='hidden' class='form-control' name='registroLista' value=''>";
      
-    // NOMBRE DE EMPRESA
+    // CORREO
     $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
-    $response .= "<div class='nombreBu' style='margin-top:30px;'>";
+    $response .= "<div class='correo' style='margin-top:30px;'>";
            
-    $response .= "<label style='margin-left: 67px'>NOMBRE</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreBu' name='nombreBu'  autocomplete='off' required>";
-            
+    $response .= "<label style='margin-left: 67px'>Correo</label>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='correo' name='correo'  autocomplete='off' required>";
+    $response.="<input type='hidden' name='nuevocorreo' value=''>";
+    $response .= "<button class='btn btn-success btnAgregarG' type='submit'>Nuevo</button>";       
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
    
-    // NOMBRE DE AREA
-    $response .= "<div class='form-group' style='margin-left: 25%'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='areaBu' style='margin-top:30px;'>";
-           
-    $response .= "<label style='margin-left: 35px'>ÁREA A AUDITAR</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='areaBu' name='areaBu'  autocomplete='off' required>";
-            
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-
-    // DIRECCION
-    $response .= "<div class='form-group' style='margin-left: 25%'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='direccionBu' style='margin-top:30px;'>";
-           
-    $response .= "<label style='margin-left: 50px'>DIRECCION</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='direccionBu' name='direccionBu'  autocomplete='off' required>";
-            
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-
-    // CELULAR
-    $response .= "<div class='form-group' style='margin-left: 25%'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='celularBu' style='margin-top:30px;'>";
-           
-    $response .= "<label style='margin-left: 67px'>CELULAR</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='celularBu' name='celularBu'  autocomplete='off' required>";
-            
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-
-    // CORREO
-    $response .= "<div class='form-group' style='margin-left: 25%'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='correoBu' style='margin-top:30px;'>";
-           
-    $response .= "<label style='margin-left: 67px'>CORREO</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='correoBu' name='correoBu'  autocomplete='off' required>";
-            
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-
-    // CONTRASEÑA
-    $response .= "<div class='form-group' style='margin-left: 25%'>";
-    $response .= "<div class='container'>";
-    $response .= "<div class='contrasenaBu' style='margin-top:30px;'>";
-           
-    $response .= "<label style='margin-left: 45px'>CONTRASEÑA</label>";
-    $response .= "<input style='width:200px;' class='form-control' type='password' id='contrasenaBu' name='contrasenaBu'  autocomplete='off' required>";
-            
-    $response .="</div>";
-    $response .= "</div>";
-    $response .=" </div>";
-    $response.="  <input type='hidden' name='addempresa' value=''>
-    <button style='margin-left:190px;margin-top:20px'type='submit' class='btn btn-dark'>Guardar</button>";
+    
+    $response.="<input type='hidden' name='addcorreo' value=''>
+    <button style='margin-left:190px;margin-top:20px' class='btn btn-dark'>Guardar</button>";
     $response.="</form>";
     $response.="
     <script src='../js/Principal.js'></script>

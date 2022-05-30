@@ -630,7 +630,7 @@ $('#deleteElementos').on('submit',function(e){
 $('.btnEnvioFormulario').click(function(){
   var editGuia =$(this).data('id');
   $.ajax({
-    url: 'get_Correo.php',
+    url: 'get_RespuestadataAdd.php',
     type:'post',
     data:{editGuia:editGuia},
     success: function(response){
