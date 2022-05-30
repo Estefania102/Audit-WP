@@ -23,8 +23,10 @@ $response = "
            
     $response .= "<label style='margin-left: 67px'>Correo</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='correo' name='correo'  autocomplete='off' required>";
+    // $response .= "<label id='correoe' style='margin-left: 67px'></label>";
     $response.="<input type='hidden' name='nuevocorreo' value=''>";
-    $response .= "<button class='btn btn-success btnAgregarG' type='submit'>Nuevo</button>";       
+    
+    $response .= "<button class='btn btn-success btnEnvioForm' type='submit'>Nuevo</button>";       
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";

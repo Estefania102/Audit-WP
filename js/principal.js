@@ -640,9 +640,13 @@ $('.btnEnvioFormulario').click(function(){
   })
 });
 
-
-
-
+// $(".btnEnvioForm").click(function() {
+//   // Cancelar comportamiento normal del botón
+//   // e.preventDefault();
+//   $('#correo').value('');
+//   var correo = document.getElementById("#correo").value;
+//   document.getElementById("correoe").innerHTML = correo; 
+// });
 
 
 });

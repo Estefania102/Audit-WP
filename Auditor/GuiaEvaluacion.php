@@ -77,13 +77,14 @@
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="GuiaEvaluacion.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="GuiaEvaluacion.php?cod=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="GuiaEvaluacion.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="GuiaEvaluacion.php?cod=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
