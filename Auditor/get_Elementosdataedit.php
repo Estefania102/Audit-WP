@@ -5,7 +5,7 @@ if(isset($_POST['editElemento'])){
     session_start();
     $idAuditor=$_SESSION["idAuditor"];  
     $id = $_POST['editElemento']; 
-    $emp=$obj->UpdateEmpresa($id);
+    $emp=$obj->UpdateElemento($id);
     $response = " 
     <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet'>
     <link rel='stylesheet' href='../css/estilos.css'>
@@ -26,7 +26,7 @@ if(isset($_POST['editElemento'])){
                 $var=$d[1];
         }       
     $response .= "<label>Nombre de elemento</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreEle' name='nombreEle'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreEle' name='nombreEle' value='$var'  autocomplete='off'>";
     
     $response .="</div>";
     $response .= "</div>";
@@ -41,7 +41,7 @@ if(isset($_POST['editElemento'])){
                 $var=$d[2];
         }       
     $response .= "<label>Descripción del elemento</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='descEle' name='descEle'  autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='descEle' name='descEle' value='$var' autocomplete='off' required>";
      
     $response .="</div>";
     $response .= "</div>";
@@ -56,7 +56,7 @@ if(isset($_POST['editElemento'])){
                 $var=$d[3];
         }       
     $response .= "<label>Cantidad</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='cantEle' name='cantEle' autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='cantEle' name='cantEle' value='$var' autocomplete='off' required>";
      
     $response .="</div>";
     $response .= "</div>";
@@ -71,7 +71,7 @@ if(isset($_POST['editElemento'])){
                 $var=$d[4];
         }       
     $response .= "<label>Fecha de revisión</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario'  autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario' value='$var' autocomplete='off'>";
       
     $response .="</div>";
     $response .= "</div>";
@@ -86,7 +86,7 @@ if(isset($_POST['editElemento'])){
     <?php
     $vec2=$obj->ListarEstado($id);
     foreach ($vec2 as $k=>$d){                                   
-    echo '<option value='.$d[0].'>sd</option>';
+    echo '<option value='.$d[0].'></option>';
     }
     $response .="<option value='1'>Bueno</option>
     <option value='2'>Regular</option>
@@ -104,7 +104,7 @@ if(isset($_POST['editElemento'])){
                 $var=$d[6];
         }       
     $response .= "<label>Observación</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='obserEle' name='obserEle' autocomplete='off'>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='obserEle' name='obserEle' value='$var' autocomplete='off'>";
       
     $response .="</div>";
     $response .= "</div>";

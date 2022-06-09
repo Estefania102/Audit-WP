@@ -145,7 +145,7 @@ class Negocio{
     //Modificar
     function UpdateElemento($upre){      
         $sql="select idelementos, nombre, descripcion, cantidad, frevision, estado, observacion 
-        FROM elementos WHERE e.idelementos=".$upre;
+        FROM elementos WHERE idelementos=".$upre;
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
         $vec=array();
         while($f=  mysqli_fetch_array($res)){
