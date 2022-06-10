@@ -43,7 +43,7 @@ if(isset($_POST['nuevocorreo'])){
 
     $mail->isHTML(true);
     $mail->Subject = 'Formulario para el proceso de Auditoria';
-    $mail->Body = 'Buenas tardes, envío el formulario ::> https://forms.gle/FCbjYbAPWgFhA7cP8';
+    $mail->Body = 'Buenas tardes, envio el formulario ::> https://forms.gle/FCbjYbAPWgFhA7cP8';
     $mail->send();
     header('location:Respuestas.php');
     } catch (Exception $e) {

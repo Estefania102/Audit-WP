@@ -19,29 +19,23 @@
             </div>
         </section>
     </section>
-
+    <div class="botones" style="margin-left: 21%">
     <button class="btn btn-success btnEnvioFormulario">Envio Formulario</button>
- 
+    <input type="file" id="txt_archivo">
+    <button class="btn btn-success btnImportar">Importar</button>
+    </div>
  <!-- $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
 
  foreach ($resultados as $resultado){
       $correo = $resultado; 
       include "EnvioCorreo.php";
  } -->
- <?php
 
-require '../lib/vendor/autoload.php';
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-$spreadsheet = new Spreadsheet();
-$sheet = $spreadsheet->getActiveSheet();
-$sheet->setCellValue('A1', 'Hello World !');
 
-$writer = new Xlsx($spreadsheet);
-$writer->save('hello world.xlsx');
-?>
+
+
  <table id="telementos" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
             <thead class="text-center">
                 <tr>
@@ -113,7 +107,7 @@ $writer->save('hello world.xlsx');
 <script src="../lib/sweetalert2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function(){
     $("#telementos").DataTable({
@@ -122,5 +116,20 @@ $writer->save('hello world.xlsx');
       }
     });
   });
+  </script>
+
+  <script>
+    document.getElementById("txt_archivo").addEventListener("change", () => {
+      var fileName = document.getElementById("txt_archivo").value;
+      var idxDot = fileName.lastIndexOf(".")+1;
+      var extFile = fileName.substr(idxDot,fileName.length).
+      toLowerCase();
+      if (extFile=="xlsx" || extFile=="xlsb"){
+
+      }else{
+Swal.fire("Mensaje de advertencia","Solo se aceptan imagenes, usted subio un archivo con extension"+ extFile,"warning");
+document.getElementById("txt_archivo").value="";
+      }
+    });
   </script>
 </html>
