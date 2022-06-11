@@ -211,7 +211,7 @@ class Negocio{
     //NUEVO 
     /* MOSTRAR RECOMENDACIONES*/ 
     function MostrarRec($idbu){      
-        $sql="select idRecomendaciones,recomendacion, 
+        $sql="select idRecomendaciones,recomendacion 
         FROM recomendaciones WHERE idEmpresa=".$idbu;
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
         $vec=array();
@@ -223,7 +223,7 @@ class Negocio{
 
     //Modificar
     function UpdateRecomendacion($upre){      
-        $sql="select idRecomendaciones,recomendacion, 
+        $sql="select idRecomendaciones,recomendacion 
         FROM recomendaciones WHERE idRecomendaciones=".$upre;
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
         $vec=array();
