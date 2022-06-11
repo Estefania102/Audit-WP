@@ -179,6 +179,34 @@ class Negocio{
         return $vec;
     }
 
+    //APARTADO DE CONCLUSIONES
+
+    //NUEVO 
+    
+    /* MOSTRAR ELEMENTOS*/ 
+    function MostrarCon($idbu){      
+        $sql="select idConclusiones, conclusion
+        FROM conclusiones WHERE idEmpresa=".$idbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
+    //Modificar
+    function UpdateConclusion($upre){      
+        $sql="select idConclusiones, conclusion 
+        FROM conclusiones WHERE idConclusiones=".$upre;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
 
 
     

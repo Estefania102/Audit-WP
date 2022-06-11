@@ -10,7 +10,8 @@ include '../controlador/Negocio.php';
 $idem=$_REQUEST['cod3'];
 $obj=new Negocio();
 session_start();
-$mresp=$obj->Mostrarresp($idem);  
+$mcon=$obj->MostrarCon($idem);
+$mrec=$obj->MostrarRec($idem);    
 
 ?>
 <body>
