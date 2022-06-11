@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="main">
-<!-- COBIT 5 -->
+	<!-- COBIT 5 -->
         <section id="cobit5"  class="cobit5">
 			<div class="container">
 				<div class="titulo-seccion">
@@ -27,42 +27,36 @@
 							<div class="item">
 								<div class="col izq">
 								<div class="container-btn">
-      <div class="row">    
-        <div class="col-lg-12">
-        <button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
-        </div>
-      </div>
-    </div>
-            <table id="tconclusion" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
-            <thead class="text-center">
-                <tr>
-                  <th>N°</th>
-                  <th>Conclusión</th>
-                  <th>Editar</th>
-                  <th>Eliminar</th>   
-                </tr>
-            </thead>
-            <tbody class="text-center">
-            <?php
-                    foreach ($melem as $k=>$d){?>
-                    <tr>                 
-                      <td><?php echo $d[0]?></td>
-                      <td><?php echo $d[1]?></td>
-                      <td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
-                    </tr>                                                                           
-                        <?php }
-              ?> 
-            </tbody>          
-            </table>
-								</div>	
+							<div class="row">    
+								<div class="col-lg-12">
+								<button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
+								</div>
 							</div>
-
-							
-
-							
-
-							
+							</div>
+								<table id="tconclusion" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
+									<thead class="text-center">
+										<tr>
+										<th>N°</th>
+										<th>Conclusión</th>
+										<th>Editar</th>
+										<th>Eliminar</th>   
+										</tr>
+									</thead>
+									<tbody class="text-center">
+										<?php
+											foreach ($melem as $k=>$d){?>
+											<tr>                 
+											<td><?php echo $d[0]?></td>
+											<td><?php echo $d[1]?></td>
+											<td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
+											<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+											</tr>                                                                           
+												<?php }
+										?> 
+									</tbody>          
+								</table>
+								</div>	
+							</div>		
 						</div>
 					<!-- FIN CONCLUSIONES -->
 
@@ -71,34 +65,39 @@
 					<div id="procesos">
 						<div class="item">
 							<div class="col izq">
-								<h3>Cafe ipsum dolor</h3>
-								<p>Ut sunt veniam praesentium illum possimus autem eaque est quod labore error.Totam dolorum veritatis dignissimos placeat voluptates.</p>
+							<div class="container-btn">
+						<div class="row">    
+							<div class="col-lg-12">
+							<button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
 							</div>
 						</div>
-
-						<div class="item">
-							<div class="col izq">
-								<h3>Late dignissim</h3>
-								<p>Aliquid beatae explicabo at officiis corrupti libero nemo alias molestiae.Ducimus similique dolor, perferendis pariatur omnis. </p>
-							</div>
 						</div>
-
-						<div class="item">
-							<div class="col izq">
-								<h3>Capuccino vestibulum</h3>
-								<p>Quos necessitatibus deserunt laudantium, tempora quibusdam? Maxime maiores consectetur aliquam Aliquid beatae explicabo at officiis corrupti libero nemo alias molestiae perferendis.</p>
+							<table id="tconclusion" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
+								<thead class="text-center">
+									<tr>
+									<th>N°</th>
+									<th>Recomendación</th>
+									<th>Editar</th>
+									<th>Eliminar</th>   
+									</tr>
+								</thead>
+								<tbody class="text-center">
+									<?php
+										foreach ($melem as $k=>$d){?>
+										<tr>                 
+										<td><?php echo $d[0]?></td>
+										<td><?php echo $d[1]?></td>
+										<td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
+										<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+										</tr>                                                                           
+											<?php }
+									?> 
+								</tbody>          
+							</table>	
 							</div>
-						</div>
-
-						<div class="item">
-							<div class="col izq">
-								<h3>Cafe semper</h3>
-								<p>Pariatur omnis, quos necessitatibus deserunt laudantium, tempora quibu.explicabo at officiis corrupti libero nemo alias molestiae perferendis.</p>
-							</div>
-						</div>
+						</div>				
 					</div> 
-					<!-- FIN RECOMENDACIONES -->
-                    
+					<!-- FIN RECOMENDACIONES -->                   
 					</div>
 				</div>
 			</div>
