@@ -103,7 +103,7 @@ $('.btnAgregar').click(function(){
     type:'post',
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalAgregar').modal('show');
+      $('#custModalEmpresa').modal('show');
     }
   })
 });
@@ -149,7 +149,7 @@ $('.btnEditar').click(function(){
     data:{edit:edit},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalEditar').modal('show');
+      $('#custModalEmpresa').modal('show');
     }
   })
 });
@@ -281,7 +281,7 @@ $('.btnAgregarG').click(function(){
     data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalAgregarGuia').modal('show');
+      $('#custModalGuia').modal('show');
       // window.show.modal = '../Auditor/get_GuiadataAdd.php;
     }
   })
@@ -330,7 +330,7 @@ $('.btnGuiaEditar').click(function(){
     data:{editGuia:editGuia},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalEditarGuia').modal('show');
+      $('#custModalGuia').modal('show');
     }
   })
 });

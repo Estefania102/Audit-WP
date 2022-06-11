@@ -61,8 +61,8 @@ $mresp=$obj->Mostrarresp($idem);
 									</tbody>          
 								</table>
 
-								<!-- NUEVO -->
-								<div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarConclusion" aria-hidden="true">
+					<!-- NUEVO -->
+					<div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarConclusion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -81,7 +81,7 @@ $mresp=$obj->Mostrarresp($idem);
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalEditarConclusion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">

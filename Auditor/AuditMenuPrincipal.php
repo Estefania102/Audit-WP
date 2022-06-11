@@ -58,7 +58,7 @@
             </tbody>          
             </table>
             <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalAgregar" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEmpresa" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -77,7 +77,7 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEditar" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEmpresa" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">

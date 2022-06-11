@@ -71,7 +71,7 @@
             </tbody>          
             </table>
             <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalAgregarGuia" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalGuia" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -91,7 +91,7 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEditarGuia" role="dialog" tabindex="-1" aria-labelledby="custModalEditarGuia" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalGuia" role="dialog" tabindex="-1" aria-labelledby="custModalEditarGuia" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
