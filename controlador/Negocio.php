@@ -183,7 +183,7 @@ class Negocio{
 
     //NUEVO 
     
-    /* MOSTRAR ELEMENTOS*/ 
+    /* MOSTRAR CONCLUSIONES*/ 
     function MostrarCon($idbu){      
         $sql="select idConclusiones, conclusion
         FROM conclusiones WHERE idEmpresa=".$idbu;
@@ -207,6 +207,31 @@ class Negocio{
         return $vec;
     }
 
+    //APARTADO DE RECOMENDACIONES
+    //NUEVO 
+    /* MOSTRAR RECOMENDACIONES*/ 
+    function MostrarRec($idbu){      
+        $sql="select idRecomendaciones,recomendacion, 
+        FROM recomendaciones WHERE idEmpresa=".$idbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
+    //Modificar
+    function UpdateRecomendacion($upre){      
+        $sql="select idRecomendaciones,recomendacion, 
+        FROM recomendaciones WHERE idRecomendaciones=".$upre;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }   
 
 
     
