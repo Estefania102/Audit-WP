@@ -5,7 +5,11 @@
 </head>
 <?php
         include "../Templates/Head.php";
-        
+        include '../controlador/Negocio.php';
+        $idem=$_REQUEST['cod2'];
+        $obj=new Negocio();
+        session_start();
+        $mresp=$obj->Mostrarresp($idem);         
 ?>
 
 <body>
@@ -22,7 +26,7 @@
     <div class="botones" style="margin-left: 21%">
     <button class="btn btn-success btnEnvioFormulario">Envio Formulario</button>
     <input type="file" id="txt_archivo">
-    <button class="btn btn-success btnImportar">Importar</button>
+    <button class="btn btn-success btnImportar" onclick="Cargar_Excel()">Importar</button>
     </div>
  <!-- $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
 
@@ -31,28 +35,26 @@
       include "EnvioCorreo.php";
  } -->
 
-
-
-
-
-
- <table id="telementos" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
+ <table id="telementos" class="table table-striped table-bordered" style="width:100%;margin-top: 50px;">
             <thead class="text-center">
                 <tr>
-                  <th>Código</th>
+                  <th>N°</th>
                   <th>Nombre</th>
-                  <th>Descripción</th>
-                  <th>Cantidad</th>
-                  <th>F.Revisión</th>
-                  <th>Estado</th>
-                  <th>Observación</th>
-                  <th>Editar</th>
-                  <th>Eliminar</th>   
+                  <th>Ubicación segura</th>
+                  <th>Cableado correcto</th>
+                  <th>Interruptor protegido</th>
+                  <th>Mant.</th>
+                  <th>Programa de protección</th>
+                  <th>Control de acceso</th>
+                  <th>Claves para BD</th>  
+                  <th>Personal informado</th>
+                  <th>Manual de programas</th>   
+                  <th>Personal realiza quejas</th> 
                 </tr>
             </thead>
             <tbody class="text-center">
             <?php
-                    foreach ($melem as $k=>$d){?>
+                    foreach ($mresp as $k=>$d){?>
                     <tr>                 
                       <td><?php echo $d[0]?></td>
                       <td><?php echo $d[1]?></td>
@@ -61,14 +63,17 @@
                       <td><?php echo $d[4]?></td>
                       <td><?php echo $d[5]?></td>
                       <td><?php echo $d[6]?></td>
-                      <td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+                      <td><?php echo $d[7]?></td>
+                      <td><?php echo $d[8]?></td>
+                      <td><?php echo $d[9]?></td>
+                      <td><?php echo $d[10]?></td>
+                      <td><?php echo $d[11]?></td>
                     </tr>                                                                           
                         <?php }
               ?> 
-            </tbody>          
+            </tbody>  
+                   
             </table>
-
 
                 <!-- Envio formulario -->
                 <div class="modal fade modal modal-warning fade" id="custModalEnvioFormulario" role="dialog">
@@ -88,10 +93,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
 
 </body>
 <!-- Datatable -->
@@ -127,9 +128,30 @@
       if (extFile=="xlsx" || extFile=="xlsb"){
 
       }else{
-Swal.fire("Mensaje de advertencia","Solo se aceptan imagenes, usted subio un archivo con extension"+ extFile,"warning");
-document.getElementById("txt_archivo").value="";
+      Swal.fire("Mensaje de advertencia","Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension"+ extFile,"warning");
+      document.getElementById("txt_archivo").value="";
       }
     });
+    function Cargar_Excel(){
+      let archivo = document.getElementById('txt_archivo').value;
+      if(archivo.length==0){
+        return Swal.fire("Mensaje de advertencia", "Seleccione un archivo", "warning");
+      }
+      let formData = new FormData();
+      let excel = $("#txt_archivo")[0].files[0];
+      formData.append('excel',excel);
+      $.ajax({
+        url:'../controlador/OperacionRespuesta.php?cod2=<?=$idem?>',
+        type:'POST',
+        data:formData,
+        contentType: false,
+        processData:false,
+        success:function(resp){
+          // alert(resp);
+          location.reload();
+        }
+      });
+      return false;
+    }
   </script>
 </html>

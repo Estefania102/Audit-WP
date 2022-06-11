@@ -164,6 +164,21 @@ class Negocio{
         return $vec;
     }
 
+    //APARTADO DE RESPUESTAS
+    
+    /* MOSTRAR RESPUESTAS*/ 
+
+    function Mostrarresp($idbu){      
+        $sql="select idRespuesta, nombre,pregunta1,pregunta2,pregunta3,pregunta4,pregunta5,pregunta6,pregunta7,pregunta8,pregunta9,pregunta10 
+        FROM respuesta WHERE idEmpresa=".$idbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
+
 
 
     
