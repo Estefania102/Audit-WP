@@ -55,6 +55,44 @@
 										?> 
 									</tbody>          
 								</table>
+
+								<!-- NUEVO -->
+								<div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Nuevo</h4>
+                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                            </div>                       
+                            <div class="modal-body">
+                              
+                            </div>
+                            <div class="modal-footer">
+                                <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+            <!-- EDITAR -->
+                  <div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Editar</h4>
+                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                            </div>                       
+                            <div class="modal-body">
+                              
+                            </div>
+                            <div class="modal-footer">
+                              <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div> 
 								</div>	
 							</div>		
 						</div>
@@ -93,7 +131,45 @@
 											<?php }
 									?> 
 								</tbody>          
-							</table>	
+							</table>
+							
+							<!-- NUEVO -->
+							<div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Nuevo</h4>
+                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                            </div>                       
+                            <div class="modal-body">
+                              
+                            </div>
+                            <div class="modal-footer">
+                                <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+            <!-- EDITAR -->
+                  <div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">Editar</h4>
+                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                            </div>                       
+                            <div class="modal-body">
+                              
+                            </div>
+                            <div class="modal-footer">
+                              <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div> 
 							</div>
 						</div>				
 					</div> 

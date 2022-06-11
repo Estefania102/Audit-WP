@@ -11,12 +11,23 @@ if(isset($_POST['editElemento'])){
     <link rel='stylesheet' href='../css/estilos.css'>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script type='text/javascript' src='../lib/bootstrap-datepicker.js'></script>
+    <link rel='stylesheet' type='text/css' href='../lib/bootstrap-datepicker.css'>
     <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
     <form role='form' method='post' name='updateElemento' id='updateElemento' action='../controlador/OperacionElementoInsertar.php'>   
     <input type='hidden' class='form-control' name='idEle' value='$id'>
-    <input type='hidden' class='form-control' name='registroElemento' value=''>";
+    <input type='hidden' class='form-control' name='registroElemento' value=''>
      
+    <script>
+    $(function() {
+    $('.dates #calendario').datepicker({
+    'format': 'yyyy-mm-dd',
+    'autoclose': true
+    });
+    });
+    </script>";
+
     // Nombre
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";

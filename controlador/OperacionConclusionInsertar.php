@@ -3,19 +3,14 @@
                 //APARTADO DE INGRESO DE ELEMENTOS
 
                 //AGREGAR 
-                if(isset($_POST['addelementos'])){
+                if(isset($_POST['addconclusion'])){
                     session_start();           
-                    $idemp= $_POST['idEle'];
-                    $nombre= $_POST['nombreEle'];
-                    $desc= $_POST['descEle'];
-                    $cant= $_POST['cantEle'];
-                    $date= $_POST['calendario'];
-                    $campo= $_POST['estado'];
-                    $obser= $_POST['obserEle'];
+                    $idemp= $_POST['idEmp'];
+                    $con= $_POST['conclusion'];
                                  
                     include_once 'Conexion.php';
-                    $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, estado, observacion, idEmpresa) 
-                    VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idemp')";
+                    $query="INSERT INTO conclusiones(conclusion, idEmpresa) 
+                    VALUES ('$con','$idemp')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -30,19 +25,14 @@
                 }
 
                 // EDITAR
-                if(isset($_POST['updateElemento'])){            
+                if(isset($_POST['updateConclusion'])){            
                     session_start();
-                    $idEle= $_POST['idEle'];
-                    $nombre= $_POST['nombreEle'];
-                    $desc= $_POST['descEle'];
-                    $cant= $_POST['cantEle'];
-                    $date= $_POST['calendario'];
-                    $campo= $_POST['estado'];
-                    $obser= $_POST['obserEle'];
+                    $idCon= $_POST['idCon'];
+                    $con= $_POST['conclusion'];
                     try {        
                     include_once 'Conexion.php';
-                    $query="update elementos SET nombre='$nombre',descripcion='$desc',cantidad='$cant',frevision='$date',estado='$campo',observacion='$obser' 
-                    WHERE idelementos=".$idEle;
+                    $query="update conclusiones SET conclusion='$con' 
+                    WHERE idConclusiones=".$idCon;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exito'                   
@@ -64,7 +54,7 @@
                     $idele = $_POST['id'];
                         try{
                     include_once 'Conexion.php';
-                    $query="DELETE FROM `elementos` WHERE idelementos=".$idele;
+                    $query="DELETE FROM `conclusiones` WHERE idConclusiones=".$idele;
                    
                 if(mysqli_query($con,$query)==1){
                     $respuesta=array(

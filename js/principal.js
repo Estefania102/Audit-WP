@@ -649,6 +649,181 @@ $('.btnEnvioFormulario').click(function(){
 // });
 
 
+//APARTADO DE CONCLUSIONES
+//Modal Agregar
+$('.btnAgregarElementos').click(function(){
+  var add =$(this).data('id');
+  $.ajax({
+    url: 'get_ElementosdataAdd.php?add='+add,
+    type:'post',
+    data:{add:add},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalElementos').modal('show');
+    }
+  })
+});
+
+// AGREGAR
+$('#addelementos').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Elemento añadido',
+            'success'
+          )
+          setTimeout(function(){
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'Datos incompletos',
+          'error'
+        )
+      }
+    }
+  })
+});
+
+//Modal Editar
+$('.btnEditarElementos').click(function(){
+  var editElemento =$(this).data('id');
+  $.ajax({
+    url: 'get_Elementosdataedit.php',
+    type:'post',
+    data:{editElemento:editElemento},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalElementos').modal('show');
+    }
+  })
+});
+
+// MODIFICAR
+$('#updateElemento').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == "datos incorrectos"){
+        swal(
+          'Incorrecto',
+          'Elemento no modificada',
+          'error'
+        )
+      }
+      else if(resultado.respuesta == "exito"){
+        swal(
+          'Correcto',
+          'Elemento modificada',
+          'success'
+        )
+        setTimeout(function(){
+        // window.location.href = '../Auditor/IngresoElementos.php';
+        location.reload();
+        },2000)
+      }
+    }
+  })
+});
+
+//Borrar registro
+$('.btnBorrarElementos').on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var tipo = $(this).attr('data-tipo');
+  swal({
+  title:'¿Estás seguro?',
+  text: "Un elemento se eliminará",
+  icon :"warning",
+  showCancelButton: true,
+  confirmButtonColor : '#3085d6',
+  cancelButtonColor : '#d33',
+  confirmButtonText : 'Si, eliminar',
+  cancelButtonText: 'Cancelar'
+  }).then((result)=>{
+    if(result.value){
+      $.ajax({
+        type:'post',
+        data:{
+          'id': id,
+          'registroElemento': 'eliminar'
+        },
+        url : '../controlador/OperacionElemento'+tipo+'.php',
+        success:function(data){
+          var resultado=JSON.parse(data);
+          if(resultado.respuesta=='exitoso'){
+            swal(
+              'Eliminado',
+              'Elemento eliminado',
+              'success' 
+              )
+              jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
+              setTimeout(function(){
+              // window.location.href="../Auditor/IngresoElementos.php";
+              location.reload();
+              },2000)
+          }
+        }
+      });
+    }else{
+      swal(
+        'Acción cancelada',
+        '',
+        'warning'
+      )
+    }
+    })
+});
+
+// Modal de borrar
+$('#deleteElementos').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Referencia eliminada',
+            'success'
+          )
+          setTimeout(function(){
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'No se pudo eliminar',
+          'error'
+        )
+      }
+    }
+  })
+});
+
 });
 
 
