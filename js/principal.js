@@ -824,6 +824,182 @@ $('#deleteConclusiones').on('submit',function(e){
   })
 });
 
+//APARTADO DE RECOMENDACIONES
+
+//Modal Agregar
+$('.btnAgregarRecomendaciones').click(function(){
+  var add =$(this).data('id');
+  $.ajax({
+    url: 'get_RecomendaciondataAdd.php?add='+add,
+    type:'post',
+    data:{add:add},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalRecomendaciones').modal('show');
+    }
+  })
+});
+
+// AGREGAR
+$('#addrecomendaciones').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Recomendación añadida',
+            'success'
+          )
+          setTimeout(function(){
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'Datos incompletos',
+          'error'
+        )
+      }
+    }
+  })
+});
+
+//Modal Editar
+$('.btnEditarRecomendaciones').click(function(){
+  var editRecomendacion=$(this).data('id');
+  $.ajax({
+    url: 'get_Recomendaciondataedit.php',
+    type:'post',
+    data:{editRecomendacion:editRecomendacion},
+    success: function(response){
+      $('.modal-body').html(response);
+      $('#custModalRecomendaciones').modal('show');
+    }
+  })
+});
+
+// MODIFICAR
+$('#updateRecomendacion').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == "datos incorrectos"){
+        swal(
+          'Incorrecto',
+          'Recomendación no modificada',
+          'error'
+        )
+      }
+      else if(resultado.respuesta == "exito"){
+        swal(
+          'Correcto',
+          'Recomendación modificada',
+          'success'
+        )
+        setTimeout(function(){
+        // window.location.href = '../Auditor/IngresoElementos.php';
+        location.reload();
+        },2000)
+      }
+    }
+  })
+});
+
+//Borrar registro
+$('.btnBorrarRecomendaciones').on('click',function(e){
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var tipo = $(this).attr('data-tipo');
+  swal({
+  title:'¿Estás seguro?',
+  text: "Una recomendación se eliminará",
+  icon :"warning",
+  showCancelButton: true,
+  confirmButtonColor : '#3085d6',
+  cancelButtonColor : '#d33',
+  confirmButtonText : 'Si, eliminar',
+  cancelButtonText: 'Cancelar'
+  }).then((result)=>{
+    if(result.value){
+      $.ajax({
+        type:'post',
+        data:{
+          'id': id,
+          'registroRecomendacion': 'eliminar'
+        },
+        url : '../controlador/OperacionRecomendacion'+tipo+'.php',
+        success:function(data){
+          var resultado=JSON.parse(data);
+          if(resultado.respuesta=='exitoso'){
+            swal(
+              'Eliminado',
+              'Recomendación eliminada',
+              'success' 
+              )
+              jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
+              setTimeout(function(){
+              // window.location.href="../Auditor/IngresoElementos.php";
+              location.reload();
+              },2000)
+          }
+        }
+      });
+    }else{
+      swal(
+        'Acción cancelada',
+        '',
+        'warning'
+      )
+    }
+    })
+});
+
+// Modal de borrar
+$('#deleteConclusiones').on('submit',function(e){
+  e.preventDefault();
+  var datos =$(this).serializeArray();
+  $.ajax({
+    type:$(this).attr('method'),
+    data :datos,
+    url:$(this).attr('action'),
+    dataType:'json',
+    success: function(data){
+      var resultado =data;
+      if(resultado.respuesta == 'exitoso'){
+          swal(
+            'Correcto',
+            'Recomendación eliminada',
+            'success'
+          )
+          setTimeout(function(){
+          // window.location.href = '../Auditor/IngresoElementos.php';
+          location.reload();
+          },2000)
+      }else{
+        swal(
+          'Error',
+          'No se pudo eliminar',
+          'error'
+        )
+      }
+    }
+  })
+});
+
 });
 
 
