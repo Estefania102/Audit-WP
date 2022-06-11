@@ -82,13 +82,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Envio de formulario</h4>
-                              <a type="button" href="Respuestas.php" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="Respuestas.php?cod2=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body" style="padding-top: 1px;">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="Respuestas.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="Respuestas.php?cod2=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>

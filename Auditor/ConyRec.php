@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>APARTADO DE CONCLUSIONES</title>
-	<link rel="stylesheet" href="../css/all.css">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins" rel="stylesheet">
-	<link rel="stylesheet" href="../css/estilos.css">
 </head>
+
+<?php
+include "../Templates/Head.php";
+include '../controlador/Negocio.php';
+$idem=$_REQUEST['cod3'];
+$obj=new Negocio();
+session_start();
+$mresp=$obj->Mostrarresp($idem);  
+
+?>
 <body>
     <section class="main">
 	<!-- COBIT 5 -->
@@ -57,19 +62,19 @@
 								</table>
 
 								<!-- NUEVO -->
-								<div class="modal fade modal modal-warning fade" id="custModalElementos" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarGuia" aria-hidden="true">
+								<div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarConclusion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="ConyRec.php?cod3=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
@@ -82,13 +87,13 @@
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Editar</h4>
-                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                              <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                              <a type="button"  href="ConyRec.php?cod3=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
