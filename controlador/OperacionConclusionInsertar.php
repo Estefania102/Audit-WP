@@ -6,11 +6,11 @@
                 if(isset($_POST['addconclusion'])){
                     session_start();           
                     $idemp= $_POST['idEmp'];
-                    $con= $_POST['conclusion'];
+                    $conclusion= $_POST['conclusion'];
                                  
                     include_once 'Conexion.php';
                     $query="INSERT INTO conclusiones(conclusion, idEmpresa) 
-                    VALUES ('$con','$idemp')";
+                    VALUES ('$conclusion','$idemp')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -28,10 +28,10 @@
                 if(isset($_POST['updateConclusion'])){            
                     session_start();
                     $idCon= $_POST['idCon'];
-                    $con= $_POST['conclusion'];
+                    $conclusion= $_POST['conclusion'];
                     try {        
                     include_once 'Conexion.php';
-                    $query="update conclusiones SET conclusion='$con' 
+                    $query="update conclusiones SET conclusion='$conclusion' 
                     WHERE idConclusiones=".$idCon;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(

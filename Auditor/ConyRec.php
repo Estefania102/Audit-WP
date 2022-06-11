@@ -50,7 +50,7 @@ $mrec=$obj->MostrarRec($idem);
 									</thead>
 									<tbody class="text-center">
 										<?php
-											foreach ($melem as $k=>$d){?>
+											foreach ($mcon as $k=>$d){?>
 											<tr>                 
 											<td><?php echo $d[0]?></td>
 											<td><?php echo $d[1]?></td>
@@ -127,7 +127,7 @@ $mrec=$obj->MostrarRec($idem);
 								</thead>
 								<tbody class="text-center">
 									<?php
-										foreach ($melem as $k=>$d){?>
+										foreach ($mrec as $k=>$d){?>
 										<tr>                 
 										<td><?php echo $d[0]?></td>
 										<td><?php echo $d[1]?></td>
@@ -140,42 +140,43 @@ $mrec=$obj->MostrarRec($idem);
 							</table>
 							
 							<!-- NUEVO -->
-							<div class="modal fade modal modal-warning fade" id="custModalRecomendacion" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarRecomendacion" aria-hidden="true">
+							<div class="modal fade modal modal-warning fade" id="custModalRecomendaciones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarRecomendacion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                                <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                                <a type="button"  href="ConyRec.php?cod3=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalRecomendacion" role="dialog" tabindex="-1" aria-labelledby="custModalEditarRecomendacion" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalRecomendaciones" role="dialog" tabindex="-1" aria-labelledby="custModalEditarRecomendacion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">Editar</h4>
-                              <a type="button" href="IngresoElementos.php?cod1=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
+                              <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
                             <div class="modal-body">
                               
                             </div>
                             <div class="modal-footer">
-                              <a type="button"  href="IngresoElementos.php?cod1=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+                              <a type="button"  href="ConyRec.php?cod3=<?=$idem?>" class="btn btn-default" data-dismiss="modal">Cancelar</a>
                             </div>
                         </div>
                     </div>
-                  </div> 
+                  </div>
+				  <!-- FIN EDITAR  -->
 							</div>
 						</div>				
 					</div> 
@@ -184,7 +185,7 @@ $mrec=$obj->MostrarRec($idem);
 				</div>
 			</div>
 		</section>
-		<!-- FIN  COBIT 5  -->
+		<!-- FIN  CONYREC  -->
     </section>
 <!-- FIN MAIN -->
 </body>

@@ -21,7 +21,7 @@
     $response .= "<div class='container'>";
     $response .= "<div class='conclusion' style='margin-top:30px;'>";
            
-    $response .= "<label>Conclusión/label>";
+    $response .= "<label>Conclusión</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='conclusion' name='conclusion'  autocomplete='off'>";
             
     $response .="</div>";

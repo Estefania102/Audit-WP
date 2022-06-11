@@ -10,7 +10,7 @@
                                
                     include_once 'Conexion.php';
                     $query="INSERT INTO recomendaciones(recomendacion, idEmpresa) 
-                    VALUES ('$recomendacion','$idrec')";
+                    VALUES ('$recomendacion','$idemp')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
@@ -32,7 +32,7 @@
                     try {        
                     include_once 'Conexion.php';
                     $query="update recomendaciones SET recomendacion='$recomendacion'
-                    WHERE idRecomendaciones".$idRec;
+                    WHERE idRecomendaciones=".$idRec;
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exito'                   
