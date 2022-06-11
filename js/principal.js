@@ -651,21 +651,21 @@ $('.btnEnvioFormulario').click(function(){
 
 //APARTADO DE CONCLUSIONES
 //Modal Agregar
-$('.btnAgregarElementos').click(function(){
+$('.btnAgregarComclusiones').click(function(){
   var add =$(this).data('id');
   $.ajax({
-    url: 'get_ElementosdataAdd.php?add='+add,
+    url: 'get_ConclusiondataAdd.php?add='+add,
     type:'post',
     data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalElementos').modal('show');
+      $('#custModalConclusiones').modal('show');
     }
   })
 });
 
 // AGREGAR
-$('#addelementos').on('submit',function(e){
+$('#addconclusion').on('submit',function(e){
   e.preventDefault();
   var datos =$(this).serializeArray();
   $.ajax({
@@ -678,7 +678,7 @@ $('#addelementos').on('submit',function(e){
       if(resultado.respuesta == 'exitoso'){
           swal(
             'Correcto',
-            'Elemento añadido',
+            'Conclusion añadida',
             'success'
           )
           setTimeout(function(){
@@ -697,21 +697,21 @@ $('#addelementos').on('submit',function(e){
 });
 
 //Modal Editar
-$('.btnEditarElementos').click(function(){
-  var editElemento =$(this).data('id');
+$('.btnEditarConclusiones').click(function(){
+  var editConclusion =$(this).data('id');
   $.ajax({
-    url: 'get_Elementosdataedit.php',
+    url: 'get_Conclusiondataedit.php',
     type:'post',
-    data:{editElemento:editElemento},
+    data:{editConclusion:editConclusion},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalElementos').modal('show');
+      $('#custModalConclusiones').modal('show');
     }
   })
 });
 
 // MODIFICAR
-$('#updateElemento').on('submit',function(e){
+$('#updateConclusion').on('submit',function(e){
   e.preventDefault();
   var datos =$(this).serializeArray();
   $.ajax({
@@ -724,14 +724,14 @@ $('#updateElemento').on('submit',function(e){
       if(resultado.respuesta == "datos incorrectos"){
         swal(
           'Incorrecto',
-          'Elemento no modificada',
+          'Conclusión no modificada',
           'error'
         )
       }
       else if(resultado.respuesta == "exito"){
         swal(
           'Correcto',
-          'Elemento modificada',
+          'Conclusión modificada',
           'success'
         )
         setTimeout(function(){
@@ -744,13 +744,13 @@ $('#updateElemento').on('submit',function(e){
 });
 
 //Borrar registro
-$('.btnBorrarElementos').on('click',function(e){
+$('.btnBorrarComclusiones').on('click',function(e){
   e.preventDefault();
   var id = $(this).attr('data-id');
   var tipo = $(this).attr('data-tipo');
   swal({
   title:'¿Estás seguro?',
-  text: "Un elemento se eliminará",
+  text: "Un conclusión se eliminará",
   icon :"warning",
   showCancelButton: true,
   confirmButtonColor : '#3085d6',
@@ -763,15 +763,15 @@ $('.btnBorrarElementos').on('click',function(e){
         type:'post',
         data:{
           'id': id,
-          'registroElemento': 'eliminar'
+          'registroConclusion': 'eliminar'
         },
-        url : '../controlador/OperacionElemento'+tipo+'.php',
+        url : '../controlador/OperacionConclusion'+tipo+'.php',
         success:function(data){
           var resultado=JSON.parse(data);
           if(resultado.respuesta=='exitoso'){
             swal(
               'Eliminado',
-              'Elemento eliminado',
+              'Conclusión eliminada',
               'success' 
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
@@ -793,7 +793,7 @@ $('.btnBorrarElementos').on('click',function(e){
 });
 
 // Modal de borrar
-$('#deleteElementos').on('submit',function(e){
+$('#deleteConclusiones').on('submit',function(e){
   e.preventDefault();
   var datos =$(this).serializeArray();
   $.ajax({
@@ -806,7 +806,7 @@ $('#deleteElementos').on('submit',function(e){
       if(resultado.respuesta == 'exitoso'){
           swal(
             'Correcto',
-            'Referencia eliminada',
+            'Conclusión eliminada',
             'success'
           )
           setTimeout(function(){

@@ -34,7 +34,7 @@ $mresp=$obj->Mostrarresp($idem);
 								<div class="container-btn">
 							<div class="row">    
 								<div class="col-lg-12">
-								<button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
+								<button class="btn btn-success btnAgregarComclusiones" data-id="<?php echo $idem;?>">Nuevo</button>
 								</div>
 							</div>
 							</div>
@@ -53,8 +53,8 @@ $mresp=$obj->Mostrarresp($idem);
 											<tr>                 
 											<td><?php echo $d[0]?></td>
 											<td><?php echo $d[1]?></td>
-											<td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
-											<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+											<td><button class='btn btn-primary btnEditarConclusiones' data-id=<?php echo $d[0]?>>Editar</button>
+											<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarComclusiones' data-id=<?php echo $d[0]?>>Eliminar</button></td>
 											</tr>                                                                           
 												<?php }
 										?> 
@@ -111,7 +111,7 @@ $mresp=$obj->Mostrarresp($idem);
 							<div class="container-btn">
 						<div class="row">    
 							<div class="col-lg-12">
-							<button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
+							<button class="btn btn-success btnAgregarRecomendaciones" data-id="<?php echo $idem;?>">Nuevo</button>
 							</div>
 						</div>
 						</div>
@@ -130,8 +130,8 @@ $mresp=$obj->Mostrarresp($idem);
 										<tr>                 
 										<td><?php echo $d[0]?></td>
 										<td><?php echo $d[1]?></td>
-										<td><button class='btn btn-primary btnEditarElementos' data-id=<?php echo $d[0]?>>Editar</button>
-										<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarElementos' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+										<td><button class='btn btn-primary btnEditarRecomendaciones' data-id=<?php echo $d[0]?>>Editar</button>
+										<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarRecomendaciones' data-id=<?php echo $d[0]?>>Eliminar</button></td>
 										</tr>                                                                           
 											<?php }
 									?> 
