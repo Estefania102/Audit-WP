@@ -72,7 +72,7 @@
 							</div>
 						</div>
 						</div>
-							<table id="tconclusion" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
+							<table id="trecomendacion" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
 								<thead class="text-center">
 									<tr>
 									<th>N°</th>
@@ -126,6 +126,15 @@
   <script>
     $(document).ready(function(){
     $("#tconclusion").DataTable({
+       "language": {
+        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+      }
+    });
+  });
+  </script>
+  <script>
+    $(document).ready(function(){
+    $("#trecomendacion").DataTable({
        "language": {
         "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
       }
