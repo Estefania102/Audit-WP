@@ -159,7 +159,7 @@
 						<h3>Conclusiones</h3>
 						<p>Según el análisis de la auditoría se expone el resultado obtenido del estado de los componentes de los sistemas de información.<br></p>
 					</div>
-					<a href="AuditMenuPrincipal.php" class='btns' style="margin:8% auto 0px auto;">Conclusiones</a>	
+					<a href="ConyRec.php?cod2=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Conclusiones</a>	
 				</div>
 			</div>			
 		</section>
