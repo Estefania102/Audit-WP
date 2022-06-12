@@ -18,11 +18,11 @@
  <header>
 		<div class="menu-bar-pc" style="padding: 0 19.95rem">
 			<nav class="menu-principal">
-				<a href="#">Inicio</a>
-				<a href="#evaluacion">Guía de Evaluación</a>
-				<a href="#elementos">Gestión de Elementos</a>
-				<a href="#respuestas">Respuestas</a>
-        <a href="#conclusiones">Conclusiones</a>
+				<a href="MenuPrincipal.php">Inicio</a>
+        <a href="EmpGuiaEvaluacion.php?cod=<?=$idemp?>">Guia de Evaluación</a>
+				<a href="EmpIngresoElementos.php?cod1=<?=$idemp?>">Gestión de Elementos</a>
+				<a href="EmpRespuestas.php?cod2=<?=$idemp?>">Respuestas</a>
+        <a href="EmpConyRec.php?cod3=<?=$idemp?>">Conclusiones</a>
 			</nav>
 		</div>
 
@@ -33,11 +33,11 @@
 
 			<div class="slideMenu" id="slideMenu">
 				<nav class="menu-principal">
-					<a href="#">Inicio</a>
-					<a href="#evaluacion">Guia de Evaluación</a>
-				    <a href="#elementos">Gestión de Elementos</a>
-				    <a href="#respuestas">Respuestas</a>
-            <a href="#conclusiones">Conclusiones</a>
+					<a href="MenuPrincipal.php">Inicio</a>
+					<a href="EmpGuiaEvaluacion.php?cod=<?=$idemp?>">Guia de Evaluación</a>
+				  <a href="EmpIngresoElementos.php?cod1=<?=$idemp?>">Gestión de Elementos</a>
+				  <a href="EmpRespuestas.php?cod2=<?=$idemp?>">Respuestas</a>
+          <a href="EmpConyRec.php?cod3=<?=$idemp?>">Conclusiones</a>
 				</nav>
 			</div>			
 		</div>
@@ -52,8 +52,8 @@
               <div class="card">
 
                   <div class="card-body">
-                    <h5 class="card-title">Actualizar horario</h5>
-                    <a href="ActualizarPer.php" class="btn btn-primary">Actualizar</a>
+                    <h5 class="card-title">Guia de Evaluación</h5>
+                    <a href="EmpGuiaEvaluacion.php?cod=<?=$idemp?>" class="btn btn-primary">Ingresar</a>
                   </div>
                 </div>
               </div>
@@ -61,8 +61,8 @@
                   <div class="card">
 
                     <div class="card-body">
-                      <h5 class="card-title">Visualizar reserva</h5>
-                      <a href="VisualizarPer.php" class="btn btn-primary">Visualizar</a>
+                      <h5 class="card-title">Elementos</h5>
+                      <a href="EmpIngresoElementos.php?cod1=<?=$idemp?>" class="btn btn-primary">Ingresar</a>
                     </div>
                   </div>
               </div>
@@ -70,8 +70,8 @@
               <div class="card">
 
                   <div class="card-body">
-                    <h5 class="card-title">Actualizar horario</h5>
-                    <a href="ActualizarPer.php" class="btn btn-primary">Actualizar</a>
+                    <h5 class="card-title">Respuestas</h5>
+                    <a href="EmpRespuestas.php?cod2=<?=$idemp?>" class="btn btn-primary">Ingresar</a>
                   </div>
                 </div>
               </div>
@@ -79,8 +79,8 @@
                   <div class="card">
 
                     <div class="card-body">
-                      <h5 class="card-title">Visualizar reserva</h5>
-                      <a href="VisualizarPer.php" class="btn btn-primary">Visualizar</a>
+                      <h5 class="card-title">Conclusiones y Recomendaciones</h5>
+                      <a href="EmpConyRec.php?cod3=<?=$idemp?>" class="btn btn-primary">Ingresar</a>
                     </div>
                   </div>
               </div>
