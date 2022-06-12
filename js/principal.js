@@ -744,7 +744,7 @@ $('#updateConclusion').on('submit',function(e){
 });
 
 //Borrar registro
-$('.btnBorrarComclusiones').on('click',function(e){
+$('.btnBorrarConclusiones').on('click',function(e){
   e.preventDefault();
   var id = $(this).attr('data-id');
   var tipo = $(this).attr('data-tipo');

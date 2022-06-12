@@ -49,7 +49,7 @@ class Negocio{
            return "Error";
     }
 
-    /* LOGIN Auditor*/ 
+    /* LOGIN Empresa*/ 
     function loginEmpresa($ema,$pas){
         $sql="select * from empresa where correo='$ema' and contrasena='$pas'";
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));

@@ -32,9 +32,7 @@
             <input type="hidden" name="envialobu">
             <button type="submit" class="button">Ingresar</button>
             
-            <p><a href="LoginEmpresa.php?">Login Empresa</a></p>
-            
-            <p><a href="RegistroAuditor.php">Registrarse</a></p>
+            <p><a href="loginAuditor.php">Login Auditor</a></p>
             </div>
         </form>
     </body>

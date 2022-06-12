@@ -15,21 +15,25 @@ $mrec=$obj->MostrarRec($idem);
 
 ?>
 <body>
+
     <section class="main">
 	<!-- COBIT 5 -->
-        <section id="cobit5"  class="cobit5">
+        <section id="ConyRec"  class="ConyRec">
 			<div class="container">
 				<div class="titulo-seccion">
 					<h2>CONCLUSIONES Y RECOMENDACIONES</h2>
 				</div>
-				<div class="contenedor-cobit">
-					<ul id="encabezado_cobit" class="encabezado">
-						<li><a href="#dominio">Conclusiones</a></li>
-						<li><a href="#procesos">Recomendaciones</a></li>
+				<?php
+                   include "graficos.php"    
+                ?>
+				<div class="contenedor-ConyRec">
+					<ul id="encabezado_ConyRec" class="encabezado">
+						<li><a href="#Conclusiones">Conclusiones</a></li>
+						<li><a href="#Recomendaciones">Recomendaciones</a></li>
 					</ul>
-					<div class="contenido" id="contenido_cobit">
+					<div class="contenido" id="contenido_ConyRec">
 						<!-- MENU CONCLUSIONES -->
-						<div id="dominio">
+						<div id="Conclusiones">
 							<div class="item">
 								<div class="col izq">
 								<div class="container-btn">
@@ -55,7 +59,7 @@ $mrec=$obj->MostrarRec($idem);
 											<td><?php echo $d[0]?></td>
 											<td><?php echo $d[1]?></td>
 											<td><button class='btn btn-primary btnEditarConclusiones' data-id=<?php echo $d[0]?>>Editar</button>
-											<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarComclusiones' data-id=<?php echo $d[0]?>>Eliminar</button></td>
+											<td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrarConclusiones' data-id=<?php echo $d[0]?>>Eliminar</button></td>
 											</tr>                                                                           
 												<?php }
 										?> 
@@ -106,7 +110,7 @@ $mrec=$obj->MostrarRec($idem);
 
 					<!-- RECOMENDACIONES -->
 
-					<div id="procesos">
+					<div id="Recomendaciones">
 						<div class="item">
 							<div class="col izq">
 							<div class="container-btn">
@@ -190,7 +194,11 @@ $mrec=$obj->MostrarRec($idem);
 <!-- FIN MAIN -->
 </body>
 
-<script src="../js/tabs.js"></script>
+
+<!-- ChartJS -->
+<script src="../lib/chart.js/Chart.min.js"></script>
+
+<script src="../js/tabs1.js"></script>
 
 <!-- Datatable -->
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -32,7 +32,7 @@
             <input type="hidden" name="envialoaud">
             <button type="submit" class="button">Ingresar</button>
             
-            <p><a href="LoginEmpresa.php?">Login Empresa</a></p>
+            <p><a href="loginEmpresa.php">Login Empresa</a></p>
             
             <p><a href="RegistroAuditor.php">Registrarse</a></p>
             </div>
