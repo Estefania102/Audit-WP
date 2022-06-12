@@ -8,11 +8,10 @@
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
         $idem=$_GET['cod'];
-        // echo $idem;
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        $namemp=$obj->NombreEmpresa($idem); 
+        $namemp=$obj->NombreEmpyar($idem); 
         $mguia=$obj->Mostrarguia($idem)
       ?>
       
@@ -33,11 +32,21 @@
 
     </header>
 <!-- BOTON NUEVO -->
+        <div style="margin-top: 3%;margin-bottom: 3%;display: grid; grid-template-columns: 1fr 1fr;text-align: center;">
+          <div>
+        <?php
+          foreach ($namemp as $k=>$d){?>
+            <a>Nombre de la empresa: <?php echo $d[0]?></a></br> 
+            </div>  
+            <div>       
+            <a>Nombre del área a auditar: <?php echo $d[1]?></a>
+        <?php }
+        ?> 
+           </div>
+        </div>
     <div class="container-btn">
       <div class="row">    
-        <div class="col-lg-12">
-          <a>Nombre de la empresa:</a></br>
-          <a>Nombre del área a auditar:</a>
+        <div class="col-lg-12" style="margin-left: 45%;margin-bottom: 3%;">                   
         <button class="btn btn-success btnAgregarG" data-id="<?php echo $idem;?>">Nuevo</button>
         </div>
       </div>

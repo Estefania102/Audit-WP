@@ -32,7 +32,7 @@
 <!-- BOTON NUEVO -->
     <div class="container-btn">
       <div class="row">    
-        <div class="col-lg-12">
+        <div class="col-lg-12" style="margin: 3% 0 3% 45%;">
         <button class="btn btn-success btnAgregarElementos" data-id="<?php echo $idem;?>">Nuevo</button>
         </div>
       </div>

@@ -17,9 +17,8 @@
 
 <body background="../img/"> 
     
-<h1 class="formh1">REGISTRO</h1>
+    <h1 class="formh1">REGISTRO</h1>
     <form class="formreaud" id="enviareaud" name="enviareaud" action="../controlador/OperacionInsertar.php" method="post">
- 
         <div class="formulario-grupo" id="grupo-nombres">
             <label for="nombre" class="formulario-label">Nombres</label>
             <div class="formulario-grupo-input">
@@ -67,7 +66,7 @@
 
         <div class="formulario-grupo" id="grupo-button">
             <input type="hidden" name="enviareaud">
-            <button type="submit" class="buttonre">Registrar</button>
+            <button type="submit" class="buttonre">REGISTRAR</button>
         </div>
     </form>
 </body>

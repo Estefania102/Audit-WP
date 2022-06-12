@@ -11,7 +11,7 @@
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
         $emp=$obj->Insertarbu($idaudit);
-		$namemp=$obj->NombreEmpresa($idem);  
+		$namemp=$obj->NombreEmpyar($idem);  
       ?>	
 <body>
 	<!-- ENCABEZADO -->

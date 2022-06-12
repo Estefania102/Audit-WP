@@ -8,7 +8,6 @@
 <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
 <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 
-    <body background="../img/"> 
         <form class="formloaud" id="envialoaud" name="envialoaud" action="../controlador/OperacionInsertar.php" method="post">
         <h1>Login Auditor</h1>
         <div class="formulario-grupo" id="grupo-correo" style="margin-top: -10px">
@@ -30,11 +29,11 @@
         </div> 
         <div class="formulario-grupo">
             <input type="hidden" name="envialoaud">
-            <button type="submit" class="button">Ingresar</button>
+            <button type="submit" class="button">INGRESAR</button>
             
-            <p><a href="loginEmpresa.php">Login Empresa</a></p>
+            <p style="text-align: center;"><a href="LoginEmpresa.php" style="text-decoration: none;color: #424242;">Login Empresa</a></p>
             
-            <p><a href="RegistroAuditor.php">Registrarse</a></p>
+            <p style="text-align: center;"><a href="RegistroAuditor.php" style="text-decoration: none;color: #424242;">Registrarse</a></p>
             </div>
         </form>
     </body>

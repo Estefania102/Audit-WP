@@ -37,18 +37,6 @@ class Negocio{
         return $resultado;
     }
 
-
-    /* REGISTRO empresa*/ 
-    function registroEmpresa($nom,$dire,$cel,$correo,$contrasena,$area){
-        $sql="insert into empresa (nombre, direccion,celular,correo,contrasena,area) 
-        values('$nom','$dire','$cel','$correo','$contrasena','$area')";
-        $res=mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
-           if($res)
-           return "ok";
-           else
-           return "Error";
-    }
-
     /* LOGIN Empresa*/ 
     function loginEmpresa($ema,$pas){
         $sql="select * from empresa where correo='$ema' and contrasena='$pas'";
@@ -89,11 +77,11 @@ class Negocio{
         }
         return $vec;
     }
+    
+    //GUIA DE EVALUACIÓN 
 
-    //Ingreso Empresa
-    //Modificar
-    function NombreEmpresa($upbu){      
-        $sql="select `nombre` FROM `empresa` WHERE idEmpresa=".$upbu;
+    function NombreEmpyar($upbu){      
+        $sql="select `nombre`,`area` FROM `empresa` WHERE idEmpresa=".$upbu;
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
         $vec=array();
         while($f=  mysqli_fetch_array($res)){
@@ -102,7 +90,6 @@ class Negocio{
         return $vec;
     }
 
-    //GUIA DE EVALUACIÓN 
     /* MOSTRAR GUIA DE EVALUACIÓN*/ 
     function Mostrarguia($idbu){      
         $sql="select idreferencia,actividad,procedimiento,herramientas,observaciones from guiaevaluacion

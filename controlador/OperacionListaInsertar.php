@@ -11,10 +11,11 @@
                     $celular= $_POST['celularBu'];
                     $correo= $_POST['correoBu'];
                     $contrasena= $_POST['contrasenaBu'];
+                    $area= $_POST['areaBu'];
                                  
                     include_once 'Conexion.php';
-                    $query="INSERT INTO empresa(nombre,direccion,celular,correo,contrasena,idauditor)
-                    VALUES ('$nombre','$direccion','$celular','$correo','$contrasena','$idaudit')";
+                    $query="INSERT INTO empresa(nombre,direccion,celular,correo,contrasena,idauditor,area)
+                    VALUES ('$nombre','$direccion','$celular','$correo','$contrasena','$idaudit','$area')";
                     if(mysqli_query($con,$query)==1){
                         $respuesta=array(
                             'respuesta' => 'exitoso'
