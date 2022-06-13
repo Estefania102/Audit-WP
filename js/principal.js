@@ -641,8 +641,7 @@ $('.btnEnvioFormulario').click(function(){
 });
 
 // $(".btnEnvioForm").click(function() {
-//   // Cancelar comportamiento normal del botón
-//   // e.preventDefault();
+//   var editGuia =$(this).data('id');
 //   $('#correo').value('');
 //   var correo = document.getElementById("#correo").value;
 //   document.getElementById("correoe").innerHTML = correo; 
@@ -834,7 +833,7 @@ $('.btnAgregarRecomendaciones').click(function(){
     type:'post',
     data:{add:add},
     success: function(response){
-      $('.modal-body').html(response);
+      $('.modal-body1').html(response);
       $('#custModalRecomendaciones').modal('show');
     }
   })
@@ -880,7 +879,7 @@ $('.btnEditarRecomendaciones').click(function(){
     type:'post',
     data:{editRecomendacion:editRecomendacion},
     success: function(response){
-      $('.modal-body').html(response);
+      $('.modal-body1').html(response);
       $('#custModalRecomendaciones').modal('show');
     }
   })
@@ -896,6 +895,7 @@ $('#updateRecomendacion').on('submit',function(e){
     url:$(this).attr('action'),
     dataType:'json',
     success: function(data){
+      console.log(data);
       var resultado =data;
       if(resultado.respuesta == "datos incorrectos"){
         swal(

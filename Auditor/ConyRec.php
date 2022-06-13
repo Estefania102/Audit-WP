@@ -152,7 +152,7 @@ $mrec=$obj->MostrarRec($idem);
                               <h4 class="modal-title">Nuevo</h4>
                               <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body">
+                            <div class="modal-body1">
                               
                             </div>
                             <div class="modal-footer">
@@ -171,7 +171,7 @@ $mrec=$obj->MostrarRec($idem);
                               <h4 class="modal-title">Editar</h4>
                               <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body">
+                            <div class="modal-body1">
                               
                             </div>
                             <div class="modal-footer">

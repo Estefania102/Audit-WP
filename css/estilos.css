@@ -1138,3 +1138,53 @@ footer {
   font-size: 1rem;
   color: #777;
 }
+
+/* Cards */
+@media all and (max-width:1700px) and (min-width:1133px){    
+  .cardEmp .container{
+      margin-top:-50px;         
+  }   
+  .cardEmp{
+      height: 1000px;
+      margin-right: 10px;
+  }
+}
+@media all and (max-width:1132px) and (min-width:1024px){    
+  .cardEmp .container{
+      margin-top:-50px;         
+  }   
+  .cardEmp{
+      height: 1000px;
+      margin-right: 10px;
+  }
+}
+@media all and (max-width:1023px) and (min-width:897px){    
+  .cardEmp .container{
+      margin-top:-50px;         
+  }   
+  .cardEmp{
+      height: 1000px;
+      margin-right: 10px;
+  }
+}
+@media all and (max-width:896px) and (min-width:807px){    
+  .cardEmp .container{
+      margin-top:-50px;         
+  }   
+  .cardEmp{
+      height: 1000px;
+      margin-right: 10px;
+  }
+}
+@media all and (max-width:806px) and (min-width:768px){     
+  .cardEmp{
+  margin-top:60px;
+  height: 1000px;
+}
+}
+/* @media all and (max-width:767px) and (min-width:466px) {    
+  .cardEmp .row{
+      margin-left: 30px;
+      margin-top:30px;
+  }   
+} */

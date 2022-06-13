@@ -29,6 +29,7 @@
                     session_start();
                     $idRec= $_POST['idRec'];
                     $recomendacion= $_POST['recomendacion'];
+                    
                     try {        
                     include_once 'Conexion.php';
                     $query="update recomendaciones SET recomendacion='$recomendacion'

@@ -15,15 +15,16 @@ use PHPMailer\PHPMailer\PHPMailer;
 // if(mysqli_num_rows($resultado) > 0){
 // $code=$obj->codigoT($cod,$correo,$estado);
 
-if(isset($_POST['nuevocorreo'])){           
+if(isset($_POST['addcorreo'])){           
     $correo= $_POST['correo'];
+    array_push($emails,$correo);
     // echo $correo;
 }
     
     // $emails = array();
-    // array_push($emails,$correo);
+    
 
-// for($i = 0; $i < count($emails); $i++) {
+//    foreach($) {
     try {
     $mail->SMTPDebug = 0;
     $mail->isSMTP();

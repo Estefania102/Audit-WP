@@ -17,7 +17,7 @@
 	<!-- ENCABEZADO -->
 	<header>
 		<div class="menu-bar-pc" style="padding: 0 17.25rem">
-			<nav class="menu-principal">
+			<nav class="menu-principal" style="font-size: 15px;">
 				<a href="#" class="volver-arriba">Inicio</a>
 				<a href="#evaluacion" class="scroll-suave">Guía de Evaluación</a>
 				<a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
@@ -26,7 +26,7 @@
                 <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 			</nav>
 			<div class="pull-right">
-                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;">CERRAR SESION</a>
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;font-size: 15px;">CERRAR SESION</a>
 			</div>
 		</div>
 
@@ -36,7 +36,7 @@
 			</div>
 
 			<div class="slideMenu" id="slideMenu">
-				<nav class="menu-principal">
+				<nav class="menu-principal" style="font-size: 19px;">
 					<a href="#" class="volver-arriba">Inicio</a>
 					<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
 				    <a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
@@ -45,7 +45,7 @@
                     <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 				</nav>
 				<div class="pull-right">
-                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;margin-top: 15px;">CERRAR SESION</a>
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;margin-top: 15px;font-size: 19px;">CERRAR SESION</a>
 			</div>
 			</div>			
 		</div>
