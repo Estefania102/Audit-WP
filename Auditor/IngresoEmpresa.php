@@ -11,7 +11,7 @@
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
         $emp=$obj->Insertarbu($idaudit);
-		$namemp=$obj->NombreEmpyar($idem);  
+		$namemp=$obj->NombreEmpresa($idem); 
       ?>	
 <body>
 	<!-- ENCABEZADO -->
@@ -25,6 +25,9 @@
 				<a href="#cobit" class="scroll-suave">COBIT 5</a>
                 <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 			</nav>
+			<div class="pull-right">
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;">CERRAR SESION</a>
+			</div>
 		</div>
 
 		<div class="menu-bar-movil">
@@ -41,6 +44,9 @@
 				    <a href="#cobit" class="scroll-suave">COBIT 5</a>
                     <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
 				</nav>
+				<div class="pull-right">
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;margin-top: 15px;">CERRAR SESION</a>
+			</div>
 			</div>			
 		</div>
 	</header>
@@ -156,8 +162,8 @@
 				</div>
 				<div class="container">					
 					<div class="blurb">
-						<h3>Conclusiones</h3>
-						<p>Según el análisis de la auditoría se expone el resultado obtenido del estado de los componentes de los sistemas de información.<br></p>
+						<h3>Conclusiones y Recomendaciones</h3>
+						<p>Según el análisis de la auditoría se expone el resultado obtenido del estado de los componentes de los sistemas de información. Además, se brindarán conclusiones y recomendaciones de la auditoria realizada.<br></p>
 					</div>
 					<a href="ConyRec.php?cod3=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Conclusiones</a>	
 				</div>

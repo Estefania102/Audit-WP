@@ -38,7 +38,7 @@ $mrec=$obj->MostrarRec($idem);
 								<div class="col izq">
 								<div class="container-btn">
 							<div class="row">    
-								<div class="col-lg-12">
+								<div class="col-lg-12" style="margin-left: 45%;margin-bottom: 3%;">
 								<button class="btn btn-success btnAgregarComclusiones" data-id="<?php echo $idem;?>">Nuevo</button>
 								</div>
 							</div>
@@ -115,7 +115,7 @@ $mrec=$obj->MostrarRec($idem);
 							<div class="col izq">
 							<div class="container-btn">
 						<div class="row">    
-							<div class="col-lg-12">
+							<div class="col-lg-12" style="margin-left: 45%;margin-bottom: 3%;">
 							<button class="btn btn-success btnAgregarRecomendaciones" data-id="<?php echo $idem;?>">Nuevo</button>
 							</div>
 						</div>

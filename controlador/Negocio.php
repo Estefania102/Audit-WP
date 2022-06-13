@@ -80,8 +80,8 @@ class Negocio{
     
     //GUIA DE EVALUACIÓN 
 
-    function NombreEmpyar($upbu){      
-        $sql="select `nombre`,`area` FROM `empresa` WHERE idEmpresa=".$upbu;
+    function NombreEmpresa($upbu){      
+        $sql="select `nombre` FROM `empresa` WHERE idEmpresa=".$upbu;
         $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
         $vec=array();
         while($f=  mysqli_fetch_array($res)){
@@ -89,7 +89,16 @@ class Negocio{
         }
         return $vec;
     }
-
+    /* AREA*/ 
+    function NombreArea($upbu){      
+        $sql="select `area` FROM `empresa` WHERE idEmpresa=".$upbu;
+        $res=  mysqli_query($this->cn, $sql) or die(mysqli_error($this->cn));
+        $vec=array();
+        while($f=  mysqli_fetch_array($res)){
+            $vec[]=$f;
+        }
+        return $vec;
+    }
     /* MOSTRAR GUIA DE EVALUACIÓN*/ 
     function Mostrarguia($idbu){      
         $sql="select idreferencia,actividad,procedimiento,herramientas,observaciones from guiaevaluacion

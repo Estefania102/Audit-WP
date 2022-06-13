@@ -11,8 +11,9 @@
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        $namemp=$obj->NombreEmpyar($idem); 
-        $mguia=$obj->Mostrarguia($idem)
+        $namemp=$obj->NombreEmpresa($idem);  
+        $namarea=$obj->NombreArea($idem); 
+        $mguia=$obj->Mostrarguia($idem);
       ?>
       
 <body>
@@ -29,7 +30,6 @@
           </nav>
 			</div>
       </div>
-
     </header>
 <!-- BOTON NUEVO -->
         <div style="margin-top: 3%;margin-bottom: 3%;display: grid; grid-template-columns: 1fr 1fr;text-align: center;">
@@ -37,9 +37,13 @@
         <?php
           foreach ($namemp as $k=>$d){?>
             <a>Nombre de la empresa: <?php echo $d[0]?></a></br> 
-            </div>  
-            <div>       
-            <a>Nombre del área a auditar: <?php echo $d[1]?></a>
+            </div> 
+            <?php }
+        ?>
+            <div>  
+            <?php
+          foreach ($namarea as $k=>$d){?>     
+            <a>Nombre del área a auditar: <?php echo $d[0]?></a>
         <?php }
         ?> 
            </div>

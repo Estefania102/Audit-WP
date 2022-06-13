@@ -14,7 +14,7 @@
         $melem=$obj->Mostrarelemen($idem);  
       ?>
 <body>
-    <header>
+    <header style="margin-bottom: 40px;">
 		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
 			<nav class="menu-principal">
         <a>Lista de elementos</a>

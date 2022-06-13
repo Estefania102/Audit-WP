@@ -30,9 +30,9 @@
         </div> 
         <div class="formulario-grupo">
             <input type="hidden" name="envialobu">
-            <button type="submit" class="button">Ingresar</button>
+            <button type="submit" class="button">INGRESAR</button>
             
-            <p><a href="../Auditor/LoginAuditor.php">Login Auditor</a></p>
+            <p style="text-align: center;"><a href="../Auditor/LoginAuditor.php" style="text-decoration: none;color: #424242;">Login Auditor</a></p>
             </div>
         </form>
     </body>

@@ -31,7 +31,7 @@
             <input type="hidden" name="envialoaud">
             <button type="submit" class="button">INGRESAR</button>
             
-            <p style="text-align: center;"><a href="LoginEmpresa.php" style="text-decoration: none;color: #424242;">Login Empresa</a></p>
+            <p style="text-align: center;"><a href="../Empresa/LoginEmpresa.php" style="text-decoration: none;color: #424242;">Login Empresa</a></p>
             
             <p style="text-align: center;"><a href="RegistroAuditor.php" style="text-decoration: none;color: #424242;">Registrarse</a></p>
             </div>

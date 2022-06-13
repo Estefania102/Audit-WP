@@ -13,20 +13,26 @@
 ?>
 
 <body>
-    <section class="main">
-<!-- RESPUESTAS -->
-        <section id="arespuestas"  class="arespuestas">
-			<div class="container">
-				<div class="titulo-seccion">
-					<h2>RESPUESTAS</h2>
-				</div>
-            </div>
-        </section>
-    </section>
-    <div class="botones" style="margin-left: 21%">
-    <button class="btn btn-success btnEnvioFormulario">Envio Formulario</button>
-    <input type="file" id="txt_archivo">
-    <button class="btn btn-success btnImportar" onclick="Cargar_Excel()">Importar</button>
+
+    <header>
+		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
+			<nav class="menu-principal">
+        <a>Respuestas</a>
+      </nav>
+    </div>
+    <div class="menu-movil">
+      <div class="slide" id="slide">
+          <nav class="menu-principal">
+          <a>Respuestas</a>
+          </nav>
+			</div>
+      </div>
+    </header>
+
+    <div class="botones" style="margin-top: 3%;margin-bottom: 3%;display: grid; grid-template-columns: 1fr 1fr;text-align: center;">
+      <div><button class="btn btn-primary btnEnvioFormulario">Envio Formulario</button></div>
+      <div><input type="file" id="txt_archivo">
+      <button class="btn btn-primary btnImportar" onclick="Cargar_Excel()">Importar</button></div>
     </div>
  <!-- $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
 

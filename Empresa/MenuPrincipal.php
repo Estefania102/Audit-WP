@@ -24,6 +24,9 @@
 				<a href="EmpRespuestas.php?cod2=<?=$idemp?>">Respuestas</a>
         <a href="EmpConyRec.php?cod3=<?=$idemp?>">Conclusiones</a>
 			</nav>
+      <div class="pull-right">
+          <a href="LoginEmpresa.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;">CERRAR SESION</a>
+			</div>
 		</div>
 
 		<div class="menu-bar-movil">
@@ -39,6 +42,9 @@
 				  <a href="EmpRespuestas.php?cod2=<?=$idemp?>">Respuestas</a>
           <a href="EmpConyRec.php?cod3=<?=$idemp?>">Conclusiones</a>
 				</nav>
+        <div class="pull-right">
+            <a href="LoginEmpresa.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;">CERRAR SESION</a>
+			</div>
 			</div>			
 		</div>
 	</header>

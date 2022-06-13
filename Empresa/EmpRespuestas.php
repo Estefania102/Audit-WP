@@ -13,16 +13,20 @@
 ?>
 
 <body>
-<section class="main">
-<!-- RESPUESTAS -->
-        <section id="arespuestas"  class="arespuestas">
-			<div class="container">
-				<div class="titulo-seccion">
-					<h2>RESPUESTAS</h2>
-				</div>
-            </div>
-        </section>
-    </section>
+    <header style="margin-bottom: 40px;">
+		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
+			<nav class="menu-principal">
+        <a>Respuestas</a>
+      </nav>
+    </div>
+    <div class="menu-movil">
+      <div class="slide" id="slide">
+          <nav class="menu-principal">
+          <a>Respuestas</a>
+          </nav>
+			</div>
+      </div>
+    </header>
  <!-- $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
 
  foreach ($resultados as $resultado){
