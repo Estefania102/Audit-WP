@@ -10,9 +10,19 @@
                     $desc= $_POST['descEle'];
                     $cant= $_POST['cantEle'];
                     $date= $_POST['calendario'];
+                    $date1= $_POST['fechahoy'];
                     $campo= $_POST['estado'];
                     $obser= $_POST['obserEle'];
-                                 
+                             
+                    try{
+                        if($date<$date1){
+                            $respuesta=array(
+                                        'respuesta' => 'Fecha pasada'                   
+                                    );                           
+                        }
+                        else{
+
+
                     include_once 'Conexion.php';
                     $query="INSERT INTO elementos(nombre, descripcion, cantidad, frevision, estado, observacion, idEmpresa) 
                     VALUES ('$nombre','$desc','$cant','$date',$campo,'$obser','$idemp')";
@@ -26,6 +36,10 @@
                             'respuesta' => 'datos incorrectos'
                         );
                     } 
+                } 
+            }catch (Exception $e){
+                echo "Error:".$e->get_Message();
+            }
                     die(json_encode($respuesta));
                 }
 
@@ -37,9 +51,17 @@
                     $desc= $_POST['descEle'];
                     $cant= $_POST['cantEle'];
                     $date= $_POST['calendario'];
+                    $date1= $_POST['fechahoy'];
                     $campo= $_POST['estado'];
                     $obser= $_POST['obserEle'];
-                    try {        
+                    try {  
+                        if($date<$date1){
+                            $respuesta=array(
+                                        'respuesta' => 'Fecha pasada'                   
+                                    );                           
+                        }
+                        else{
+                        
                     include_once 'Conexion.php';
                     $query="update elementos SET nombre='$nombre',descripcion='$desc',cantidad='$cant',frevision='$date',estado='$campo',observacion='$obser' 
                     WHERE idelementos=".$idEle;
@@ -53,7 +75,7 @@
                             'respuesta' => 'datos incorrectos'
                         );
                         }
-                    } catch (Exception $e){
+                    } }catch (Exception $e){
                         echo "Error:".$e->get_Message();
                     }                
                     die(json_encode($respuesta));

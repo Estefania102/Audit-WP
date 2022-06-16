@@ -41,7 +41,7 @@
       include "EnvioCorreo.php";
  } -->
 
- <table id="telementos" class="table table-striped table-bordered" style="width:100%;margin-top: 50px;">
+ <table id="trespuesta" class="table table-striped table-bordered" style="width:100%;margin-top: 50px;">
             <thead class="text-center">
                 <tr>
                   <th>N°</th>
@@ -117,7 +117,7 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(function(){
-    $("#telementos").DataTable({
+    $("#trespuesta").DataTable({
        "language": {
         "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
       }

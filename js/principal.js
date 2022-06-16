@@ -476,7 +476,13 @@ $('#addelementos').on('submit',function(e){
     dataType:'json',
     success: function(data){
       var resultado =data;
-      if(resultado.respuesta == 'exitoso'){
+      if(resultado.respuesta == 'Fecha pasada'){
+        swal(
+          'Fecha debe ser mayor',
+          'Cambie de fecha',
+          'error'
+        )
+        }else if(resultado.respuesta == 'exitoso'){
           swal(
             'Correcto',
             'Elemento añadido',
@@ -522,7 +528,13 @@ $('#updateElemento').on('submit',function(e){
     dataType:'json',
     success: function(data){
       var resultado =data;
-      if(resultado.respuesta == "datos incorrectos"){
+      if(resultado.respuesta == 'Fecha pasada'){
+        swal(
+          'Fecha debe ser mayor',
+          'Cambie de fecha',
+          'error'
+        )
+        }else if(resultado.respuesta == "datos incorrectos"){
         swal(
           'Incorrecto',
           'Elemento no modificada',

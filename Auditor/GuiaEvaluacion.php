@@ -50,8 +50,8 @@
         </div>
     <div class="container-btn">
       <div class="row">    
-        <div class="col-lg-12" style="margin-left: 45%;margin-bottom: 3%;">                   
-        <button class="btn btn-success btnAgregarG" data-id="<?php echo $idem;?>">Nuevo</button>
+        <div class="col-lg-12" >                   
+        <button class="btn btn-success btnAgregarG" style="margin-left: 45%;margin-bottom: 3%;" data-id="<?php echo $idem;?>">Nuevo</button>
         </div>
       </div>
     </div>

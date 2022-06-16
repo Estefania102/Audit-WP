@@ -27,6 +27,15 @@
     });
     </script>";
 
+    ?>
+    <?php
+    date_default_timezone_set('America/Lima');
+    $fecha_hoy = date('Y-m-d'); 
+    // echo $fecha_hoy;
+    ?>
+
+    <?php
+
     // Nombre
     $response .= "<div class='form-group'>";
     $response .= "<div class='container'>";
@@ -69,8 +78,9 @@
     $response .= "<div class='dates' style='margin-top:30px;'>";
            
     $response .= "<label>Fecha de revisión</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario'  autocomplete='off'>";
-            
+    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='fecha1' name='fechahoy' value= '$fecha_hoy' autocomplete='off' required >";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario'  autocomplete='off' required>";
+         
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
@@ -80,8 +90,8 @@
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";
     $response .= "<label for='estado'>Elija estado</label>                           
-    <select name='estado' id='estado' class='camposr'>
-    <option value='null'>Seleccione</option>
+    <select name='estado' id='estado' class='camposr' required>
+    <option value=''>Seleccione</option>
     <option value='1'>Bueno</option>
     <option value='2'>Regular</option>
     <option value='3'>Malo</option></select>"; 

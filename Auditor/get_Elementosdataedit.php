@@ -82,7 +82,8 @@ if(isset($_POST['editElemento'])){
                 $var=$d[4];
         }       
     $response .= "<label>Fecha de revisión</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario' value='$var' autocomplete='off'>";
+    $response .= "<input type='hidden' style='width:200px;' class='form-control' id='fecha1' name='fechahoy'  value='$var' autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario' value='$var' autocomplete='off' required>";
       
     $response .="</div>";
     $response .= "</div>";
@@ -93,13 +94,14 @@ if(isset($_POST['editElemento'])){
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";    
     $response .= "<label for='estado'>Elija estado</label>                           
-    <select name='estado' id='estado' class='camposr'>";?>  
+    <select name='estado' id='estado' class='camposr' required>";?>  
     <?php
     $vec2=$obj->ListarEstado($id);
     foreach ($vec2 as $k=>$d){                                   
     echo '<option value='.$d[0].'></option>';
     }
-    $response .="<option value='1'>Bueno</option>
+    $response .=" <option value=''>Seleccione</option>
+    <option value='1'>Bueno</option>
     <option value='2'>Regular</option>
     <option value='3'>Malo</option></select>";
     $response .="</div>";
