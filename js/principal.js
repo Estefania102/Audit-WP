@@ -126,7 +126,6 @@ $('#addempresa').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/AuditMenuPrincipal.php';
           location.reload();
           },2000)
       }else{
@@ -179,45 +178,12 @@ $('#updateempresa').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-        // window.location.href = '../Auditor/AuditMenuPrincipal.php';
         location.reload();
         },2000)
       }
     }
   })
 });
-
-// Modal de borrar
-// $('#deletempresa').on('submit',function(e){
-//   e.preventDefault();
-//   var datos =$(this).serializeArray();
-//   $.ajax({
-//     type:$(this).attr('method'),
-//     data :datos,
-//     url:$(this).attr('action'),
-//     dataType:'json',
-//     success: function(data){
-//       var resultado =data;
-//       if(resultado.respuesta == 'exitoso'){
-//           swal(
-//             'Correcto',
-//             'Empresa eliminada',
-//             'success'
-//           )
-//           setTimeout(function(){
-//           // window.location.href = '../Auditor/AuditMenuPrincipal.php';
-//           location.reload();
-//           },2000)
-//       }else {
-//         swal(
-//           'Error',
-//           'No se pudo eliminar',
-//           'error'
-//         )
-//       }
-//     }
-//   })
-// });
 
 //Borrar registro
 $('.btnBorrar').on('click',function(e){
@@ -252,7 +218,6 @@ $('.btnBorrar').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              // window.location.href="../Auditor/AuditMenuPrincipal.php";
               location.reload();
               },2000)
           } else if(resultado.respuesta == 'eliminacion incorrecta'){
@@ -288,7 +253,6 @@ $('.btnAgregarG').click(function(){
     success: function(response){
       $('.modal-body').html(response);
       $('#custModalGuiaAgregar').modal('show');
-      // window.show.modal = '../Auditor/get_GuiadataAdd.php;
     }
   })
 });
@@ -442,7 +406,6 @@ $('#deletereferencia').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/GuiaEvaluacion.php';
           location.reload();
           },2000)
       }else{
@@ -495,7 +458,6 @@ $('#addelementos').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
           location.reload();
           },2000)
       }else{
@@ -554,7 +516,6 @@ $('#updateElemento').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-        // window.location.href = '../Auditor/IngresoElementos.php';
         location.reload();
         },2000)
       }
@@ -595,7 +556,6 @@ $('.btnBorrarElementos').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              // window.location.href="../Auditor/IngresoElementos.php";
               location.reload();
               },2000)
           }
@@ -611,40 +571,7 @@ $('.btnBorrarElementos').on('click',function(e){
     })
 });
 
-// Modal de borrar
-$('#deleteElementos').on('submit',function(e){
-  e.preventDefault();
-  var datos =$(this).serializeArray();
-  $.ajax({
-    type:$(this).attr('method'),
-    data :datos,
-    url:$(this).attr('action'),
-    dataType:'json',
-    success: function(data){
-      var resultado =data;
-      if(resultado.respuesta == 'exitoso'){
-          swal(
-            'Correcto',
-            'Referencia eliminada',
-            'success'
-          )
-          setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
-          location.reload();
-          },2000)
-      }else{
-        swal(
-          'Error',
-          'No se pudo eliminar',
-          'error'
-        )
-      }
-    }
-  })
-});
-
 //Apartado de envio formulario
-
 $('.btnEnvioFormulario').click(function(){
   var editGuia =$(this).data('id');
   $.ajax({
@@ -699,7 +626,6 @@ $('#addconclusion').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
           location.reload();
           },2000)
       }else{
@@ -752,7 +678,6 @@ $('#updateConclusion').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-        // window.location.href = '../Auditor/IngresoElementos.php';
         location.reload();
         },2000)
       }
@@ -793,7 +718,6 @@ $('.btnBorrarConclusiones').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              // window.location.href="../Auditor/IngresoElementos.php";
               location.reload();
               },2000)
           }
@@ -827,7 +751,6 @@ $('#deleteConclusiones').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
           location.reload();
           },2000)
       }else{
@@ -875,7 +798,6 @@ $('#addrecomendaciones').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
           location.reload();
           },2000)
       }else{
@@ -929,7 +851,6 @@ $('#updateRecomendacion').on('submit',function(e){
           'success'
         )
         setTimeout(function(){
-        // window.location.href = '../Auditor/IngresoElementos.php';
         location.reload();
         },2000)
       }
@@ -970,7 +891,6 @@ $('.btnBorrarRecomendaciones').on('click',function(e){
               )
               jQuery('[data-id="'+resultado.id_borrar+'"]').parents('tr').remove();
               setTimeout(function(){
-              // window.location.href="../Auditor/IngresoElementos.php";
               location.reload();
               },2000)
           }
@@ -1004,7 +924,6 @@ $('#deleteConclusiones').on('submit',function(e){
             'success'
           )
           setTimeout(function(){
-          // window.location.href = '../Auditor/IngresoElementos.php';
           location.reload();
           },2000)
       }else{
