@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>	
-	<title>APARTADO RESPUESTAS</title>	   
+	<title>APARTADO RESPUESTAS</title>	
+  <link rel='stylesheet' href='../lib/sweetalert2.min.css'>   
 </head>
 <?php
         include "../Templates/Head.php";
@@ -114,7 +115,7 @@
 <script src="../lib/sweetalert2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 <script>
     $(document).ready(function(){
     $("#trespuesta").DataTable({
@@ -134,14 +135,14 @@
       if (extFile=="xlsx" || extFile=="xlsb"){
 
       }else{
-      Swal.fire("Mensaje de advertencia","Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension"+ extFile,"warning");
+      swal("Mensaje de advertencia","Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension"+ extFile,"warning");
       document.getElementById("txt_archivo").value="";
       }
     });
     function Cargar_Excel(){
       let archivo = document.getElementById('txt_archivo').value;
       if(archivo.length==0){
-        return Swal.fire("Mensaje de advertencia", "Seleccione un archivo", "warning");
+        return swal("Mensaje de advertencia", "Seleccione un archivo", "warning");
       }
       let formData = new FormData();
       let excel = $("#txt_archivo")[0].files[0];
