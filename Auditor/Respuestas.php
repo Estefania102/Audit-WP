@@ -135,14 +135,14 @@
       if (extFile=="xlsx" || extFile=="xlsb"){
 
       }else{
-      swal("Mensaje de advertencia","Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension"+ extFile,"warning");
+      swal('Mensaje de advertencia','Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension'+ extFile,'warning');
       document.getElementById("txt_archivo").value="";
       }
     });
     function Cargar_Excel(){
       let archivo = document.getElementById('txt_archivo').value;
       if(archivo.length==0){
-        return swal("Mensaje de advertencia", "Seleccione un archivo", "warning");
+        return swal('Mensaje de advertencia', 'Seleccione un archivo', 'warning');
       }
       let formData = new FormData();
       let excel = $("#txt_archivo")[0].files[0];
