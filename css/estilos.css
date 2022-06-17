@@ -427,7 +427,6 @@ header .menu-movil .slide .menu-principal a {
 }
 
 .main .portada .col .foto.der {
-  background-image: url('../img/portada-3.jpg');
   opacity: 0.8;
 }
 
@@ -480,13 +479,8 @@ header .menu-movil .slide .menu-principal a {
   background-position: center;
 }
 
-.main .portada .col .foto-full.izq {
-  background-image: url('../img/portada-2.jpg');
-  opacity: 0.8;
-}
-
 .main .portada .col .foto-full.der {
-  background-image: url('../img/portada-3.jpg');
+  background-image: url('../img/portada.jpg');
 }
 
 .main .portada .col .foto-full .overlay {
@@ -670,15 +664,15 @@ font-family: inherit;
 }
 
 .main .elementos .container .slider .slide.foto1 {
-  background-image: url('../img/chef-1.jpg');
+  background-image: url('../img/elemento1.jpg');
 }
 
 .main .elementos .container .slider .slide.foto2 {
-  background-image: url('../img/chef-2.jpg');
+  background-image: url('../img/elemento2.jpg');
 }
 
 .main .elementos .container .slider .slide.foto3 {
-  background-image: url('../img/chef-3.jpg');
+  background-image: url('../img/elemento3.jpg');
 }
 
 /*COBIT*/
@@ -736,7 +730,7 @@ font-family: inherit;
 }
 
 .main .cobit .container .slider .slide.foto1 {
-  background-image: url('../img/chef-1.jpg');
+  background-image: url('../img/cobit1.jpg');
 }
 
 .main .cobit .container .slider .slide.foto2 {
@@ -749,7 +743,7 @@ font-family: inherit;
 .main .conclusiones .datos {
   padding: 5.625rem 0 5.625rem 0;
   position: relative;
-  background-image: url('../img/contacto-bg.jpg');
+  background-image: url('../img/conclusion.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
