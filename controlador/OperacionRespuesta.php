@@ -5,11 +5,13 @@
 $conexion = new mysqli("localhost", "root", "" , "bdauditwp");
  class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
 
-  public function readCell($columnAddress, $row, $worksheetName = '') {
+  public function readCell($columnAdress, $row, $worksheetName = '') {
       // Read title row and rows 20 - 30
-      if ($row > 7 ) {
+      if ($row>1) {
+        // if (in_array($column,range('C','M'))){
           return true;
-      }
+      // }
+    }
       return false;
   }
 }

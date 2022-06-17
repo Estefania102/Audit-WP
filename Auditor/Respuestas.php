@@ -2,6 +2,7 @@
 <html lang="es">
 <head>	
 	<title>APARTADO RESPUESTAS</title>	
+  <link rel='stylesheet' href='../lib/sweetalert2.min.css'>
 </head>
 <?php
         include "../Templates/Head.php";
@@ -30,16 +31,11 @@
     </header>
 
     <div class="botones" style="margin-top: 3%;margin-bottom: 3%;display: grid; grid-template-columns: 1fr 1fr;text-align: center;">
-      <div><button class="btn btn-primary btnEnvioFormulario">Envio Formulario</button></div>
+      
       <div><input type="file" id="txt_archivo">
       <button class="btn btn-primary btnImportar" onclick="Cargar_Excel()">Importar</button></div>
     </div>
- <!-- $resultados = array("yourusermail", "meusermail@mail.com", "theyuser@mail.com");
 
- foreach ($resultados as $resultado){
-      $correo = $resultado; 
-      include "EnvioCorreo.php";
- } -->
 
  <table id="trespuesta" class="table table-striped table-bordered" style="width:100%;margin-top: 50px;">
             <thead class="text-center">
@@ -110,9 +106,11 @@
 <!-- BOOTSTRAP -->
 <link rel="stylesheet" href="../lib/bootstrap.min.css">
 <script type="text/javascript" src="../js/Principal.js"></script>
+<!-- <script src="../lib/sweetalert2.all.js"></script>
+<script src="../lib/sweetalert2.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 <script>
     $(document).ready(function(){
     $("#trespuesta").DataTable({
@@ -132,14 +130,14 @@
       if (extFile=="xlsx" || extFile=="xlsb"){
 
       }else{
-        Swal.Fire('Mensaje de advertencia','Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension'+ extFile,'warning');
+        swal('Mensaje de advertencia','Solo se aceptan archivos Excel, sin embargo el archivo seleccionado tiene extension '+ extFile,'warning');
       document.getElementById("txt_archivo").value="";
       }
     });
     function Cargar_Excel(){
       let archivo = document.getElementById('txt_archivo').value;
       if(archivo.length==0){
-        return Swal.Fire('Mensaje de advertencia', 'Seleccione un archivo', 'warning');
+        return swal('Mensaje de advertencia', 'Seleccione un archivo', 'warning');
       }
       let formData = new FormData();
       let excel = $("#txt_archivo")[0].files[0];
@@ -152,10 +150,17 @@
         processData:false,
         success:function(resp){
           // alert(resp);
+          swal(
+        'Exitoso',
+        'Archivo importado',
+        'success'
+      )
           location.reload();
         }
       });
       return false;
     }
   </script>
+  <script src="../lib/sweetalert2.all.js"></script>
+<script src="../lib/sweetalert2.min.js"></script>
 </html>
