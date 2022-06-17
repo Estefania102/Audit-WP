@@ -23,56 +23,56 @@ if(isset($_POST['editGuia'])){
     $response .="<input type='hidden' class='form-control' name='idbu' value='$var'>";
      
     // Actividad que será evaluada
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%;'>";
     $response .= "<div class='container'>";
     $response .= "<div class='actividadG' style='margin-top:30px;'>";?>   
             <?php
             foreach ($ref as $k=>$d){
                 $var=$d[1];
         }       
-    $response .= "<label style='margin-left:67px'>Actividad que será evaluada</label>";
+    $response .= "<label style='margin-left: 1.9px'>Actividad que será evaluada</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='actividadG' name='actividadG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
     
     // Procedimiento de auditoría
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='procedimientoG' style='margin-top:30px;'>";?>   
             <?php
             foreach ($ref as $k=>$d){
                 $var=$d[2];
         }       
-    $response .= "<label style='margin-left:67px'>Procedimiento de auditoría</label>";
+    $response .= "<label style='margin-left: 3.5px;'>Procedimiento de auditoría</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='procedimientoG' name='procedimientoG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
 
     // Herramientas que serán utilizadas
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='herramientaG' style='margin-top:30px;'>";?>   
             <?php
             foreach ($ref as $k=>$d){
                 $var=$d[3];
         }       
-    $response .= "<label style='margin-left:67px'>Herramientas que serán utilizadas</label>";
+    $response .= "<label style='margin-left:-21px'>Herramientas que serán utilizadas</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='herramientaG' name='herramientaG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
 
     // Observaciones
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='observacionG' style='margin-top:30px;'>";?>   
             <?php
             foreach ($ref as $k=>$d){
                 $var=$d[4];
         }       
-    $response .= "<label style='margin-left:67px'>Observaciones</label>";
+    $response .= "<label style='margin-left:49px'>Observaciones</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  value='$var' autocomplete='off' required>";
     $response .="</div>";
     $response .= "</div>";

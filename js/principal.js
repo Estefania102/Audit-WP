@@ -103,7 +103,7 @@ $('.btnAgregar').click(function(){
     type:'post',
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalEmpresa').modal('show');
+      $('#custModalEmpresaAgregar').modal('show');
     }
   })
 });
@@ -148,8 +148,8 @@ $('.btnEditar').click(function(){
     type:'post',
     data:{edit:edit},
     success: function(response){
-      $('.modal-body').html(response);
-      $('#custModalEmpresa').modal('show');
+      $('.modal-body1').html(response);
+      $('#custModalEmpresaEditar').modal('show');
     }
   })
 });
@@ -188,36 +188,36 @@ $('#updateempresa').on('submit',function(e){
 });
 
 // Modal de borrar
-$('#deletempresa').on('submit',function(e){
-  e.preventDefault();
-  var datos =$(this).serializeArray();
-  $.ajax({
-    type:$(this).attr('method'),
-    data :datos,
-    url:$(this).attr('action'),
-    dataType:'json',
-    success: function(data){
-      var resultado =data;
-      if(resultado.respuesta == 'exitoso'){
-          swal(
-            'Correcto',
-            'Empresa eliminada',
-            'success'
-          )
-          setTimeout(function(){
-          // window.location.href = '../Auditor/AuditMenuPrincipal.php';
-          location.reload();
-          },2000)
-      }else{
-        swal(
-          'Error',
-          'No se pudo eliminar',
-          'error'
-        )
-      }
-    }
-  })
-});
+// $('#deletempresa').on('submit',function(e){
+//   e.preventDefault();
+//   var datos =$(this).serializeArray();
+//   $.ajax({
+//     type:$(this).attr('method'),
+//     data :datos,
+//     url:$(this).attr('action'),
+//     dataType:'json',
+//     success: function(data){
+//       var resultado =data;
+//       if(resultado.respuesta == 'exitoso'){
+//           swal(
+//             'Correcto',
+//             'Empresa eliminada',
+//             'success'
+//           )
+//           setTimeout(function(){
+//           // window.location.href = '../Auditor/AuditMenuPrincipal.php';
+//           location.reload();
+//           },2000)
+//       }else {
+//         swal(
+//           'Error',
+//           'No se pudo eliminar',
+//           'error'
+//         )
+//       }
+//     }
+//   })
+// });
 
 //Borrar registro
 $('.btnBorrar').on('click',function(e){
@@ -255,6 +255,12 @@ $('.btnBorrar').on('click',function(e){
               // window.location.href="../Auditor/AuditMenuPrincipal.php";
               location.reload();
               },2000)
+          } else if(resultado.respuesta == 'eliminacion incorrecta'){
+            swal(
+              'Error',
+              'No se pudo eliminar porque la empresa tiene datos registrados',
+              'error'
+            )
           }
         }
       });
@@ -281,7 +287,7 @@ $('.btnAgregarG').click(function(){
     data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalGuia').modal('show');
+      $('#custModalGuiaAgregar').modal('show');
       // window.show.modal = '../Auditor/get_GuiadataAdd.php;
     }
   })
@@ -329,8 +335,8 @@ $('.btnGuiaEditar').click(function(){
     type:'post',
     data:{editGuia:editGuia},
     success: function(response){
-      $('.modal-body').html(response);
-      $('#custModalGuia').modal('show');
+      $('.modal-body1').html(response);
+      $('#custModalGuiaEditar').modal('show');
     }
   })
 });
@@ -460,7 +466,7 @@ $('.btnAgregarElementos').click(function(){
     data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalElementos').modal('show');
+      $('#custModalElementosAgregar').modal('show');
     }
   })
 });
@@ -511,8 +517,8 @@ $('.btnEditarElementos').click(function(){
     type:'post',
     data:{editElemento:editElemento},
     success: function(response){
-      $('.modal-body').html(response);
-      $('#custModalElementos').modal('show');
+      $('.modal-body1').html(response);
+      $('#custModalElementosEditar').modal('show');
     }
   })
 });

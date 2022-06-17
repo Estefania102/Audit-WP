@@ -61,7 +61,7 @@
                 <input class="campos" type="password" name="contrasena" placeholder="" required>
                 <i class="formulario-validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario-input-error">El password tiene que ser de 1 mayúscula,1 número y será de no menos de 6 caracteres</p>
+            <p class="formulario-input-error">La contraseña tiene que ser de 1 mayúscula,1 número y será de no menos de 6 caracteres</p>
         </div>
 
         <div class="formulario-grupo" id="grupo-button">

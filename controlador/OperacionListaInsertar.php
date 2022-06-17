@@ -72,7 +72,7 @@
                 }
                 else{
                     $respuesta=array(
-                        'respuesta' => 'eliminación incorrecta'
+                        'respuesta' => 'eliminacion incorrecta'
                     );
                   }
                  

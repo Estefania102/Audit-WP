@@ -58,7 +58,7 @@
             </tbody>          
             </table>
             <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEmpresa" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEmpresaAgregar" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -77,7 +77,7 @@
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEmpresa" role="dialog">
+                  <div class="modal fade modal modal-warning fade" id="custModalEmpresaEditar" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -85,7 +85,7 @@
                               <h4 class="modal-title">Editar</h4>
                               <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body">
+                            <div class="modal-body1">
                               
                             </div>
                             <div class="modal-footer">
