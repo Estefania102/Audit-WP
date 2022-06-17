@@ -550,7 +550,7 @@ $('#updateElemento').on('submit',function(e){
       else if(resultado.respuesta == "exito"){
         swal(
           'Correcto',
-          'Elemento modificada',
+          'Elemento modificado',
           'success'
         )
         setTimeout(function(){
@@ -676,7 +676,7 @@ $('.btnAgregarComclusiones').click(function(){
     data:{add:add},
     success: function(response){
       $('.modal-body').html(response);
-      $('#custModalConclusiones').modal('show');
+      $('#custModalConclusiones1').modal('show');
     }
   })
 });
@@ -721,8 +721,8 @@ $('.btnEditarConclusiones').click(function(){
     type:'post',
     data:{editConclusion:editConclusion},
     success: function(response){
-      $('.modal-body').html(response);
-      $('#custModalConclusiones').modal('show');
+      $('.modal-body1').html(response);
+      $('#custModalConclusiones2').modal('show');
     }
   })
 });
@@ -851,8 +851,8 @@ $('.btnAgregarRecomendaciones').click(function(){
     type:'post',
     data:{add:add},
     success: function(response){
-      $('.modal-body1').html(response);
-      $('#custModalRecomendaciones').modal('show');
+      $('.modal-body2').html(response);
+      $('#custModalRecomendaciones1').modal('show');
     }
   })
 });
@@ -897,8 +897,8 @@ $('.btnEditarRecomendaciones').click(function(){
     type:'post',
     data:{editRecomendacion:editRecomendacion},
     success: function(response){
-      $('.modal-body1').html(response);
-      $('#custModalRecomendaciones').modal('show');
+      $('.modal-body3').html(response);
+      $('#custModalRecomendaciones2').modal('show');
     }
   })
 });

@@ -67,7 +67,7 @@ $mrec=$obj->MostrarRec($idem);
 								</table>
 
 					<!-- NUEVO -->
-					<div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarConclusion" aria-hidden="true">
+					<div class="modal fade modal modal-warning fade" id="custModalConclusiones1" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarConclusion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -86,7 +86,7 @@ $mrec=$obj->MostrarRec($idem);
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalConclusiones" role="dialog" tabindex="-1" aria-labelledby="custModalEditarConclusion" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalConclusiones2" role="dialog" tabindex="-1" aria-labelledby="custModalEditarConclusion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -94,7 +94,7 @@ $mrec=$obj->MostrarRec($idem);
                               <h4 class="modal-title">Editar</h4>
                               <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body">
+                            <div class="modal-body1">
                               
                             </div>
                             <div class="modal-footer">
@@ -144,7 +144,7 @@ $mrec=$obj->MostrarRec($idem);
 							</table>
 							
 							<!-- NUEVO -->
-							<div class="modal fade modal modal-warning fade" id="custModalRecomendaciones" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarRecomendacion" aria-hidden="true">
+							<div class="modal fade modal modal-warning fade" id="custModalRecomendaciones1" role="dialog" tabindex="-1" aria-labelledby="custModalAgregarRecomendacion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -152,7 +152,7 @@ $mrec=$obj->MostrarRec($idem);
                               <h4 class="modal-title">Nuevo</h4>
                               <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body1">
+                            <div class="modal-body2">
                               
                             </div>
                             <div class="modal-footer">
@@ -163,7 +163,7 @@ $mrec=$obj->MostrarRec($idem);
                   </div>
 
             <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalRecomendaciones" role="dialog" tabindex="-1" aria-labelledby="custModalEditarRecomendacion" aria-hidden="true">
+                  <div class="modal fade modal modal-warning fade" id="custModalRecomendaciones2" role="dialog" tabindex="-1" aria-labelledby="custModalEditarRecomendacion" aria-hidden="true">
                     <div class="modal-dialog">
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -171,7 +171,7 @@ $mrec=$obj->MostrarRec($idem);
                               <h4 class="modal-title">Editar</h4>
                               <a type="button" href="ConyRec.php?cod3=<?=$idem?>" class="close" data-dismiss="modal">&times;</a>
                             </div>                       
-                            <div class="modal-body1">
+                            <div class="modal-body3">
                               
                             </div>
                             <div class="modal-footer">

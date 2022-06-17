@@ -29,14 +29,14 @@ if(isset($_POST['editElemento'])){
     </script>";
 
     // Nombre
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='nombreEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[1];
         }       
-    $response .= "<label>Nombre de elemento</label>";
+    $response .= "<label style='margin-left: 24px'>Nombre de elemento</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreEle' name='nombreEle' value='$var'  autocomplete='off'>";
     
     $response .="</div>";
@@ -44,14 +44,14 @@ if(isset($_POST['editElemento'])){
     $response .=" </div>";
     
     // Descripción
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='descEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[2];
         }       
-    $response .= "<label>Descripción del elemento</label>";
+    $response .= "<label style='margin-left: 10px'>Descripción del elemento</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='descEle' name='descEle' value='$var' autocomplete='off' required>";
      
     $response .="</div>";
@@ -59,14 +59,14 @@ if(isset($_POST['editElemento'])){
     $response .=" </div>";
 
     // Cantidad
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='cantEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[3];
         }       
-    $response .= "<label>Cantidad</label>";
+    $response .= "<label style='margin-left: 66px'>Cantidad</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='cantEle' name='cantEle' value='$var' autocomplete='off' required>";
      
     $response .="</div>";
@@ -74,14 +74,14 @@ if(isset($_POST['editElemento'])){
     $response .=" </div>";
 
     // F.Revisión
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='dates' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[4];
         }       
-    $response .= "<label>Fecha de revisión</label>";
+    $response .= "<label style='margin-left: 38.5px'>Fecha de revisión</label>";
     $response .= "<input type='hidden' style='width:200px;' class='form-control' id='fecha1' name='fechahoy'  value='$var' autocomplete='off' required>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario' value='$var' autocomplete='off' required>";
       
@@ -90,10 +90,10 @@ if(isset($_POST['editElemento'])){
     $response .=" </div>";
 
     // Estado
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";    
-    $response .= "<label for='estado'>Elija estado</label>                           
+    $response .= "<label for='estado' style='margin-left: 9.5px'>Elija estado</label>                           
     <select name='estado' id='estado' class='camposr' required>";?>  
     <?php
     $vec2=$obj->ListarEstado($id);
@@ -109,14 +109,14 @@ if(isset($_POST['editElemento'])){
     $response .=" </div>";
 
     // Observación
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='obserEle' style='margin-top:30px;'>";?>   
             <?php
             foreach ($emp as $k=>$d){
                 $var=$d[6];
         }       
-    $response .= "<label>Observación</label>";
+    $response .= "<label style='margin-left: 53px'>Observación</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='obserEle' name='obserEle' value='$var' autocomplete='off'>";
       
     $response .="</div>";

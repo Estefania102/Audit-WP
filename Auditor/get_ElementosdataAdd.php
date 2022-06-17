@@ -37,11 +37,11 @@
     <?php
 
     // Nombre
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='nombreEle' style='margin-top:30px;'>";
            
-    $response .= "<label>Nombre de elemento</label>";
+    $response .= "<label style='margin-left: 24px'>Nombre de elemento</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='nombreEle' name='nombreEle'  autocomplete='off'>";
             
     $response .="</div>";
@@ -49,11 +49,11 @@
     $response .=" </div>";
     
     // Descripción
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='descEle' style='margin-top:30px;'>";
            
-    $response .= "<label>Descripción del elemento</label>";
+    $response .= "<label style='margin-left: 10px'>Descripción del elemento</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='descEle' name='descEle'  autocomplete='off' required>";
             
     $response .="</div>";
@@ -61,11 +61,11 @@
     $response .=" </div>";
    
     // Cantidad
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='cantEle' style='margin-top:30px;'>";
            
-    $response .= "<label>Cantidad</label>";
+    $response .= "<label style='margin-left: 66px'>Cantidad</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='cantEle' name='cantEle' autocomplete='off' required>";
             
     $response .="</div>";
@@ -73,11 +73,11 @@
     $response .=" </div>";
 
     // F.Revisión
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='dates' style='margin-top:30px;'>";
            
-    $response .= "<label>Fecha de revisión</label>";
+    $response .= "<label style='margin-left: 38.5px'>Fecha de revisión</label>";
     $response .= "<input type='hidden' style='width:200px;' class='form-control' id='fecha1' name='fechahoy' value= '$fecha_hoy' autocomplete='off' required >";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='calendario' name='calendario'  autocomplete='off' required>";
          
@@ -86,10 +86,10 @@
     $response .=" </div>";
 
     // Estado
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='camposr' style='margin-top:30px;'>";
-    $response .= "<label for='estado'>Elija estado</label>                           
+    $response .= "<label for='estado' style='margin-left: 9.5px' >Elija estado</label>                           
     <select name='estado' id='estado' class='camposr' required>
     <option value=''>Seleccione</option>
     <option value='1'>Bueno</option>
@@ -101,11 +101,11 @@
 
 
     // Observación
-    $response .= "<div class='form-group'>";
+    $response .= "<div class='form-group' style='margin-left: 25%'>";
     $response .= "<div class='container'>";
     $response .= "<div class='obserEle' style='margin-top:30px;'>";
            
-    $response .= "<label>Observación</label>";
+    $response .= "<label style='margin-left: 53px'>Observación</label>";
     $response .= "<input type='text' style='width:200px;' class='form-control' id='obserEle' name='obserEle' autocomplete='off'>";
             
     $response .="</div>";
