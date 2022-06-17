@@ -1,125 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Insertar empresas</title>
+    <title>INGRESO EMPRESA</title>
 </head>
-      <?php
+<?php
         include "../Templates/Head.php";
         include '../controlador/Negocio.php';
+        $idem=$_REQUEST['cod'];
         $obj=new Negocio();       
         session_start(); 
         $idaudit=$_SESSION["idAuditor"];    
-        $emp=$obj->Insertarbu($idaudit);  
-      ?>
+        $emp=$obj->Insertarbu($idaudit);
+		$namemp=$obj->NombreEmpresa($idem); 
+      ?>	
 <body>
-    <header>
-		<div class="menu-bar-pc" style="padding:0 30.25rem; font-size: 26px; font-family: 'Playfair Display', serif; color: #303133;">
-			<nav class="menu-principal">
-        <a>Lista de empresas</a>
-      </nav>
-    </div>
-    <div class="menu-movil">
-      <div class="slide" id="slide">
-          <nav class="menu-principal">
-          <a>Lista de empresas</a>
-          </nav>
+	<!-- ENCABEZADO -->
+	<header>
+		<div class="menu-bar-pc" style="padding: 0 17.25rem">
+			<nav class="menu-principal" style="font-size: 15px;">
+				<a href="#" class="volver-arriba">Inicio</a>
+				<a href="#evaluacion" class="scroll-suave">Guía de Evaluación</a>
+				<a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
+				<a href="#respuestas" class="scroll-suave">Respuestas</a>
+				<a href="#cobit" class="scroll-suave">COBIT 5</a>
+                <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
+			</nav>
+			<div class="pull-right">
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;font-size: 15px;">CERRAR SESION</a>
 			</div>
-      </div>
+		</div>
 
-    </header>
-<!-- BOTON NUEVO -->
-    <div class="container-btn">
-      <div class="row">    
-        <div class="col-lg-12">
-        <button class="btn btn-success btnAgregar">Nuevo</button>
-        </div>
-      </div>
-    </div>
-            <table id="tinsertar" class="table table-striped table-bordered" style="width:100%;padding:20px;margin-top: 50px;">
-            <thead class="text-center">
-                <tr>
-                  <th>Nombre</th>
-                  <th>Ingresar</th>
-                  <th>Editar</th>
-                  <th>Eliminar</th>   
-                </tr>
-            </thead>
-            <tbody class="text-center">
-            <?php
-                    foreach ($emp as $k=>$d){?>
-                    <tr>                
-                      <td><?php echo $d[0]?></td>
-                      <td><a href="IngresoEmpresa.php?cod=<?=$d[1]?>" class='btns2' style="text-decoration:none;color: #fff;">Ingresar</a>
-                      <td><button class='btn btn-primary btnEditar' data-id=<?php echo $d[1]?>>Editar</button>
-                      <td><input type="hidden" name="borrar" value=""><button type="submit" data-tipo="Insertar" class='btn btn-danger btnBorrar' data-id=<?php echo $d[1]?>>Eliminar</button></td>
-                    </tr>                                                                           
-                        <?php }
-              ?> 
-            </tbody>          
-            </table>
-            <!-- NUEVO -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEmpresaAgregar" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">Nuevo</h4>
-                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
-                            </div>                       
-                            <div class="modal-body" style="padding-top: 1px;">
-                              
-                            </div>
-                            <div class="modal-footer">
-                                <a type="button"  href="AuditMenuPrincipal.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
+		<div class="menu-bar-movil">
+			<div class="movil-menu" id="movil_menu">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</div>
 
-            <!-- EDITAR -->
-                  <div class="modal fade modal modal-warning fade" id="custModalEmpresaEditar" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">Editar</h4>
-                              <a type="button" href="AuditMenuPrincipal.php" class="close" data-dismiss="modal">&times;</a>
-                            </div>                       
-                            <div class="modal-body1">
-                              
-                            </div>
-                            <div class="modal-footer">
-                                <a type="button"  href="AuditMenuPrincipal.php" class="btn btn-default" data-dismiss="modal">Cancelar</a>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
+			<div class="slideMenu" id="slideMenu">
+				<nav class="menu-principal" style="font-size: 19px;">
+					<a href="#" class="volver-arriba">Inicio</a>
+					<a href="#evaluacion" class="scroll-suave">Guia de Evaluación</a>
+				    <a href="#elementos" class="scroll-suave">Gestión de Elementos</a>
+				    <a href="#respuestas" class="scroll-suave">Respuestas</a>
+				    <a href="#cobit" class="scroll-suave">COBIT 5</a>
+                    <a href="#conclusiones" class="scroll-suave">Conclusiones</a>
+				</nav>
+				<div class="pull-right">
+                  <a href="LoginAuditor.php?cerrar_sesion=true" style="background: #A4A4A4; color: #fff; padding: 10px 5px; display: block; text-align: center;margin-top: 15px;font-size: 19px;">CERRAR SESION</a>
+			</div>
+			</div>			
+		</div>
+	</header>
+<!-- FIN DE ENCABEZADO -->
 
-                
+<!-- MAIN -->
+	<section class="main">
+		<!-- PORTADA -->
+		<section class="portada" id="portada">
+			<div class="col">
+			<div class="foto-full der lightbox">
+					<div class="overlay">
+						<i class="fas fa-plus"></i>
+					</div>
+				</div>
+				<?php
+                    foreach ($namemp as $k=>$d){?>				
+				<div class="texto">					
+					<h2>Proceso de Auditoria a los sistemas de información de:</h2>
+					<p><?php echo $d[0];?></p>	
+				</div>
+				<?php }?>
+			</div>		
+		</section>
+		<!-- FIN PORTADA -->
+
+		<!-- EVALUACIÓN -->
+		<section class="evaluacion" id="evaluacion">
+			<div class="container">
+				<div class="col izq">
+					<div class="titulo-seccion">
+						<h2>Guía de evaluación</h2>
+					</div>
+				</div>
+				<div class="col der">
+					<div class="texto">
+						<p>Documento formal que permite hacer seguimiento paso a paso de todos los procedimientos a evaluar, con la finalidad de realizar una adecuada revisión a los sistemas de información. </p>				
+					</div>			
+				</div>	
+				<a href="GuiaEvaluacion.php?cod=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Guía de evaluación</a>
+				</div>
+			</div>
+		</section>
+		<!-- FIN EVALUACIÓN -->
+
+		<!-- GESTIÓN DE ELEMENTOS -->
+		<section class="elementos" id="elementos">
+			<div class="container">
+				<div class="col izq">
+					<div class="slider" id="slider">
+						<div class="slide foto1"></div>
+						<div class="slide foto2"></div>
+						<div class="slide foto3"></div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="titulo-seccion">
+						<h2>Gestión de elementos</h2>
+						<p>Se utiliza para actualizar la tabla elementos de la auditoría.</p>
+						<p>Permite introducir la información de los elementos de cada componente que serán objeto de revisión durante la auditoria</p>
+					</div>				
+				</div>
+				<a href="IngresoElementos.php?cod1=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Gestión de elementos</a>
+			</div>
+		</section>
+		<!--FIN GESTIÓN DE ELEMENTOS -->
+
+		<!-- RESPUESTAS -->
+		<section class="respuestas" id="respuestas">
+			<div class="container">
+				<div class="col izq">
+					<div class="titulo-seccion">
+						<h2>Respuestas</h2>
+					</div>
+				</div>
+				<div class="col der">
+					<div class="texto">
+						<p>Se utiliza para actualizar la tabla que contiene información sobre las respuestas al cuestionario aplicado en la auditoría.</p>
+						<p>Permite introducir las respuestas, debilidades, efectos y recomendaciones de cada elemento auditado. Por otra parte, permite revisar las respuestas y el análisis de los registros ya ingresados.</p>
+					</div>			
+				</div>
+				<a href="Respuestas.php?cod2=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Respuestas</a>
+			</div>
+		</section>
+		<!-- RESPUESTAS -->
+
+        <!-- COBIT -->
+		<section class="cobit" id="cobit">
+			<div class="container">
+				<div class="col izq">
+					<div class="slider" id="slider">
+						<div class="slide foto1"></div>
+						<div class="slide foto2"></div>
+						<div class="slide foto3"></div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="titulo-seccion">
+						<h2>COBIT 5</h2>
+						<p>COBIT 5 brinda mecanismos de apoyo que ayudan a los ejecutivos a disminuir la diferencia existente entre los requisitos de verificación, las cuestiones tecnológicas y amenazas al negocio. </p>
+						<p>Mejora la capacidad de definir controles, seguridad y gobierno de procesos en el dominio de TI de las organizaciones.</p>
+					</div>
+				</div>
+				<a href="COBIT.php" class='btns' style="margin:8% auto 0px auto;">COBIT 5</a>
+			</div>
+		</section>
+		<!--FIN COBIT-->
+
+		<!-- CONCLUSIONES -->
+		<section class="conclusiones" id="conclusiones">
+			<div class="datos parallax">
+				<div class="overlay">					
+				</div>
+				<div class="container">					
+					<div class="blurb">
+						<h3>Conclusiones y Recomendaciones</h3>
+						<p>Según el análisis de la auditoría se expone el resultado obtenido del estado de los componentes de los sistemas de información. Además, se brindarán conclusiones y recomendaciones de la auditoria realizada.<br></p>
+					</div>
+					<a href="ConyRec.php?cod3=<?=$idem?>" class='btns' style="margin:8% auto 0px auto;">Conclusiones</a>	
+				</div>
+			</div>			
+		</section>
+		<!-- FIN CONCLUSIONES -->
+	</section>
+<!-- FIN MAIN -->
+
+<!-- PIE DE PAGINA -->
+	<footer>
+		<p class="copyright">Todos los derechos reservados</p>	
+	</footer>
+<!-- FIN DE PIE DE PAGINA -->
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/slider.js"></script>
+	<script src="../js/tabs.js"></script>
+	<script src="../js/bgParallax.js"></script>
+	<script src="../js/scroll.js"></script>
+	<script src="../js/menuMovil.js"></script>
 </body>
-  
-<!-- Datatable -->
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>  
-<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
-
-<!-- BOOTSTRAP -->
-<link rel="stylesheet" href="../lib/bootstrap.min.css">
-<script type="text/javascript" src="../js/Principal.js"></script>
-<script src="../lib/sweetalert2.all.js"></script>
-<script src="../lib/sweetalert2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-  <script>
-    $(document).ready(function(){
-    $("#tinsertar").DataTable({
-       "language": {
-        "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
-      }
-    });
-  });
-  </script>
-      
 </html>

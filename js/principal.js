@@ -50,7 +50,7 @@ $('#envialoaud').on('submit',function(e){
                   'success'
               )
               setTimeout(function(){
-              window.location.href='../Auditor/AuditMenuPrincipal.php';
+              window.location.href='../Auditor/IngresoEmpresa.php';
               },2000)
           }else{
               swal(
