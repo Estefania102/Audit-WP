@@ -53,7 +53,7 @@
 <div class="container principal" > 
 	<div class="row" >
 		    <div class="col-md-12 text-center">
-            <div class="row row-cols-1 row-cols-md-2 lg-4">
+            <div class="row row-cols-1 row-cols-md-2 lg-4" style="margin-left: 100px;">
               <div class="col" style="padding-top: 150px;width:40%;">  
               <div class="card" style="width: 240px;height: 350px;margin-left: 65px;margin-top: 35px;">
               <img src="../img/guia.png" class="card-img-top" alt="...">

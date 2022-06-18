@@ -30,7 +30,7 @@
       </div>
     </header>
 
-    <div class="botones" style="margin-top: 3%;margin-bottom: 3%;display: grid; grid-template-columns: 1fr 1fr;text-align: center;">
+    <div class="botones" style="margin-top: 3%;margin-bottom: 3%;text-align: center;">
       
       <div><input type="file" id="txt_archivo">
       <button class="btn btn-primary btnImportar" onclick="Cargar_Excel()">Importar</button></div>
@@ -155,7 +155,9 @@
         'Archivo importado',
         'success'
       )
+      setTimeout(function(){
           location.reload();
+          },2000)
         }
       });
       return false;
