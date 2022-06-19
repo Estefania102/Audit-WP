@@ -717,28 +717,28 @@ font-family: inherit;
   padding-bottom: 0;
 }
 
-.main .cobit .container .slider {
+.main .cobit .container .slider1 {
   width: 300%;
   display: flex;
 }
 
-.main .cobit .container .slider .slide {
+.main .cobit .container .slider1 .slide1 {
   width: 100%;
   min-height: 400px;
   background-size: cover;
   background-position: center;
 }
 
-.main .cobit .container .slider .slide.foto1 {
+.main .cobit .container .slider1 .slide1.foto1 {
   background-image: url('../img/cobit1.jpg');
 }
 
-.main .cobit .container .slider .slide.foto2 {
-  background-image: url('../img/chef-2.jpg');
+.main .cobit .container .slider1 .slide1.foto2 {
+  background-image: url('../img/cobit2.jpg');
 }
 
-.main .cobit .container .slider .slide.foto3 {
-  background-image: url('../img/chef-3.jpg');
+.main .cobit .container .slider1 .slide1.foto3 {
+  background-image: url('../img/cobit3.jpeg');
 }
 .main .conclusiones .datos {
   padding: 5.625rem 0 5.625rem 0;

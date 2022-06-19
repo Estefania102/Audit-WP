@@ -137,10 +137,10 @@
 		<section class="cobit" id="cobit">
 			<div class="container">
 				<div class="col izq">
-					<div class="slider" id="slider">
-						<div class="slide foto1"></div>
-						<div class="slide foto2"></div>
-						<div class="slide foto3"></div>
+					<div class="slider1" id="slider1">
+						<div class="slide1 foto1"></div>
+						<div class="slide1 foto2"></div>
+						<div class="slide1 foto3"></div>
 					</div>
 				</div>
 				<div class="col">
