@@ -9,6 +9,7 @@ $conexion = new mysqli("localhost", "root", "" , "bdauditwp");
       // Read title row and rows 20 - 30
       if ($row>1) {
         // if (in_array($column,range('C','M'))){
+          $columnAdress = Coordinate::columnIndexFromString('B');
           return true;
       // }
     }
