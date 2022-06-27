@@ -57,7 +57,7 @@
     $response .= "<div class='observacionG' style='margin-top:30px;'>";
            
     $response .= "<label style='margin-left:40px'>Observaciones</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  autocomplete='off'>";
             
     $response .="</div>";
     $response .= "</div>";

@@ -73,7 +73,7 @@ if(isset($_POST['editGuia'])){
                 $var=$d[4];
         }       
     $response .= "<label style='margin-left:49px'>Observaciones</label>";
-    $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  value='$var' autocomplete='off' required>";
+    $response .= "<input type='text' style='width:200px;' class='form-control' id='observacionG' name='observacionG'  value='$var' autocomplete='off'>";
     $response .="</div>";
     $response .= "</div>";
     $response .=" </div>";
